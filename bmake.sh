@@ -1,7 +1,7 @@
 let tmo=1
 let tcount=1
 while true
-do if [[  ! ( -f "dawoodiss.pdf" )  || ( "dawoodiss.tex" -nt "dawoodiss.pdf" ) || ( "introduction.tex" -nt "dawoodiss.pdf" ) || ( "literature.tex" -nt "dawoodiss.pdf" ) || ( "cybersecuritydesign.tex" -nt "dawoodiss.pdf" ) || ( "stakeholderanalysis.tex" -nt "dawoodiss.pdf" ) || ( "conclusion.tex" -nt "dawoodiss.pdf" ) || ( "methodology.tex" -nt "dawoodiss.pdf" ) ]]
+do if [[  ! ( -f "dawoodiss.pdf" )  || ( "dawoodiss.tex" -nt "dawoodiss.pdf" ) || ( "introduction.tex" -nt "dawoodiss.pdf" ) || ( "literature.tex" -nt "dawoodiss.pdf" ) || ( "cybersecuritydesign.tex" -nt "dawoodiss.pdf" ) || ( "stakeholderanalysis.tex" -nt "dawoodiss.pdf" ) || ( "conclusion.tex" -nt "dawoodiss.pdf" ) || ( "methodology.tex" -nt "dawoodiss.pdf" ) || ( "experiments.tex" -nt "dawoodiss.pdf" ) ]]
    then    make
        let tmo=1
        let tcount=1
