@@ -1,0 +1,120 @@
+
+
+NOTICE: sender is dawood70iraq@gmail.com
+
+Hi Ron,
+
+ 
+
+ 
+
+According to the philosophical and mathematical viewpoint of cybersecurity in this research:
+
+The topology of cyberspace can be considered as a network of heterogeneous entities (individual users, organizations, devices, service providers, and services etc. These entities can be classified into two main categories, the services, and their stakeholders (cyberspace diagram).  Stakeholders can set their own policies regarding the services they engage with. To assist them in this setting, they can use the policies declared by those services.
+
+ 
+
+Stakeholders polices are used to achieve their objectives. These objectives vary and may be subject to change, which requires consistency between those policies to ensure the wellbeing of all stakeholders. To adopt such consistency, conditions that maintain safety, security, privacy and more should be defined and enforced. A social contract, also, is needed to enable and manage these conditions (consistency diagram).  While ensuring the achievement of stakeholders’ objectives, the consistency of all their policies is essential.
+
+ 
+
+Cyber-security is the logical steps or "process of design" to achieve objectives(cybersecurity process diagram). Anything else is an illusion (like Plato's cave). However, before we can even state these objectives, it is essential to gain agreement between all the parties affected. In other words, to gain agreement to a "contract".Without such a contract, cybersecurity is not possible, because it has no clear goal. But, with such a contract, there is a relatively obvious, systematic process to achieve cybersecurity. We must design, develop and implement software which enforces the social contract, and ensure that everyone installs this software and uses only this software in the course of their interaction (like the Uber App).
+
+ 
+
+Sent from Mail for Windows
+
+ 
+
+From: Ron Addie
+Sent: Thursday, 3 February 2022 6:48 PM
+To: Dawood Hussian; James Talbot; James Northway
+Subject: Re: Cybersecurity and cybersafety
+
+ 
+
+Good question (see below). Furthermore, this question explains why safety, privacy, and in fact all objectives must be taken into account simultaneously.
+
+ 
+
+It is clear that all stakeholders want to achieve all their objectives, not just security objectives, not just safety objectives, etc. So, if there is any logical question about objectives that we need to address, they must be dealt with as a whole, not separately. Eg if some other agent's safety policy is inconsistent with our security policy, that will be important for us to know, and we must take it into account.
+
+ 
+
+What this shows, it seems to me, is that any method for designing policies, and in particular, any method which seeks to ensure that the policies of a collection of agents are coherent / consistent, must make use of each agent's entire policy, not just a sub-policy in one sense (eg safety) or another.
+
+ 
+
+ 
+
+ 
+
+Ron.
+
+ 
+
+On 3/2/22 6:17 pm, Dawood Hussian wrote:
+
+    NOTICE: sender is dawood70iraq@gmail.com
+
+    Hu Ron,
+
+    We've talked about the consistency. Well, we have stakeholder objectives and in order to achieve  the well-being in cyberspace. Services must be able to accomplish these objectives collectively and in a way that is fair to all.  So we need to define the terms of consistency.  The question here is .. Are the conditions of consistency mean the conditions of safety and security that enable these services to achieve the well-being, or is there something else that should be taken into consideration?
+
+     
+
+    On Thu, 3 Feb 2022, 2:29 pm Ron Addie, <Ron.Addie@usq.edu.au> wrote:
+
+        Thanks very much for these links Dawood. It seems to me that there are different types of definition, for words (or terms).
+
+         
+
+        The discussion in the links you have sent is adopting a "common sense" view of what a definition should be. In this view, which is quite logical, the quality of most importance is "clarity in common use". If a term has a meaning that will be adopted by a high proportion of lay-people, it is best to adopt a meaning that is close as possible to that meaning. To do otherwise will be dangerous, and not useful. It could cause confusion, or even harm.
+
+         
+
+        In our work, and a lot of academic work, esp mathematics, a different approach is used. In this context, we are more concerned with adopting a framework according to which all key concepts fit within a consistent logical framework.
+
+         
+
+        In many cases it should be possible to use common sense definitions which are also logically and academically sound.
+
+         
+
+        In the present instance, however, we seem to be adopting definitions of a more academic nature, which contradict, to some degree, the common sense viewpoint. This is risky, but it does arise naturally and for a good reason in some cases. In particular, if the point we are trying to make is actually trying to challenge, and change, the common sense viewpoint, then I think we are forced to do this.
+
+         
+
+        It seems to me that this should be ok, and can be explained, but only by clearly explaining that this is what we are trying to do. For this reason, these articles you have found could be quite useful for us. Please make sure to create bib entries for them (probably using the "misc" type).
+
+         
+
+        Ron.
+
+         
+
+        On 3/2/22 2:13 pm, Dawood Hussian wrote:
+
+            NOTICE: sender is dawood70iraq@gmail.com
+
+            Hi Ron,
+
+             
+
+            See kindly the following links regarding the  defference between cybersecurity and cybersafety.
+
+             
+
+            https://www.paulfletcher.com.au/pauls-blog/cyber-safety-and-cyber-security-whats-the-difference
+
+             
+
+            https://dzone.com/articles/cyber-safety-vs-cybersecurity-whats-the-difference
+
+             
+
+            https://mysudo.com/2021/12/whats-the-difference-between-cybersafety-and-cybersecurity/
+
+             
+
+             
