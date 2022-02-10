@@ -10,15 +10,48 @@ Hi Ron,
 
 According to the philosophical and mathematical viewpoint of cybersecurity in this research:
 
-The topology of cyberspace can be considered as a network of heterogeneous entities (individual users, organizations, devices, service providers, and services etc. These entities can be classified into two main categories, the services, and their stakeholders (cyberspace diagram).  Stakeholders can set their own policies regarding the services they engage with. To assist them in this setting, they can use the policies declared by those services.
+Cyberspace can be considered as a network of heterogeneous entities
+(individual users, organizations, devices, service providers, and
+services etc. These entities can be classified into two main categories,
+the services, and their stakeholders (cyberspace diagram).  Stakeholders
+can set their own policies regarding the services they engage with. To
+assist them in this setting, they can use the policies declared by
+those services.
 
- 
+Stakeholders polices are used to achieve their key (essential)
+objectives. Different stakeholders have different objectives and also,
+their objectives are subject to change.  For the stakeholders to be
+able to work together effectively, their policies must be consistent.
+Furthermore, as stakeholders objectives and policies change over time,
+this consistency must be maintained.
 
-Stakeholders polices are used to achieve their objectives. These objectives vary and may be subject to change, which requires consistency between those policies to ensure the wellbeing of all stakeholders. To adopt such consistency, conditions that maintain safety, security, privacy and more should be defined and enforced. A social contract, also, is needed to enable and manage these conditions (consistency diagram).  While ensuring the achievement of stakeholders’ objectives, the consistency of all their policies is essential.
+Stakeholder objectives and policies are designed to maintain safety, privacy, security,
+and any other key objectives. Any inconsistency between policies will lead
+to a breakdown or compromise of the overall system.
 
- 
+In order for stakeholders to maintain their essential objectives, it is
+generally necessary to develop a collection of enforcable conditions and
+to configure these conditions so that they achieve the objectives. This process
+is sometimes referred to as policy refinement. [Find citations in James Northway's
+proposal.]
 
-Cyber-security is the logical steps or "process of design" to achieve objectives(cybersecurity process diagram). Anything else is an illusion (like Plato's cave). However, before we can even state these objectives, it is essential to gain agreement between all the parties affected. In other words, to gain agreement to a "contract".Without such a contract, cybersecurity is not possible, because it has no clear goal. But, with such a contract, there is a relatively obvious, systematic process to achieve cybersecurity. We must design, develop and implement software which enforces the social contract, and ensure that everyone installs this software and uses only this software in the course of their interaction (like the Uber App).
+A social contract is needed to enable and manage these conditions
+(consistency diagram).  While ensuring the achievement of stakeholders’
+objectives, the consistency of all the policies is essential, but this
+will be difficult unless stakeholders have a sound basis of shared {\em
+values}. The social contract provides this basis.
+
+Cyber-security is the logical steps or "process of design" to achieve
+objectives(cybersecurity process diagram). Anything else is an illusion
+(like Plato's cave). However, before we can even state these objectives,
+it is essential to gain agreement between all the parties affected. In
+other words, to gain agreement to a "contract".Without such a contract,
+cybersecurity is not possible, because it has no clear goal. But, with
+such a contract, there is a relatively obvious, systematic process to
+achieve cybersecurity. We must design, develop and implement software
+which enforces the social contract, and ensure that everyone installs this
+software and uses only this software in the course of their interaction
+(like the Uber App).
 
  
 
