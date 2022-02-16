@@ -1,0 +1,12 @@
+Definition of Cybersecurity
+---------------------------
+
+Cybersecurity is the {\em logical} process, including design and implementation, of 
+ensuring that one's {\em mandatory} objectives are met, where mandatory means the
+objectives which one wishes to be {\em certain} of achieving.
+
+This is not a conventional view because it includes privacy, safety, financial risks, ...
+anything that is mandatory. This view is adopted to allow the different mandatory goals
+to be designed simultaneously, which is logically necessary.
+
+
