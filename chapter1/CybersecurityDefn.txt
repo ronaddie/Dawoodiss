@@ -10,3 +10,13 @@ anything that is mandatory. This view is adopted to allow the different mandator
 to be designed simultaneously, which is logically necessary.
 
 
+\section{Research Background}
+\section{Significance of the Research}
+\section{Research Problem}
+\section{Research Question(s)}
+
+What is the logical cybersecurity framework within which all the key concepts are consistent?\\
+What is the cybersecurity framework within which all the key concepts are consistent?\\
+What is the cybersecurity logical consistency framework within which all the key concepts are fit?\\
+
+How can we develop and configure a collection of enforceable conditions to maintain safety, privacy, security, and any other key objectives?

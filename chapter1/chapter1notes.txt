@@ -30,16 +30,10 @@ and any other key objectives. Any inconsistency between policies will lead
 to a breakdown or compromise of the overall system.
 
 In order for stakeholders to maintain their essential objectives, it is
-generally necessary to develop a collection of enforcable conditions and
-to configure these conditions so that they achieve the objectives. This process
-is sometimes referred to as policy refinement. [Find citations in James Northway's
+generally necessary to develop a collection of enforcable conditions and to configure these conditions so that they achieve the objectives. This process is sometimes referred to as policy refinement. [Find citations in James Northway's
 proposal.]
 
-A social contract is needed to enable and manage these conditions
-(consistency diagram).  While ensuring the achievement of stakeholders’
-objectives, the consistency of all the policies is essential, but this
-will be difficult unless stakeholders have a sound basis of shared {\em
-values}. The social contract provides this basis.
+A social contract is needed to enable and manage these conditions (consistency diagram).  While ensuring the achievement of stakeholders’ objectives, the consistency of all the policies is essential, but this will be difficult unless stakeholders have a sound basis of shared {\em values}. The social contract provides this basis.
 
 Cyber-security is the logical steps or "process of design" to achieve
 objectives(cybersecurity process diagram). Anything else is an illusion
