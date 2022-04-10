@@ -23,22 +23,43 @@ This research aims to propose,  demonstrate, and develope a Cybersecurity Archit
 \subsection{Cybersecurity Definition}
 In recent years, the term cyber security has been widely used\cite{craigen2014defining,schatz2017towards,giles2013divided}. Because it is considered modern, there seems to be little understanding of what it means. Also, the current definitions fluctuate between difference and similarity for two reasons\cite{schatz2017towards}. The first is the diversity of sources of definition between governmental, professional and academic. The second is the rapid developments, especially in the field of technology, which sometimes leads to a change in the understanding of some terms. This discrepancy in the proposed definitions leads to a difference of views on what cyber security is and what are the related cybersecurity and ethical issues. It is also likely to cause significant problems in the context of organizational strategies, stakeholder policy consistency, business objectives, or international agreements. 
 
-In this thesis, we study the existing literature to determine the definitions provided for the term cybersecurity by reliable sources. Then we propose a new definition representing what this term is in a different way.  It is not affected by the determinants that affected the previous definitions and is related to all issues.\paragraph{New Definition}
+In this research, we study the existing literature to determine the definitions provided for the term cybersecurity by reliable sources. Then we propose a new definition representing what this term is in a different way.  It is not affected by the determinants that affected the previous definitions and is related to all issues.
+\subsubsection*{New Definition}
+"Cybersecurity is the {\em logical} process, including design and implementation, of ensuring that one's {\em mandatory} objectives are met, where mandatory means the objectives which one wishes to be {\em certain} of achieving."
 
-\subsection{Cybersecurity Policies}}
+This is not a conventional view because it includes privacy, safety, financial risks, ...
+anything that is mandatory. This view is adopted to allow the different mandatory goals
+to be designed simultaneously, which is logically necessary.
+\subsection{Cybersecurity Policies}
+%The discrepancy in the current cybersecurity definitions and the difference in objectives lead to significant problems with policies consistency. Any inconsistency will lead to not being able to work together effectively.
+The current policies may support the practice 
+of unethical issues through cyberspace.
+ These policies seek to achieve certain mandatory goals without the other goals.
+%Like this approach in itself led to the creation of a safe environment for the practice of unethical issues.
+ For example,  search engines such Google and Beng focused on transparency in tracking information sources to the extent that the privacy of individuals and institutions was violated by government agencies or rights holders. On the other hand, on the deep Internet, this privacy is preserved in search engines such as Tor, to the extent that this privacy is a starting point for the creation of a virtual crime world \emph{Dark Side}. It seems that the lack of consistency between the primary objectives is a clear weakness in cybersecurity policies.
+\\ Stakeholders need to "negotiate" their policies with each other in order to make their own and fashion others' policies. This process of negotiation of policies needs some guidelines or rules; We have proposed, in particular, that all parties accept a "social contract" which is, primarily, that all stakeholders honour their own policies. In the process of this negotiation, stakeholders should constantly check the coherence of the policies of their peers, ie of the systems of agents with whom they work.
+\\ It is clear that all stakeholders want to achieve all their objectives, not just security objectives, not just safety objectives, etc. So, if there is any logical question about objectives that we need to address, they must be dealt with as a whole, not separately. Eg if some other agent's safety policy is inconsistent with our security policy, that will be important for us to know, and we must take it into account. This shows that any method for designing policies, and in particular, any method which seeks to ensure that the policies of a collection of agents are consistent, must make use of each agent's entire policy, not just a sub-policy in one sense (eg safety) or another. It seems that safety, privacy, and in fact all objectives must be taken into account simultaneously. 
+
 \subsection{Mantodory Objectives}
 \subsection{Social Contract}
+According to Hobbes \cite{Leviathan}, without a social contract, life is subject to continual fear, and danger of violent death; and the life of man is solitary, poor, nasty, brutish, and short. 
+However, a social contract between the citizens of a society enables them to co-operate effectively, to achieve a better life without the need for constant fear.
+
+Social contracts have been adopted in many modern nations, and in many cases, they appear to provide a good foundation for civil society, providing safety, wide-ranging freedom, with a high standard of living. Attempts to formulate an international social contract have been at best partially successful. There is an international court of justice, but many nations do not accept its jurisdiction [16].
+
+The Internet has made computing social \cite{parameswaran2007social}. In turn, the Internet and the cyberspace based on it, is susceptible to a number of social ills that may befall any society, such as constant harassment, belligerent attacks on property, that is, cyberattacks, and invasions of privacy which seriously compromise the benefits for our social, educational, and commercial lives. By other words, with the convenience and intelligence offered by electronic agents inhabiting the web, and the world of apps, a crowd of unwanted denizens focused on criminality, exploitation, fraud, and chaos have taken the opportunities (of which there are many) to join us in cyberspace.  We must assume that whenever there is an opportunity for error, fraud, deception, or intimidation, it will be exploited. We need to actively defend against criminality, greed, parochialism, and chaos. Are these issues (which are surveyed in more detail in Section ??) due to the absence of a social contract? \\ In this study, We demonstrated the need for a social contract for cyberspace (and the Internet), i.e. a declaration of responsibilities and rights of all members of cyberspace, and also to propose a draft of such a social contract.
+%\item \emph{proposed, demonstrated and developed by fair stakeholder policies that are formulated and agreed upon under the umbrella of a proposed social contract}, and then
+%\item  \emph{designed and implemented by software that enforces those policies and their social contract and ensures  all parties are using this software}.
+%\end{itemize}
+%\end{flushleft}
 
 \section{Significance of the Research}
+
 Cyber security in this research, as it has not been previously, is:
-\begin{flushleft}
-\begin{itemize}
+%\begin{flushleft}
+%\begin{itemize}
 
-\item \emph{proposed, demonstrated and developed by fair stakeholder policies that are formulated and agreed upon under the umbrella of a proposed social contract}, and then
-\item  \emph{designed and implemented by software that enforces those policies and their social contract and ensures  all parties are using this software}.
-\end{itemize}
 
-\end{flushleft}
 \section{Research Problem}
 According to the philosophical and mathematical viewpoint of cybersecurity in this research:
 
@@ -85,5 +106,13 @@ What is the logical process to achieve cybersecurity within which all the key co
 
 \section{Research Aims and Objectives}
 Cyber security policies should be produced within a teamwork approach.  This partnership needs a logical framework that controls these policies through a set of conditions that guarantee the achievement of the mandatory objectives.  The social contract comprehensively controls how these policies operate together, in other words, enables and manages these conditions.  This contract should be approved by the stakeholders. Finally, we develop, design, and implement software that enforces this contract, and ensure that this software is dealt with exclusively by all parties.
-
+\begin{enumerate}
+\item Demonstrating that cyberspace needs a social contract and proposing a draft of a social contract for cyberspace.
+\item Developing a stakeholder security analysis which are: 
+\begin{itemize}
+\item Formulating the safety and security conditions, that are consistent with the social contract for cyberspace, as a statement of the user’s expectations of the system (Netml System).
+\item Analysing the source code of the system to prove that it meets these conditions.
+\end{itemize}
+\item Developing Inference graphs, a graphical representation of cybersecurity architecture, which assist cybersecurity professionals to define the security objectives of their systems, the rules which enforce this security, and the reasoning behind the choice of these rules.
+\end{enumerate}
 \section{Research Limitations}
