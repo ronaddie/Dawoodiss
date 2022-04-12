@@ -28,4 +28,22 @@ problems in the context of organizational strategies, stakeholder policy consist
 business objectives, or international agreements.
 [or international --> and international]
 
+In this research, we study the existing literature to determine the definitions pro-
+vided for the term cybersecurity by reliable sources.
+[Where is this done? Please indicate. E,g, by "we study" --> "we review, below,"]
 
+Then we propose a new definition
+representing what this term is in a different way.
+[It seems that you have told the reader that first you will review existing
+definitions, then propose a new one. However, the new definition appears
+almost immediately. What happened to the review of existing defns?]
+
+It is not affected by the determinants
+that affected the previous definitions and is related to all issues.
+[Good, but you seem to be insisting, rather than inviting the reader to
+adopt the new definition.]
+-->
+The definition we now give is somewhat broader than is often adopted
+but it has advantages of applicability and logical consistency which
+we hope the reader will appreciate when it has been tested in a 
+variety of contexts.
