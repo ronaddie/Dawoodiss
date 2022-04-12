@@ -54,6 +54,24 @@ Also, please put the \em command inside the quote enviroment, which will
 render this text in italics. Quotation marks (") are not needed if a quote
 environment is used.]
 
+to be designed simultaneously
+-->
+to be designed in a fully coordinated manner
+[simultaneity is not the point; the design can be coordinated
+without it, and simultaneity does not guarantee correct coordination.]
+
+1.1.2 Cybersecurity Policies
+----------------------------
+
+The current policies may support the practice of unethical issues through cyberspace.
+[Policies need to be define before this statement can be made. Hence, insert the following
+paragraph:]
+All devices, servers, agents, and even individual applications, running in a computer-based
+device have an explicit or implicit {\em policy} which governs what this particular
+agent or process {\em permits} to occur, on its account. In all major operating systems
+policies, for all installed applications, are already or soon will be an important
+component of system security.
+
 
 
 
