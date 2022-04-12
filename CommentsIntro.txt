@@ -1,0 +1,31 @@
+[Please insert a space before all \cite cmds.]
+
+Because it is considered modern,
+-->
+Because of its recent origin,
+
+there seems to be little understanding of what it means
+-->
+there are differing interpretations of its meaning
+
+fluctuate between difference and similarity
+[What does this mean? Please avoid this type of expression. ]
+-->
+fluctuate quite dramatically
+[Does the citation really suppiort this assertion? Please make sure it does
+and if not, remove, or move the citation.]
+
+The second is the rapid developments
+-->
+The second is rapid development
+
+This discrepancy in the proposed definitions leads
+-->
+This diversity in assumed definitions leads
+
+It is also likely to cause significant
+problems in the context of organizational strategies, stakeholder policy consistency,
+business objectives, or international agreements.
+[or international --> and international]
+
+
