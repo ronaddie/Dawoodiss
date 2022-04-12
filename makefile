@@ -1,7 +1,7 @@
 .SUFFIXES : .dvi .tex .bbl .ind .aux .oldaux .html .ps .m .eps .pdf .bsh .c .pl .java .class .glo .gls .idx .glo .gls .dia .xml .Snw
 # PRESERVE the following lines when applying newpaper
 TEX1FILES = dawoodiss.tex literature.tex stakeholderanalysis.tex introduction.tex cybersecuritydesign.tex  \
-			conclusion.tex methodology.tex experiments.tex
+			conclusion.tex methodology.tex socialcontract.tex
 TEX2FILES = 
 TEXFILES = $(TEX1FILES) $(TEX2FILES)
 BIBFILES = dawoodiss.bib
