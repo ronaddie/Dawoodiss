@@ -47,3 +47,13 @@ The definition we now give is somewhat broader than is often adopted
 but it has advantages of applicability and logical consistency which
 we hope the reader will appreciate when it has been tested in a 
 variety of contexts.
+
+Cybersecurity is the logical process
+[This definition should be inside a quote environment, ie \begin{quote} ... \end{quote}
+Also, please put the \em command inside the quote enviroment, which will 
+render this text in italics. Quotation marks (") are not needed if a quote
+environment is used.]
+
+
+
+
