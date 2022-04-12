@@ -232,4 +232,1761 @@
   publisher = {La Trobe},
 }
 
+@Article{peircelogic1885,
+  author  = {Charles Sanders Peirce},
+  title   = {On the Algebra of Logic: A Contribution to the Philosophy of Notation},
+  journal = {American Journal of Mathematics},
+  year    = {1885},
+  volume  = {7},
+}
+
+@Book{pm1910,
+  title     = {Principia mathematica},
+  publisher = {Cambridge University Press},
+  year      = {1910},
+  author    = {Whitehead, Alfred North and Russell, Bertrand},
+}
+
+@Book{frege1879,
+  title  = {Begriffsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens},
+  year   = {1879},
+  author = {Freidrich Ludwig Gottlob Frege},
+}
+
+@Misc{wikicryptographytimeline,
+  author = {Wiki},
+  title  = {Timeline of cryptography},
+  year   = {2019},
+  note   = {\url{http://en.wikipedia.org/wiki/Timeline_of_cryptography}},
+}
+
+@Misc{TPMwiki,
+  author = {Wiki},
+  title  = {Trusted Platform Module},
+  year   = {2020},
+  note   = {\url{https://en.wikipedia.org/wiki/Trusted_Platform_Module}},
+}
+
+@Misc{bitcointheft,
+  author = {TNW},
+  title  = {Bitcoin theft victim sues AT\&T for \$224M after SIM-swap bungle},
+  year   = {2019},
+  note   = {\url{https://thenextweb.com/hardfork/2019/01/17/bitcoin-att-sim-swapping-victim/}},
+}
+
+@Misc{wikicryptography,
+  author = {Wiki},
+  title  = {History of cryptography},
+  year   = {2019},
+  note   = {\url{http://en.wikipedia.org/wiki/History_of_cryptography}},
+}
+
+@Misc{wikichurchthesis,
+  author = {Wiki},
+  title  = {{Church–Turing thesis}},
+  year   = {2019},
+  note   = {\url{http://en.wikipedia.org/wiki/Church–Turing_thesis}},
+}
+
+@Book{Barwise77,
+  title     = {Handbook of Mathematical Logic},
+  publisher = {North Holland},
+  year      = {1977},
+  editor    = {Jon Barwise},
+}
+
+@Book{Mendelson64,
+  title     = {Introduction to Mathematical Logic},
+  publisher = {Van Nostrand},
+  year      = {1964},
+  author    = {Elliot Mendelson},
+  address   = {Princeton, New Jersey},
+  access    = {RGA},
+}
+
+@Book{Kleene52,
+  title     = {Introduction to Metamathematics},
+  publisher = {D. van Nostrand},
+  year      = {1952},
+  author    = {S. C. Kleene},
+}
+
+@Book{Rogers67,
+  title     = {Theory of Recursive Functions and Effective Computability},
+  publisher = {MIT Press},
+  year      = {1967},
+  author    = {Hartley Rogers},
+  address   = {Cambridge, Massachusetts},
+}
+
+@Article{ZhangRG07,
+  author  = {Nan Zhang and Mark Ryan and Dimitar P. Guelev},
+  title   = {Synthesising Verified Access Control Systems through Model Checking},
+  journal = {Journal of Computer Security},
+  year    = {2007},
+  volume  = {16},
+  number  = {1},
+  pages   = {1-61},
+  note    = {\url{http://www.cs.bham.ac.uk/~hxq/acpeg.php}},
+  file    = {NanZhang2007JCS.pdf},
+  summary = {This long article presents all the results of the previous work, both compiling to XACML and the validation by model-checking. It makes use of the two examples used previously: the Employee Incentive Scheme, and the Conf Technical Committee review access rules,},
+}
+
+@InProceedings{Zhang04,
+  author    = {Nan Zhang and Mark Ryan and Dimitar P. Guelev},
+  title     = {Synthesising Verified Access Control Systems in XACML},
+  booktitle = {LNCS, 2nd ACM Workshop on Formal Methods in Security Engineering},
+  year      = {2004},
+  publisher = {Springer-Verlag},
+  note      = {\url{http://www.cs.bham.ac.uk/~hxq/acpeg.php}},
+  file      = {Zhang04-xacml.pdf},
+  summary   = {author summary:[This paper explains how access control systems defined in our [Nan Zhang et al] model can be compiled into XACML code]; This paper is an continuation of Guelev04; the language RW which was not given a name in Guelev04 is here named and its syntax is specified in detail. The examples are limited in this paper to the conference technical committee from Guelev04. This paper presents their architecture for access control more clearly. On the other hand, the validation aspect of Guelev04 is missing. The main additional content is a clear specification of the RW language and explanation of how this language is translated into XACML. A key feature of the translation is that some aspects of RW are converted into XACML and other parts are converted into SQL code for evaluating expressions in terms of a database for the propositions that the RW program is referring to. The database contains the actual values of these propositions. The SQL code therefore evaluates expressions over the database according to the current state of the system. When applied to a real system, the database would presumably also be referenced to determine if access should be granted to underlying data, eg to the pdf of a paper or a review. Here is a quote explaining the role of the sql expressions: "Logical expressions in RW are converted into conditions which are enclosed within _Condition Tags_. For each rule the _Condition Tag_ is called to be evaluated if the target evaluation is passed." I don't think anything like this was envisaged in Guelev04, where the plan appeared to be to use the RW language for model checking, ie logical validation. In a sense, the database is used as the "model". Incidentally, this clearly limits access rules to ones which can be evaluated over a single database, and only be direct access to system state. Indirect proofs of validation are not envisaged, even though this might be enormously more efficient. E.g. even if there is a proof that a certain function always evaluates to T, it will have to be re-evaluated every time. },
+}
+
+@InProceedings{Zhang05,
+  author    = {Nan Zhang, Mark D. Ryan and Dimitar Guelev},
+  title     = {Evaluating Access Control Policies Through Model Checking},
+  booktitle = {Eighth Information Security Conference (ISC’05). Lecture Notes in Computer Science},
+  year      = {2005},
+  publisher = {Springer-Verlag},
+  note      = {\url{http://www.cs.bham.ac.uk/~hxq/acpeg.php}},
+  file      = {NanZhang05.pdf},
+  summary   = {author summary:[This paper explains the basic model-checking algorithm [of Nan Zhang et al] for access control systems] This paper appears to take up the topic of policy validation which was initiated in Guelev04, and but which was ommitted from consideration in Zhang04. As in Guelev04, validation is assumed to be achieved by confirming that appropriate coalitions do have access to the underlying resources and inappropriate ones do not, even though they exercise the available mechanisms (for changing permisions, for example) somewhat energetically This paper contains another, different, example - the Employee Incentive Scheme. The aim of validation, in this paper, takes the form: "Given an access control system and a goal, we need to determine whether a group of agents can achieve it." This paper is not very well written. It appears that the main author does not have a good command of english, and the other authors did not contribute sufficiently.},
+}
+
+@InProceedings{Guelev04,
+  author    = {Dimitar P. Guelev and Mark D. Ryan and Pierre-Yves Schobbens},
+  title     = {Model-checking Access Control Policies},
+  booktitle = {Seventh Information Security Conference (ISC’04). Lecture Notes in Computer Science},
+  year      = {2004},
+  publisher = {Springer-Verlag},
+  note      = {\url{http://www.cs.bham.ac.uk/~hxq/acpeg.php}},
+  file      = {Guelev04.pdf},
+  summary   = {author summary:[This one defines our basic model and shows some of its properties]. This paper appears to be near to the initial contribution of the series by Zhang et al. It provides two very useful examples: the conference technical committee example, and an example in the context of the health industry involving delegation. Both of these examples make use of access rule sets in propositional form, ie without any quantifiers. The paper is concerned not just with verifying the access control in individual cases, but also with validating an protocol relative to risks such as deadlocks and allowing invalid access - perhaps even inconsistency - I think. Here is an example of the sort of validation that they claim to achieve: "We also show that it is decidable whether the execution of a certain program by one coalition provides another coalition with temporary opportunities that are sufficient for the achievement of a certain goal, given that the second coalition can interleave its actions with the actions of the first one." The architecture appears to take the form that access rules are propositional and global and distinct from validation rules. The process of validation, of the access rules is defined as proving (by model checking, which makes use of an unnamed programming language (is this what later became RW?) ) that the validity rules are true . This distinction between validity rules and access rules is a weakness. In our approach there is only one set of rules, and the protocol ensures that they always hold, so testing, or proving, validity, is not required as a separate process. The examples appear to only extend to providing the access rules. I don't believe the validity of these access rules is checked in this paper, although the definition of the language, and its investigation is directed to that end. },
+}
+
+@PhdThesis{NanZhangDissertation05,
+  author      = {Nan Zhang},
+  title       = {Generating Verified Access Control Policies through Model Checking},
+  year        = {2005},
+  note        = {\url{http://www.cs.bham.ac.uk/~hxq/acpeg.php}},
+  file        = {NanZhangDissertation05.pdf},
+  institution = {School of Computer Science, University of Birmingham},
+}
+
+@InProceedings{Crispo,
+  author = {Bruno Crispo},
+  title  = {Delegation of Responsibility},
+  year   = {1999},
+  series = {Lecture Notes in Computer Science},
+  file   = {Delegation.pdf},
+}
+
+@Article{AbadiBurrowsLampson93,
+  author  = {Martin Abadi and Michael Burrows and Butler Lampson and Gordon Plotkin},
+  title   = {A calculus for access control in distributed systems},
+  journal = {ACM Transactions on Programming Languages and Systems},
+  year    = {1993},
+  volume  = {15},
+  number  = {4},
+  pages   = {706--734},
+  file    = {AbadiBurrowsLampson93},
+}
+
+@Misc{ModelCheckingWiki10,
+  author  = {wiki},
+  title   = {Model checking},
+  year    = {2010},
+  note    = {\url{http://en.wikipedia.org/wiki/Model_checking}},
+  file    = {see url},
+  summary = {This web site provides a short, simple, explanation of model checking},
+}
+
+@Book{Frege1893,
+  title     = {Grundgesetze der Arithmetik},
+  publisher = {Verlag Hermann Pohle},
+  year      = {1893},
+  author    = {Freidrich Ludwig Gottlob Frege},
+  note      = {\url{https://archive.org/details/bub_gb_LZ5tAAAAMAAJ}},
+  place     = {Jena},
+}
+
+@TechReport{privacyguide2017,
+  author      = {justice connect not-for-profit law},
+  title       = {Privacy Guide, A Guide to Compliance with Privacy Laws in Australia},
+  institution = {justice connect not-for-profit law},
+  year        = {2017},
+  month       = {July},
+}
+
+@TechReport{ism,
+  author      = {Austalian Government, Australian Cyber Security Centre},
+  title       = {Australian Government Information Security Manual},
+  institution = {Australian Cyber Security Centre},
+  year        = {2019},
+  month       = {July},
+  note        = {\url{https://www.cyber.gov.au/sites/default/files/2019-08/Australian%20Government%20Information%20Security%20Manual%20%28August%202019%29.pdf}},
+}
+
+@TechReport{acsc_strategies,
+  author      = {Austalian Government, Australian Cyber Security Centre},
+  title       = {Strategies to Mitigate Cyber Security Incidents -- Mitigation Details},
+  institution = {Australian Cyber Security Centre},
+  year        = {2017},
+  month       = {February},
+  note        = {\url{https://www.cyber.gov.au/sites/default/files/2020-03/PROTECT%20-%20Strategies%20to%20Mitigate%20Cyber%20Security%20Incidents%20%E2%80%93%20Mitigation%20Details%20%28February%202017%29.pdf}},
+}
+
+@Book{Wiener2013,
+  title     = {Cybernetics : Or the Control and Communication in the Animal and the Machine},
+  publisher = {Martino Fine Books},
+  year      = {2013},
+  author    = {Wiener, Norbert},
+}
+
+@Misc{ClaudeShannonWiki,
+  author = {wiki},
+  title  = {Claude Shannon},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Claude_Shannon}},
+  file   = {see url},
+}
+
+@Misc{MoodleWiki,
+  author = {wiki},
+  title  = {Moodle},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Moodle}},
+  file   = {see url},
+}
+
+@Book{Cohen1966a,
+  title     = {Set theory and the continuum hypothesis},
+  publisher = {W. A. Benjamin, Inc.},
+  year      = {1966},
+  author    = {Paul J. Cohen},
+  place     = {New York},
+}
+
+@InProceedings{Hadaad15,
+  author    = {Nabeel Hadaad and Drury, Luke and Ron Addie},
+  title     = {Protecting services from security mis-configuration},
+  booktitle = {International Telecommunication Networks and Applications Conference (ITNAC)},
+  year      = {2015},
+}
+
+@InProceedings{sheniar2018experiments,
+  author       = {Sheniar, Dawood and Hadaad, Nabeel and Martin, David and Addie, Ron and Abdullah, Shahab},
+  title        = {Experiments and proofs in web-service security},
+  booktitle    = {2018 28th International Telecommunication Networks and Applications Conference (ITNAC)},
+  year         = {2018},
+  pages        = {1--6},
+  organization = {IEEE},
+}
+
+@InProceedings{sheniar2019Graph,
+  author       = {Sheniar, Dawood and Hadaad, Nabeel and Addie, Ron},
+  title        = {The Inference Graph of Cybersecurity Rules},
+  booktitle    = {2019 29th International Telecommunication Networks and Applications Conference (ITNAC)},
+  year         = {2019},
+  pages        = {3--8},
+  organization = {IEEE},
+}
+
+@Article{Forbes1997,
+  author  = {Anthony Forbes},
+  title   = {A large pair of twin primes},
+  journal = {Math. Comput.},
+  year    = {1997},
+  volume  = {66},
+  pages   = {451-455},
+}
+
+@Book{Heyting1956,
+  title     = {Intuitionism. An introduction},
+  publisher = {North-Holland Publishing Company},
+  year      = {1956},
+  author    = {A. Heyting},
+  series    = {Studies in logic and the foundations of mathematics},
+  place     = {Amsterdam},
+}
+
+@Misc{ModalLogicWiki,
+  author = {wiki},
+  title  = {Modal Logic},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Modal_logic}},
+  file   = {see url},
+}
+
+@Misc{onetimepad,
+  author = {wiki},
+  title  = {One-time pad},
+  year   = {2019},
+  note   = {\url{hhttps://en.wikipedia.org/wiki/One-time_pad}},
+  file   = {see url},
+}
+
+@TechReport{ascii,
+  author      = {American Standards Association (ASA)},
+  title       = {American Standard Code for Information Interchange, ASA X3.4-1963},
+  institution = {American Standards Association (ASA)},
+  year        = {1963},
+}
+
+@Misc{VigenereWiki,
+  author = {wiki},
+  title  = {Vigen\'ere cipher},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher}},
+  file   = {see url},
+}
+
+@Misc{ViginereCode,
+  author = {wiki},
+  title  = {Vigen\`ere Cipher},
+  year   = {2019},
+  note   = {\url{https://www.geeksforgeeks.org/vigenere-cipher/}},
+  file   = {see url},
+}
+
+@Misc{ViginereCryptanalysisCode,
+  author = {wiki},
+  title  = {Vigen\`ere cipher/Cryptanalysis},
+  year   = {2019},
+  note   = {\url{https://rosettacode.org/wiki/Vigen%C3%A8re_cipher/Cryptanalysis#Python}},
+  file   = {see url},
+}
+
+@Misc{DiffieHellmanWiki,
+  author = {wiki},
+  title  = {Diffie–Hellman key exchange},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange}},
+  file   = {see url},
+}
+
+@TechReport{RFC7231,
+  author      = {R. Fielding and J. Reschke},
+  title       = {Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content},
+  institution = {{IETF}},
+  year        = {2014},
+  number      = {{RFC} 7231},
+  month       = {June},
+  note        = {\url{https://tools.ietf.org/html/rfc7231}},
+  annote      = {https},
+}
+
+@Misc{httpsWiki,
+  author = {wiki},
+  title  = {HTTPS},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/HTTPS}},
+  file   = {see url},
+}
+
+@TechReport{RFC8446,
+  author      = {E. Rescorla},
+  title       = {The Transport Layer Security ({TLS}) Protocol Version 1.3},
+  institution = {{IETF}},
+  year        = {2018},
+  number      = {{RFC} 8446},
+  month       = {August},
+  note        = {\url{https://tools.ietf.org/html/rfc8446}},
+  annote      = {https},
+  editor      = {E. Rescorla},
+}
+
+@TechReport{PKCS1,
+  author      = {{RSA Laboratories}},
+  title       = {PKCS \#1 v2.2: RSA Cryptography Standard},
+  institution = {{RSA Laboratories}},
+  year        = {2012},
+  month       = {October},
+  note        = {\url{https://www.emc.com/collateral/white-papers/h11300-pkcs-1v2-2-rsa-cryptography-standard-wp.pdf}},
+}
+
+@Misc{TLSWiki,
+  author = {wiki},
+  title  = {Transport Layer Security},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Transport_Layer_Security}},
+  file   = {see url},
+}
+
+@TechReport{X.509,
+  author      = {ISO},
+  title       = {Information technology – Open Systems Interconnection – The Directory: Public-key and attribute certificate frameworks},
+  institution = {International Telecommunication Union},
+  year        = {2016},
+  month       = {October},
+  note        = {\url{https://www.itu.int/net4/ITU-T/search/api/redirection?dest=http\%3A\%2F\%2Fhandle.itu.int\%2F11.1002\%2F1000\%2F13031-en\&position=1\&page=2}},
+  series      = {X.509: DATA NETWORKS, OPEN SYSTEM COMMUNICATIONS AND SECURITY},
+}
+
+@InCollection{lenstra2006key,
+  author    = {Lenstra, Arjen K},
+  title     = {Key lengths},
+  booktitle = {Handbook of Information Security, Information Warfare, Social, Legal, and International Issues and Security Foundations},
+  publisher = {Wiley},
+  year      = {2006},
+  editor    = {Bidgoli, Hossein},
+  pages     = {617-635},
+}
+
+@Misc{X.509Wiki,
+  author = {wiki},
+  title  = {X.509},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/X.509}},
+  file   = {see url},
+}
+
+@TechReport{RFC5280,
+  author      = {D. Cooper and S. Santesson and S. Farrell and S. Boeyen and R. Housley and W. Polk},
+  title       = {Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile},
+  institution = {{IETF}},
+  year        = {2008},
+  number      = {{RFC} 5280},
+  month       = {May},
+  note        = {\url{https://tools.ietf.org/html/rfc5280}},
+}
+
+@TechReport{RFC4158,
+  author      = {M. Cooper and Y. Dzambasow and P. Hesse and S. Joseph and R. Nicholas},
+  title       = {Internet X.509 Public Key Infrastructure: Certification Path Building},
+  institution = {{IETF}},
+  year        = {2005},
+  number      = {{RFC} 4158},
+  month       = {September},
+  note        = {\url{https://tools.ietf.org/html/rfc4158}},
+}
+
+@Misc{hashfnWiki,
+  author = {wiki},
+  title  = {Cryptographic hash function},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Cryptographic_hash_function}},
+  file   = {see url},
+}
+
+@TechReport{RFC1321,
+  author      = {R. Rivest},
+  title       = {The MD5 Message-Digest Algorithm},
+  institution = {{IETF}},
+  year        = {1992},
+  number      = {{RFC} 1321},
+  month       = {April},
+  note        = {\url{https://tools.ietf.org/html/rfc1321}},
+}
+
+@TechReport{RFC3174,
+  author      = {D. Eastlake and P. Jones},
+  title       = {US Secure Hash Algorithm 1 (SHA1)},
+  institution = {{IETF}},
+  year        = {2001},
+  number      = {{RFC} 3174},
+  month       = {September},
+  note        = {\url{https://tools.ietf.org/html/rfc3174}},
+}
+
+@TechReport{Eastlake2001,
+  author      = {D. Eastlake and P. Jones},
+  title       = {US Secure Hash Algorithm 1 (SHA1)},
+  institution = {{IETF}},
+  year        = {2001},
+  number      = {{RFC} 3174},
+  month       = {September},
+  note        = {\url{}},
+}
+
+@Misc{sha2Wiki,
+  author = {wiki},
+  title  = {SHA-2},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/SHA-2}},
+  file   = {see url},
+}
+
+@Misc{digitalsignatureWiki,
+  author = {wiki},
+  title  = {Digital signature},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Digital_signature}},
+  file   = {see url},
+}
+
+@Article{Rivest78amethod,
+  author  = {R. L. Rivest and A. Shamir and L. Adleman},
+  title   = {A method for obtaining digital signatures and public-key cryptosystems},
+  journal = {Communications of the ACM},
+  year    = {1978},
+}
+
+@Misc{RSAWiki,
+  author = {wiki},
+  title  = {{RSA} (cryptosystem)},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/RSA_(cryptosystem)}},
+  file   = {see url},
+}
+
+@Misc{DSAWiki,
+  author = {wiki},
+  title  = {Digital Signature Algorithm},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Digital_Signature_Algorithm}},
+  file   = {see url},
+}
+
+@Misc{ECDSAWiki,
+  author = {wiki},
+  title  = {Elliptic Curve Digital Signature Algorithm},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm}},
+  file   = {see url},
+}
+
+@Misc{verisign,
+  author = {Verisign},
+  title  = {Verisign},
+  year   = {2019},
+  note   = {\url{https://www.verisign.com/}},
+  file   = {see url},
+}
+
+@Article{diffie1976new,
+  author    = {Diffie, Whitfield and Hellman, Martin},
+  title     = {New directions in cryptography},
+  journal   = {IEEE transactions on Information Theory},
+  year      = {1976},
+  volume    = {22},
+  number    = {6},
+  pages     = {644--654},
+  publisher = {IEEE},
+}
+
+@Article{rivest1978method,
+  author    = {Rivest, Ronald L and Shamir, Adi and Adleman, Leonard},
+  title     = {A method for obtaining digital signatures and public-key cryptosystems},
+  journal   = {Communications of the ACM},
+  year      = {1978},
+  volume    = {21},
+  number    = {2},
+  pages     = {120--126},
+  publisher = {ACM},
+}
+
+@Misc{DNSsecWiki,
+  author = {wiki and wiki},
+  title  = {Domain Name System Security Extensions},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions}},
+  file   = {see url},
+}
+
+@TechReport{RFC4033,
+  author      = {R. Arends and R. Austein and M. Larson and D. Massey and S. Rose},
+  title       = {DNS Security Introduction and Requirements},
+  institution = {{IETF}},
+  year        = {2005},
+  number      = {{RFC} 4033},
+  month       = {March},
+  note        = {\url{https://tools.ietf.org/html/rfc4033}},
+}
+
+@TechReport{BeyondCorpnet,
+  author = {Rory Ward and Betsy Beyer},
+  title  = {BeyondCorp: A New Approach to Enterprise Security},
+  year   = {2014},
+  note   = {\url{https://research.google/pubs/pub43231/}},
+  pages  = {6--11},
+  volume = {Vol. 39, No. 6},
+}
+
+@Misc{AthenaProjectWiki,
+  author = {wiki},
+  title  = {Project Athena},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Project_Athena}},
+  file   = {see url},
+}
+
+@Misc{KerberosWiki,
+  author = {wiki},
+  title  = {Kerberos (protocol)},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Kerberos_(protocol)}},
+  file   = {see url},
+}
+
+@Misc{authenticatedEmailWiki,
+  author = {wiki},
+  title  = {Email authentication},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Email_authentication}},
+  file   = {see url},
+}
+
+@Misc{BourneShellWiki,
+  author = {wiki},
+  title  = {Bourne Shell},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Bourne_shell}},
+  file   = {see url},
+}
+
+@Misc{CshellWiki,
+  author = {wiki},
+  title  = {C Shell},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/C_shell}},
+  file   = {see url},
+}
+
+@Misc{LinuxWiki,
+  author = {wiki},
+  title  = {Linux},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Linux}},
+  file   = {see url},
+}
+
+@Misc{bashWiki,
+  author = {wiki},
+  title  = {Bash (Unix Shell)},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Bash_(Unix_shell)}},
+  file   = {see url},
+}
+
+@Misc{superuserWiki,
+  author = {wiki},
+  title  = {Superuser},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Superuser}},
+  file   = {see url},
+}
+
+@Misc{Plan9Wiki,
+  author = {wiki},
+  title  = {Plan 9 from Bell Labs},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs}},
+  file   = {see url},
+}
+
+@Misc{ForkBombWiki,
+  author = {wiki},
+  title  = {Fork bomb},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Fork_bomb}},
+  file   = {see url},
+}
+
+@Book{KernighanPike83,
+  title     = {The UNIX Programming Environment},
+  publisher = {Prentice-Hall},
+  year      = {1983},
+  author    = {Brian Kernighan and Rob Pike},
+}
+
+@Misc{WikiLDAP,
+  author = {Wiki},
+  title  = {Lightweight Directory Access Protocol},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol}},
+  file   = {see url},
+}
+
+@Misc{nist2,
+  author = {Nist},
+  title  = {National Institute of Standards and Technology},
+  year   = {2020},
+  note   = {\url{https://www.nist.gov/}},
+  file   = {see url},
+}
+
+@Misc{nsa,
+  author = {NSA},
+  title  = {National Security Agency},
+  year   = {2020},
+  note   = {\url{https://nsa.gov/}},
+  file   = {see url},
+}
+
+@Misc{WikiNIS,
+  author = {wiki},
+  title  = {Network Information Service},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Network_Information_Service}},
+  file   = {see url},
+}
+
+@Misc{gitolitewebpage,
+  author = {Sitaram Chamarty},
+  title  = {Hosting Git Repositories},
+  year   = {2019},
+  note   = {\url{http://gitolite.com}},
+  file   = {see url},
+}
+
+@Misc{WikiActiveDirectory,
+  author = {wiki},
+  title  = {Active Directory},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Active_Directory}},
+  file   = {see url},
+}
+
+@Misc{WikiRadius,
+  author = {wiki},
+  title  = {RADIUS},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/RADIUS}},
+  file   = {see url},
+}
+
+@Misc{WikiPAM,
+  author = {wiki},
+  title  = {Pluggable authentication module},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Pluggable_authentication_module}},
+  file   = {see url},
+}
+
+@Misc{WikiBoot,
+  author = {wiki},
+  title  = {Booting},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Booting#Modern_boot_loaders}},
+  file   = {see url},
+}
+
+@Misc{WikiGrub,
+  author = {wiki},
+  title  = {GNU GRUB},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/GNU_GRUB}},
+  file   = {see url},
+}
+
+@Misc{FreeBSDwebpage,
+  author = {FreeBSD.org},
+  title  = {FreeBSD -- the power to serve},
+  year   = {2019},
+  note   = {\url{https://www.freebsd.org/}},
+  file   = {see url},
+}
+
+@Misc{WikiLinuxDistro,
+  author = {wiki},
+  title  = {Linux distribution},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Linux_distribution}},
+  file   = {see url},
+}
+
+@Misc{WikiSysV,
+  author = {wiki},
+  title  = {UNIX System V},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/UNIX_System_V}},
+  file   = {see url},
+}
+
+@Misc{RAIDWiki,
+  author = {wiki},
+  title  = {RAID},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/RAID}},
+  file   = {see url},
+}
+
+@Misc{NovellWiki,
+  author = {wiki},
+  title  = {Novell},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Novell}},
+  file   = {see url},
+}
+
+@Misc{ietf,
+  author = {IETF},
+  title  = {ietf.org},
+  year   = {2019},
+  note   = {\url{https://www.ietf.org/}},
+  file   = {see url},
+}
+
+@TechReport{RFC3935,
+  author      = {H. Alvestrand},
+  title       = {A Mission Statement for the IETF},
+  institution = {{IETF}},
+  year        = {2004},
+  number      = {{RFC} 3935},
+  month       = {October},
+  note        = {\url{https://tools.ietf.org/html/rfc3935}},
+}
+
+@InProceedings{Rowe2011,
+  author    = {Rowe, Dale C. and Lunt, Barry M. and Ekstrom, Joseph J.},
+  title     = {The Role of Cyber-security in Information Technology Education},
+  booktitle = {Proceedings of the 2011 Conference on Information Technology Education},
+  year      = {2011},
+  series    = {SIGITE '11},
+  pages     = {113--122},
+  address   = {New York, NY, USA},
+  publisher = {ACM},
+  acmid     = {2047628},
+  doi       = {10.1145/2047594.2047628},
+  file      = {RoweLuntEkstrom.pdf},
+  isbn      = {978-1-4503-1017-8},
+  keywords  = {cyber security, information assurance and security, information technology, model curriculum},
+  location  = {West Point, New York, USA},
+  numpages  = {10},
+  url       = {http://doi.acm.org/10.1145/2047594.2047628},
+}
+
+@InProceedings{Conklin2006,
+  author    = {A. {Conklin}},
+  title     = {Cyber Defense Competitions and Information Security Education: An Active Learning Solution for a Capstone Course},
+  booktitle = {Proceedings of the 39th Annual Hawaii International Conference on System Sciences (HICSS'06)},
+  year      = {2006},
+  volume    = {9},
+  pages     = {220b-220b},
+  month     = {Jan},
+  doi       = {10.1109/HICSS.2006.110},
+  issn      = {1530-1605},
+  keywords  = {Information security;Decision making;Educational programs;Testing;Computer security;Information management;Collaborative work;Collaboration;Art;Environmental management},
+}
+
+@Article{Bishop2003,
+  author   = {M. {Bishop}},
+  title    = {What is computer security?},
+  journal  = {IEEE Security Privacy},
+  year     = {2003},
+  volume   = {1},
+  number   = {1},
+  pages    = {67-69},
+  month    = {Jan},
+  issn     = {1540-7993},
+  doi      = {10.1109/MSECP.2003.1176998},
+  keywords = {security of data;data integrity;computer network management;network security;cybersecurity;infrastructure;routers;domain name servers;cyberspace;security requirements;security policy;security mechanisms;security assurances;security components;Data security;Computer network management},
+}
+
+@Article{MirkovicBenzel2012,
+  author   = {J. {Mirkovic} and T. {Benzel}},
+  title    = {Teaching Cybersecurity with DeterLab},
+  journal  = {IEEE Security Privacy},
+  year     = {2012},
+  volume   = {10},
+  number   = {1},
+  pages    = {73-76},
+  month    = {Jan},
+  issn     = {1540-7993},
+  doi      = {10.1109/MSP.2012.23},
+  keywords = {security of data;teaching;cybersecurity teaching;DeterLab;DETER project;cyberdefense technology;free-for-use experimental facility;DETER innovations;cybersecurity innovators;cyberdefender;Computer security;Computer science education;Manuals;Education courses;Privacy;DETER project;DeterLab;computer security;cybersecurity;computer science education;computer security education},
+}
+
+@InProceedings{Matthew2012,
+  author    = {G. {Mathew}},
+  title     = {Security considerations and reference architecture of a cyber computing infrastructure for online education},
+  booktitle = {2012 IEEE Symposium on E-Learning, E-Management and E-Services},
+  year      = {2012},
+  pages     = {1-6},
+  month     = {Oct},
+  doi       = {10.1109/IS3e.2012.6414959},
+  file      = {vizsec01s-mathew.pdf},
+  keywords  = {computer aided instruction;security of data;security considerations;reference architecture;cyber computing infrastructure;online course;top-tier universities;learning management systems;face-to-face lectures;educational campus environments;online educational environments;Servers;Software;Computer architecture;Educational institutions;Licenses;Security;online education;cyber computing infrastructure;virtual computing lab},
+}
+
+@Article{Kortjan:2014:1015-7999:29,
+  author           = {Kortjan, Noluxolo and Von Solms, Rossouw},
+  title            = {A conceptual framework for cyber-security awareness and education in SA : research article},
+  journal          = {South African Computer Journal},
+  year             = {2014},
+  volume           = {52},
+  number           = {1},
+  pages            = {29-41},
+  issn             = {1015-7999},
+  abstract         = {The Internet is becoming increasingly interwoven in the daily lives of many individuals, organisations and nations. It has, to a large extent, had a positive effect on the way people communicate. It has also introduced new avenues for business; and it has offered nations an opportunity
+to govern online. Nevertheless, although cyberspace offers an endless list of services and opportunities, it is also accompanied by many risks, of which many Internet users are not aware. As such, various countries have developed and implemented cyber-security awareness and education measures
+to counter the perceived ignorance of the Internet users. However, there is currently a definite lack in South Africa (SA) in this regard; as there are currently, little government-led and sponsored cyber-security awareness and education initiatives. The primary research objective of this
+paper, therefore, is to propose a cyber-security awareness and education framework for SA that would assist in creating a cyber-secure culture in SA among all of the users of the Internet. This framework will be developed on the basis of key factors extrapolated from a comparative analysis
+of relevant developed countries.},
+  file             = {KortjanSolms2014.pdf},
+  itemtype         = {ARTICLE},
+  keyword          = {K.4, Cyber-security awareness and education, South Africa, Cyber-security, K.6.5},
+  parent_itemid    = {infobike://sabinet/comp},
+  publication_date = {2014-07-01T00:00:00},
+  publishercode    = {sabinet},
+  url              = {https://www.ingentaconnect.com/content/sabinet/comp/2014/00000052/00000001/art00004},
+}
+
+@InProceedings{van2014emergence,
+  author    = {Van den Berg, Jan and Van Zoggel, Jacqueline and Snels, Mireille and Van Leeuwen, Mark and Boeke, Sergei and van de Koppen, Leo and Van der Lubbe, Jan and Van den Berg, Bibi and De Bos, Tony},
+  title     = {On (the emergence of) cyber security science and its challenges for cyber security education},
+  booktitle = {The NATO IST-122 Cyber Security Science and Engineering Symposium},
+  year      = {2014},
+  file      = {BergZSLBK.pdf},
+}
+
+@Book{Evans2019,
+  title     = {Cybersecurity: What You Need to Know About Computer and Cyber Security, Social Engineering, The Internet of Things + An Essential Guide to Ethical Hacking for Beginners},
+  publisher = {Amazon},
+  year      = {2019},
+  author    = {Lester Evans},
+  comment   = {This book seems rather superficial},
+}
+
+@Book{TroncoreAbling2019,
+  title     = {Cybersecurity Ops with bash},
+  publisher = {O'Reilly},
+  year      = {2019},
+  author    = {Paul Troncore and Carl Albing},
+}
+
+@Book{McGraw2006,
+  title     = {Software security -- building security in},
+  publisher = {Addison-Wesley},
+  year      = {2006},
+  author    = {Gary McGraw},
+}
+
+@Book{Nastase2019,
+  title     = {Hacking for Beginners: Your Guide for Learning the Basics of Hacking and Kali Linux (CyberSecurity and Hacking Book 2)},
+  publisher = {Amazon},
+  year      = {2018},
+  author    = {Ramon Nastase},
+}
+
+@Book{Steinberg2019,
+  title     = {Cybersecurity For Dummies},
+  publisher = {Wiley},
+  year      = {2019},
+  author    = {Joseph Steinberg},
+}
+
+@Book{Schoenfield2015,
+  title     = {Securing systems : applied security architecture and threat models},
+  publisher = {CRC Press is an imprint of the Taylor \& Francis Group, an informa business},
+  year      = {2015},
+  author    = {Schoenfield, Brook S. E.},
+  address   = {Boca Raton, FL},
+  isbn      = {9781482233988},
+  abstract  = {Detailing the time-tested practices of experienced security architects, this book explains how to deliver the right security at the right time in the implementation lifecycle. All types of systems, from the simplest applications to complex, enterprise-grade, hybrid cloud architectures are covered. Questions addressed include: When should the security architect begin the analysis?; At what points can a security architect add the most value?; What are the activities the architect must execute?; How are these activities delivered?; What is the set of knowledge domains applied to the analysis?; What are the outputs?; What are the tips and tricks that make security architecture risk assessment easier? To help build skill in assessing architectures for security, six sample assessments are provided. Each assessment examines a different type of system architecture and introduces at least one new pattern for security analysis. -- Edited summary from book.},
+  booktitle = {Securing systems : applied security architecture and threat models},
+  keywords  = {Computer networks -- Security measures},
+  language  = {eng},
+}
+
+@Book{Rerup2018,
+  title     = {Hands-on cybersecurity for architects : plan and design robust security architectures},
+  publisher = {Packt Publishing},
+  year      = {2018},
+  author    = {Rerup, Neil},
+  address   = {Birmingham, UK},
+  isbn      = {9781788627238},
+  abstract  = {Security Architecture is the design artifacts that describe how the security controls are positioned and how they relate to the overall systems architecture. This book will serve the purpose to maintain the system's quality attributes such as confidentiality, integrity and availability and ensure that your architecture has a raised level of ...},
+  booktitle = {Hands-on cybersecurity for architects : plan and design robust security architectures},
+  keywords  = {Computer network architectures -- Security measures},
+  language  = {eng},
+}
+
+@Misc{CrackWiki,
+  author = {wiki},
+  title  = {Crack (password software)},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Crack_(password_software)}},
+  file   = {see url},
+}
+
+@Misc{BIOSWiki,
+  author = {Wiki},
+  title  = {BIOS},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/BIOS}},
+}
+
+@Misc{IPsecWiki,
+  author = {Wiki},
+  title  = {IPsec},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/IPsec}},
+}
+
+@TechReport{RFC4303,
+  author      = {S. Kent},
+  title       = {IP Encapsulating Security Payload (ESP)},
+  institution = {{IETF}},
+  year        = {2005},
+  number      = {{RFC} 4303},
+  month       = {December},
+  note        = {\url{https://www.ietf.org/rfc/rfc4303.txt}},
+}
+
+@TechReport{RFC6071,
+  author      = {S. Frankel and S. Krishnan},
+  title       = {IP Security (IPsec) and Internet Key Exchange (IKE) Document Roadmap},
+  institution = {{IETF}},
+  year        = {2011},
+  number      = {{RFC} 6071},
+  month       = {February},
+  note        = {\url{https://www.ietf.org/rfc/rfc6071.txt}},
+}
+
+@TechReport{RFC4301,
+  author      = {S. Kent and K. Seo},
+  title       = {Security Architecture for the Internet Protocol},
+  institution = {{IETF}},
+  year        = {2011},
+  number      = {{RFC} 4301},
+  month       = {February},
+  note        = {\url{https://www.ietf.org/rfc/rfc4301.txt}},
+}
+
+@TechReport{RFC5406,
+  author      = {S. Bellovin},
+  title       = {Guidelines for Specifying the Use of IPsec Version 2},
+  institution = {{IETF}},
+  year        = {2009},
+  number      = {{RFC} 5406},
+  month       = {February},
+  note        = {\url{https://www.ietf.org/rfc/rfc5406.txt}},
+}
+
+@Misc{sshWiki,
+  author = {Wiki},
+  title  = {Secure Shell},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Secure_Shell}},
+}
+
+@Misc{acsc,
+  author = {ACSC},
+  title  = {Australian Cyber-Security Centre},
+  year   = {2019},
+  note   = {\url{https://www.cyber.gov.au/}},
+}
+
+@Misc{nist,
+  author = {National Institute of Standards and Technology},
+  title  = {National Institute of Standards and Technology, {US} Department of Commerce},
+  year   = {2020},
+  note   = {\url{https://www.nist.gov/}},
+}
+
+@Misc{auscert,
+  author = {Auscert},
+  title  = {Australian Cyber Emergency Response Team},
+  year   = {2019},
+  note   = {\url{https://www.auscert.org.au/}},
+}
+
+@Misc{hardwaresecurityWiki,
+  author = {Wiki},
+  title  = {Hardware security},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Hardware_security}},
+}
+
+@Misc{hsmWiki,
+  author = {Wiki},
+  title  = {Hardware security module},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Hardware_security_module}},
+}
+
+@Misc{rfc4120,
+  author      = {C. Neuman and T. Yu and S. Hartman and K. Raeburn},
+  title       = {The Kerberos Network Authentication Service (V5)},
+  month       = {July},
+  year        = {2005},
+  note        = {\url{https://tools.ietf.org/html/rfc4120}},
+  institution = {{IETF}},
+  number      = {{RFC} 4120},
+}
+
+@TechReport{RFC4511,
+  author      = {J. Sermersheim},
+  title       = {Lightweight Directory Access Protocol (LDAP): The Protocol},
+  institution = {{IETF}},
+  year        = {2006},
+  number      = {{RFC} 4511},
+  month       = {June},
+  note        = {\url{https://tools.ietf.org/html/rfc4511}},
+}
+
+@TechReport{RFC4510,
+  author      = {K. Zeilenga},
+  title       = {Lightweight Directory Access Protocol (LDAP): Technical Specification Road Map},
+  institution = {{IETF}},
+  year        = {2006},
+  number      = {{RFC} 4510},
+  month       = {June},
+  note        = {\url{https://tools.ietf.org/html/rfc4510}},
+}
+
+@TechReport{RFC4513,
+  author      = {R. Harrison},
+  title       = {Lightweight Directory Access Protocol (LDAP): Authentication Methods and Security Mechanisms},
+  institution = {{IETF}},
+  year        = {2006},
+  number      = {{RFC} 4513},
+  month       = {June},
+  note        = {\url{https://tools.ietf.org/html/rfc4513}},
+}
+
+@Misc{ssoWiki,
+  author = {Wiki},
+  title  = {Single sign-on},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Single_sign-on}},
+}
+
+@Misc{hivintweb,
+  author = {Hivint},
+  title  = {Hivint},
+  year   = {2019},
+  note   = {\url{https://hivint.com/}},
+}
+
+@Misc{tssweb,
+  author = {Trusted Security Services},
+  title  = {Trusted Security Services},
+  year   = {2019},
+  note   = {\url{https://www.tsscyber.com.au/}},
+}
+
+@TechReport{cybersecurityportalcoursetrainingguide,
+  author = {Hivint},
+  title  = {Skills and Career Guide},
+  year   = {2018},
+  month  = {February},
+  note   = {\url{https://hivint.com/}},
+  url    = {www.securitycolony.com},
+}
+
+@Misc{crestweb,
+  author = {Crest},
+  title  = {The Council of Registered Ethical Security Testers},
+  year   = {2019},
+  note   = {\url{https://www.crestaustralia.org/}},
+}
+
+@Misc{oscpweb,
+  author = {Offensive Security},
+  title  = {Industry-Defining Penetration Testing Courses and Certifications For Information Security Professionals},
+  year   = {2019},
+  note   = {\url{https://www.offensive-security.com/}},
+}
+
+@Misc{securitycentricweb,
+  author = {Security Centric},
+  title  = {Security Centric},
+  year   = {2019},
+  note   = {\url{https://www.securitycentric.com.au}},
+}
+
+@Misc{sscpweb,
+  author = {IT SECURITY CAREER},
+  title  = {SSCP CERTIFICATION},
+  year   = {2019},
+  note   = {\url{https://itsecuritycareer.com/cybersecurity-education/certifications/sscp/}},
+}
+
+@Misc{cehWiki,
+  author = {Wiki},
+  title  = {Certified Ethical Hacker},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Certified_Ethical_Hacker}},
+}
+
+@Book{Murphy2015,
+  title     = {SCCP (ISC$)^2$ Systems Security Certified Practitioner Official Study Guide},
+  publisher = {Sybex (a Wiley brand)},
+  year      = {2015},
+  author    = {George B. Murphy},
+}
+
+@Book{ChappleSG2018,
+  title     = {CISSP Certified Information Systems Security Professional Official Study Guide},
+  publisher = {Sybex (a Wiley brand)},
+  year      = {2018},
+  author    = {Mike Chappie and James Michael Stewart and Darril Gibson},
+}
+
+@Book{KleimanCCCGVW2007,
+  title     = {The official CHFI Exam 312-40 Study Guide},
+  publisher = {Syngress},
+  year      = {2007},
+  author    = {Kevin Cardwell and Timothy Clinton and Michael Cross and Michael Gregg and Jesse Varsalone and Craig Wright},
+}
+
+@Misc{eccouncilweb,
+  author = {EC-Council},
+  title  = {EC-Council},
+  year   = {2019},
+  note   = {\url{https://www.eccouncil.org/}},
+}
+
+@Misc{SABSAwww,
+  author = {SABSA},
+  title  = {SABSA Enterprise Security Architecture},
+  year   = {2019},
+  note   = {\url{https://sabsa.org/}},
+  file   = {see url},
+}
+
+@Misc{CommunicationsAlliance,
+  author = {Communications Alliance},
+  title  = {Communications Alliance Ltd},
+  year   = {2019},
+  note   = {\url{https://www.commsalliance.com.au/}},
+  file   = {see url},
+}
+
+@TechReport{iCode,
+  author = {Communications Alliance Ltd},
+  title  = {Internet service providers voluntary code of practice for industry self-regulation in the area of cyber security},
+  year   = {2010},
+  note   = {\url{https://www.cert.gov.au/aisi/icode}},
+}
+
+@Misc{DXCweb,
+  author = {DXC Technology},
+  title  = {DXC Technology},
+  year   = {2019},
+  note   = {\url{https://www.dxc.technology/}},
+  file   = {see url},
+}
+
+@TechReport{BSact1992,
+  author      = {Australian Parliament},
+  title       = {Broadcasting Services Act 1992},
+  institution = {Australian Parliament},
+  year        = {1992},
+  month       = {July},
+  note        = {\url{https://www.legislation.gov.au/Series/C2004A04401}},
+}
+
+@TechReport{SPAMact1992,
+  author      = {Australian Parliament},
+  title       = {Spam Act 2003},
+  institution = {Australian Parliament},
+  year        = {2003},
+  month       = {July},
+  note        = {\url{https://www.legislation.gov.au/Details/C2016C00614}},
+}
+
+@TechReport{encryptionbill2019,
+  author      = {Australian Parliament},
+  title       = {Telecommunications (Interception and Access) Regulations 2017},
+  institution = {Australian Parliament},
+  year        = {2019},
+  month       = {March},
+  note        = {\url{https://www.legislation.gov.au/Details/F2019C00160}},
+}
+
+@TechReport{DataRetentionAmmendment2015,
+  author      = {Australian Parliament},
+  title       = {Telecommunications (Interception and Access) Amendment (Data Retention) Bill 2015},
+  institution = {Australian Parliament},
+  year        = {2015},
+  month       = {March},
+  note        = {\url{https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/Bills_Search_Results/Result?bId=r5375}},
+}
+
+@TechReport{PrivacyAct1988,
+  author      = {Australian Parliament},
+  title       = {Privacy Act 1998},
+  institution = {Australian Parliament},
+  year        = {2018},
+  month       = {July},
+  note        = {\url{https://www.legislation.gov.au/Details/C2019C00025/c4f0ba64-dd6c-4b69-8d81-d4a8a1ef3334}},
+}
+
+@TechReport{cyberstrategy2016,
+  author      = {Australian Government},
+  title       = {Australia’s Cyber Security Strategy},
+  institution = {Australian Government},
+  year        = {2016},
+  month       = {April},
+  note        = {\url{https://cybersecuritystrategy.homeaffairs.gov.au/sites/all/themes/cybersecurity/img/PMC-Cyber-Strategy.pdf}},
+}
+
+@Misc{MSSDLCWiki,
+  author = {Wiki},
+  title  = {Microsoft Security Development Lifecycle},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Microsoft_Security_Development_Lifecycle}},
+}
+
+@Book{alma991002804129704691,
+  title     = {Secrets and lies : digital security in a networked world},
+  publisher = {John Wiley \& Sons, Inc.},
+  year      = {2015},
+  author    = {Schneier, Bruce},
+  address   = {Indianapolis, Indiana},
+  edition   = {15th anniversary edition.},
+  abstract  = {This anniversary edition which has stood the test of time as a runaway best-seller provides a practical, straight-forward guide to achieving security throughout computer networks. No theory, no math, no fiction of what should be working but isn't, just the facts. Known as the master of cryptography, Schneier uses his extensive field experience with his own clients to dispel the myths that often mislead IT managers as they try to build secure systems. A much-touted section: Schneier's tutorial on just what cryptography (a subset of computer security) can and cannot do for them, has received far-reaching praise from both the technical and business community. -- Unedited summary from book.},
+  booktitle = {Secrets and lies : digital security in a networked world},
+  keywords  = {Computer networks -- Security measures},
+  language  = {eng},
+}
+
+@Book{McMillan2017,
+  title     = {CompTIA Cybersecurity Analyst (CySA+)},
+  publisher = {Pearson},
+  year      = {2017},
+  author    = {McMillan, Troy},
+  isbn      = {978-0-7897-5695-4},
+  language  = {eng},
+}
+
+@Book{Stallings2019,
+  title     = {Effective Cybersecurity},
+  publisher = {Addison-Wesley},
+  year      = {2019},
+  author    = {Stallings, William},
+  isbn      = {978-0-13-477280-6},
+  language  = {eng},
+}
+
+@Book{KaufmanPerlmanSpeciner2002,
+  title     = {Effective Cybersecurity},
+  publisher = {Prentice Hall},
+  year      = {2019},
+  author    = {Kaufman, Charlie and Perlman, Radia and Speciner, Mike},
+  isbn      = {0-13-046019-2},
+  language  = {eng},
+}
+
+@TechReport{iso27000,
+  author      = {the International Organization for Standardization},
+  title       = {Information technology — Security techniques — Information security management systems — Requirements},
+  institution = {the International Organization for Standardization},
+  year        = {2019},
+  number      = {27000},
+  note        = {\url{https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en}},
+}
+
+@Misc{ISF,
+  author = {Information Security Forum},
+  title  = {Information Security Forum},
+  year   = {2019},
+  note   = {\url{https://www.securityforum.org/}},
+}
+
+@Book{alma991003652959704691,
+  title     = {Official (ISC)2 Guide to the CISSP-ISSMP CBK, Second Edition :},
+  publisher = {Isc2 Press},
+  year      = {2015},
+  author    = {(ed), Joseph Steinberg},
+  isbn      = {1466578955},
+  abstract  = {Supplying an authoritative review of key concepts and requirements in the exam, this book provides numerous illustrated examples and practical exercises, and offers insight into creating and implementing effective information security management programs that meet the security needs of today's businesses. -- Edited summary from book.},
+  booktitle = {Official (ISC)2 Guide to the CISSP-ISSMP CBK, Second Edition :},
+  keywords  = {Computer security -- Examinations},
+  language  = {eng},
+}
+
+@Misc{alma991003096429704691,
+  author    = {Ransome, James F.},
+  title     = {Core software security security at the source},
+  year      = {2014},
+  abstract  = {This book outlines a step-by-step process for software security that is relevant to today's technical, operational, business, and development environments. The authors focus on what humans can do to control and manage a secure software development process in the form of best practices and metrics. Although security issues will always exist, this book will teach you how to maximize an organization's ability to minimize vulnerabilities in your software products before they are released or deployed by building security into the development process. This book is targeted towards anyone who is interested in learning about software security in an enterprise environment ... -- Provided by publisher.},
+  address   = {Boca Raton, FL},
+  booktitle = {Core software security security at the source},
+  keywords  = {Computer security},
+  language  = {eng},
+  publisher = {CRC Press},
+}
+
+@InProceedings{5207638,
+  author    = {B. {Yee} and D. {Sehr} and G. {Dardyk} and J. B. {Chen} and R. {Muth} and T. {Ormandy} and S. {Okasaka} and N. {Narula} and N. {Fullagar}},
+  title     = {Native Client: A Sandbox for Portable, Untrusted x86 Native Code},
+  booktitle = {2009 30th IEEE Symposium on Security and Privacy},
+  year      = {2009},
+  pages     = {79-93},
+  month     = {May},
+  doi       = {10.1109/SP.2009.25},
+  issn      = {1081-6011},
+  keywords  = {computer interfaces;Internet;online front-ends;security of data;software performance evaluation;Native client;sandbox;untrusted x86 native code;browser-based applications;software fault isolation;operating system portability;binary code;Web application programming environments;thread support;instruction set extensions;hand-coded assembler;open architecture;Application software;Security;Operating systems;Yarn;Assembly systems;Manuals;Java;High performance computing;Physics computing;Privacy;Security;World Wide Web},
+}
+
+@TechReport{ISF-SGP,
+  author      = {The Information Security Forum},
+  title       = {The Standard of Good Practice for Information Security, 2018},
+  institution = {The Information Security Forum},
+  year        = {2018},
+  note        = {\url{https://www.securityforum.org/}},
+}
+
+@Misc{ISO,
+  author = {International Organization for Standardization},
+  title  = {International Organization for Standardization},
+  year   = {2019},
+  note   = {\url{https://www.iso.org/home.html}},
+}
+
+@Misc{ITU,
+  author = {International Telecommunication Union},
+  title  = {ITU},
+  year   = {2019},
+  note   = {\url{https://www.itu.int/en/Pages/default.aspx}},
+}
+
+@Article{von2013information,
+  author    = {Von Solms, Rossouw and Van Niekerk, Johan},
+  title     = {From information security to cyber security},
+  journal   = {computers \& security},
+  year      = {2013},
+  volume    = {38},
+  pages     = {97--102},
+  publisher = {Elsevier},
+}
+
+@InCollection{rehak2014ways,
+  author    = {Rehak, David and Grasseova, Monika},
+  title     = {The ways of assessing the security of organization information systems through SWOT analysis},
+  booktitle = {Crisis Management: Concepts, Methodologies, Tools, and Applications},
+  publisher = {IGI Global},
+  year      = {2014},
+  pages     = {712--728},
+}
+
+@Misc{ETSI,
+  author = {ETSI},
+  title  = {ETSI},
+  year   = {2020},
+  note   = {\url{https://etsi.org/}},
+}
+
+@Article{von2013information,
+  author    = {Von Solms, Rossouw and Van Niekerk, Johan},
+  title     = {From information security to cyber security},
+  journal   = {computers \& security},
+  year      = {2013},
+  volume    = {38},
+  pages     = {97--102},
+  publisher = {Elsevier},
+}
+
+@InCollection{rehak2014ways,
+  author    = {Rehak, David and Grasseova, Monika},
+  title     = {The ways of assessing the security of organization information systems through SWOT analysis},
+  booktitle = {Crisis Management: Concepts, Methodologies, Tools, and Applications},
+  publisher = {IGI Global},
+  year      = {2014},
+  pages     = {712--728},
+}
+
+@Misc{IEEE,
+  author = {IEEE},
+  title  = {IEEE},
+  year   = {2020},
+  note   = {\url{https://www.ieee.org/}},
+}
+
+@Article{von2013information,
+  author    = {Von Solms, Rossouw and Van Niekerk, Johan},
+  title     = {From information security to cyber security},
+  journal   = {computers \& security},
+  year      = {2013},
+  volume    = {38},
+  pages     = {97--102},
+  publisher = {Elsevier},
+}
+
+@InCollection{rehak2014ways,
+  author    = {Rehak, David and Grasseova, Monika},
+  title     = {The ways of assessing the security of organization information systems through SWOT analysis},
+  booktitle = {Crisis Management: Concepts, Methodologies, Tools, and Applications},
+  publisher = {IGI Global},
+  year      = {2014},
+  pages     = {712--728},
+}
+
+@Misc{FederatedIdWiki,
+  author = {wiki},
+  title  = {Federated Identity},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Federated_identity}},
+  file   = {see url},
+}
+
+@Misc{EuclidsElementsWiki,
+  author = {wiki},
+  title  = {Euclid's Elements},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Euclid%27s_Elements}},
+  file   = {see url},
+}
+
+@Misc{EuclidsElements,
+  author     = {Euclid},
+  title      = {Euclid's Elements of Geometry},
+  year       = {2008},
+  note       = {\url{http://named-data.net/publications/techreports/}},
+  editor     = {J. L. Heidberg},
+  file       = {see url},
+  isbn       = {978-0-6151-7984-1},
+  translator = {Richard Fitzpatrick},
+}
+
+@Misc{DNSWiki,
+  author = {wiki},
+  title  = {Domain Name System},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Domain_Name_System}},
+  file   = {see url},
+}
+
+@Misc{FermatLittleTheoremProofsWiki,
+  author = {Wiki},
+  title  = {Proofs of Fermat's little theorem},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Proofs_of_Fermat%27s_little_theorem}},
+}
+
+@Misc{FermatLastTheoremWiki,
+  author = {Wiki},
+  title  = {Fermat's Last Theorem},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Fermat%27s_Last_Theorem}},
+}
+
+@Misc{FourColourTheoremWiki,
+  author = {Wiki},
+  title  = {Four color theorem},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Four_color_theorem}},
+}
+
+@Misc{PeanoAxiomsWiki,
+  author = {Wiki},
+  title  = {Peano axioms},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Peano_axioms}},
+}
+
+@Misc{WinNTFS,
+  author = {Wiki},
+  title  = {NTFS overview},
+  year   = {2019},
+  note   = {\url{https://docs.microsoft.com/en-us/windows-server/storage/file-server/ntfs-overview}},
+}
+
+@Misc{WinSecureBoot,
+  author = {Microsoft},
+  title  = {Secure boot and device encryption overview},
+  year   = {2019},
+  note   = {\url{https://docs.microsoft.com/en-au/windows-hardware/drivers/bringup/secure-boot-and-device-encryption-overview}},
+}
+
+@Misc{kernelOS,
+  author = {Microsoft},
+  title  = {Secure boot and device encryption overview},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Kernel_(operating_system)}},
+}
+
+@Misc{kernelLinux,
+  author = {Microsoft},
+  title  = {Secure boot and device encryption overview},
+  year   = {2019},
+  note   = {\url{https://www.makeuseof.com/tag/what-is-kernel-in-linux-check-version}},
+}
+
+@Misc{kernelMemorySafe,
+  author = {Wiley},
+  title  = {Toward Linux kernel memory safety},
+  year   = {2019},
+  note   = {\url{https://onlinelibrary.wiley.com/doi/epdf/10.1002/spe.2638}},
+}
+
+@Book{Pearson2016,
+  title     = {Absolut Java},
+  publisher = {Pearson},
+  year      = {2016},
+  author    = {Savitch, Walter},
+  language  = {eng},
+}
+
+@Misc{bufferOver,
+  author = {Veracode},
+  title  = {What is a buffer overflow?},
+  year   = {2019},
+  note   = {\url{https://www.veracode.com/security/buffer-overflow}},
+}
+
+@Misc{bufferOverWiki,
+  author = {Wiki},
+  title  = {Buffer overflow},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Buffer_overflow}},
+}
+
+@Misc{stackOver,
+  author = {Wiki},
+  title  = {Buffer overflow},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Stack_buffer_overflow}},
+}
+
+@Misc{tennisAstralia,
+  author = {Tennis Australia},
+  title  = {Tennis Australia},
+  year   = {2019},
+  note   = {\url{https://www.tennis.com.au/}},
+}
+
+@Misc{loadableKernelModules,
+  author = {Wiki},
+  title  = {Loadable kernel module},
+  year   = {2019},
+  note   = {\url{https://en.wikipedia.org/wiki/Loadable_kernel_module}},
+}
+
+@Misc{wikiHerbrandGodel,
+  author = {Wiki},
+  title  = {General recursive function},
+  year   = {2020},
+  note   = {\url{http://en.wikipedia.org/wiki/General_recursive_function}},
+}
+
+@InBook{Klein_SW_10,
+  pages     = {323--339},
+  title     = {Refinement in the formal verification of {seL4}},
+  publisher = {Springer},
+  year      = {2010},
+  author    = {Klein, Gerwin and Sewell, Thomas and Winwood, Simon},
+  month     = {March},
+  isbn      = {978-1-4419-1538-2},
+  booktitle = {Design and Verification of Microprocessor Systems for High-Assurance Applications},
+  keywords  = {isabelle/hol, sel4},
+  paperurl  = {https://ts.data61.csiro.au/publications/nicta_full_text/3087.pdf},
+  xeditor   = {{David Hardin}},
+}
+
+@InProceedings{klein2009sel4,
+  author    = {Klein, Gerwin and Elphinstone, Kevin and Heiser, Gernot and Andronick, June and Cock, David and Derrin, Philip and Elkaduwe, Dhammika and Engelhardt, Kai and Kolanski, Rafal and Norrish, Michael and others},
+  title     = {seL4: Formal verification of an OS kernel},
+  booktitle = {Proceedings of the ACM SIGOPS 22nd symposium on Operating systems principles},
+  year      = {2009},
+  pages     = {207--220},
+}
+
+@Book{nipkow2002isabelle,
+  title     = {{Isabelle/HOL}: a proof assistant for higher-order logic},
+  publisher = {Springer Science \& Business Media},
+  year      = {2002},
+  author    = {Nipkow, Tobias and Paulson, Lawrence C and Wenzel, Markus},
+  volume    = {2283},
+}
+
+@TechReport{Heiser2020,
+  author      = {Gernot Heiser},
+  title       = {The {seL4R} Microkernel An Introduction},
+  institution = {The seL4 Foundation},
+}
+
+@Misc{rust,
+  author = {Rust},
+  title  = {Rust},
+  year   = {2020},
+  note   = {\url{https://www.rust-lang.org/}},
+}
+
+@Misc{tss,
+  author = {Trusted Security Services},
+  title  = {Trusted Security Services},
+  year   = {2020},
+  note   = {\url{https://www.tsscyber.com.au/}},
+}
+
+@Misc{ironbastion,
+  author = {Iron Bastion},
+  title  = {Iron Bastion},
+  year   = {2020},
+  note   = {\url{https://www.ironbastion.com.au/}},
+}
+
+@Misc{esecure,
+  author = {eSecure},
+  title  = {eSecure},
+  year   = {2020},
+  note   = {\url{https://www.esecure.com.au/}},
+}
+
+@Misc{RFCs,
+  author = {IETF},
+  title  = {RFC Editor},
+  year   = {2020},
+  note   = {\url{https://www.rfc-editor.org/retrieve/}},
+}
+
+@PhdThesis{Hadaad2020,
+  author = {Nabeel Hadaad},
+  title  = {Stakeholder security analysis -- a new approach to security design with example applications},
+  year   = {2020},
+}
+
+@Misc{StuxnetWiki,
+  author = {Wiki},
+  title  = {Stuxnet},
+  year   = {2020},
+  note   = {\url{https://en.wikipedia.org/wiki/Stuxnet}},
+}
+
+@Misc{SELinux,
+  author = {SELinux},
+  title  = {SELinux Project Wiki},
+  year   = {2020},
+  note   = {\url{https://selinuxproject.org/page/Main_Page}},
+}
+
+@Misc{spamassassin,
+  author = {Apache.org},
+  title  = {Apache Spamassassin},
+  year   = {2021},
+  note   = {\url{https://spamassassin.apache.org/}},
+}
+
+@Article{ormandy2011sophail,
+  author = {Ormandy, Tavis},
+  title  = {Sophail: A critical analysis of sophos antivirus},
+  file   = {papers/Sophos_AV_Tavis_Ormandy.pdf},
+}
+
+@TechReport{ormandy2012sophail,
+  author = {Ormandy, Tavis},
+  title  = {Sophail: Applied attacks against sophos antivirus},
+  file   = {papers/sophailv2.pdf},
+}
+
+@TechReport{ANUbreakinreport,
+  author      = {Australian National University},
+  title       = {Incident Report on the Breach of the Australian National University’s Administrative Systems},
+  institution = {Australian National University},
+  year        = {2021},
+  note        = {\url{https://imagedepot.anu.edu.au/scapa/Website/SCAPA190209_Public_report_web_2.pdf}},
+  file        = {papers/ANU_Breakin_Public_report_web_2.pdf},
+}
+
+@Misc{anu_advice_from_ciso,
+  author = {Australian National University Chief Information Security Officer},
+  title  = {Advice from the Chief Information Security Officer},
+  year   = {2021},
+  note   = {\url{https://www.anu.edu.au/news/all-news/advice-from-the-chief-information-security-officer}},
+}
+
+@Misc{rsa,
+  author = {{RSA}},
+  title  = {{RSA}},
+  year   = {2021},
+  note   = {\url{https://www.rsa.com/}},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
