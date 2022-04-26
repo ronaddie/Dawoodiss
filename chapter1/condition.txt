@@ -1,0 +1,33 @@
+Cybersecurity architecture is the practice of articulating the manda tory conditions for the well-being of an organization/business/entity, and creating an ICT plan, and design, which maintains them.
+
+The policies which form part of an organization’s governance directly contribute to the conditions for well-being which we seek to identify and maintain, in cyber-security. These policies need to be ensured, and it is our job to see it done.
+
+According to our definition of cyber-security architecture, it is concerned with defining and maintaining the conditions for well-being of an organization or entity. So, how should these conditions be expressed? And how do we identify what these conditions are?
+
+Governance is not the only source from which we can draw to find conditions which need to be maintained. Another important strategy is risk analysis. In this approach, all possible events, or sequences of events, which could impact on a service are considered and, if the event or sequence of events is sufficiently likely, a strategy for responding to the event is planned.
+
+Examples of a risk include: fire, flood, earthquake, or extremism. Modern organizations usually have plans in place to cope with such events. Cybersecurity is relevant to such risks, although only to the extent that the plan involves the ICT resources
+
+These risks include the possibility that any of the conditions for satisfactory service found in Exercise 2.4 might not hold
+
+The method of analysis and design of security outlined in Chapters 2 and 3 can be applied, methodically, to a component of the whole system, with a view to creating, implementing, and validating a design that archives its intended security objectives.
+
+There are many conditions that can be directly enforced. However, most of the conditions that we seek to ensure are not directly enforceable, but instead will depend on a number of other conditions in a complicated web of logical connections.
+
+There are many conditions that can be directly enforced. However, most of the conditions that we seek to ensure are not directly enforceable, but instead will depend on a number of other conditions in a complicated web of logical connections.
+
+In this chapter, we have developed further the concept that cybersecurity can be rigorously designed into a system by first identifying the conditions which are essential for the well-being of the system, and then proving that these will be met if certain other conditions are met. It is essential, of course, that these conditions which ensure the system is operating successfully are enforced. It is not enough, either, to merely design such a system. Once it is implemented, we need to ensure that the conditions which were to be enforced are, indeed, being enforced. This can only be achieved by appropriate testing. Testing is considered in Chapter 9
+
+A combination of such conditions can be
+formulated which can be enforced, and which also have the property that
+when they are all true, the original objectives that we have been trying to
+ensure, must be true.
+This process of finding conditions which can be enforced, to ensure that risks
+are managed, and objectives attained, can always be achieved. This cannot
+be proved. It can be checked, in individual cases. In this book a number
+of such experiments have been undertaken, and in every case the necessary
+rules were found and proved to be sufficient
+
+Cybersecurity architecture was defined, in Section 1.5, as identifying the conditions for the well-being of an organization, and working out how to ensure that they can be maintained. This is cyber-security on account of the fact that we use information and communication technology to do it. This includes using certificates, digital signatures, networking filtering, protocols, and systems made of software and hardware, when enforcing certain conditions, to achieve it.
+
+

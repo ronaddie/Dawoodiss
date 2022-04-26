@@ -1,8 +1,8 @@
-[Please insert a space before all \cite cmds.]
+[Please insert a space before all \cite cmds.]     ..done
 
 Because it is considered modern,
 -->
-Because of its recent origin,
+Because of its recent origin,     ..done
 
 there seems to be little understanding of what it means
 -->
