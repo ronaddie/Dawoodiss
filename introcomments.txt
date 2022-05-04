@@ -52,4 +52,49 @@ which is more appropriate for the research reported in this dissertation.
 Alternative interpretations, or definitions, of cybersecurity will be considered in more depth
 in Chapter 2.
 
+This is not a conventional view because it includes privacy, safety, financial
+-->
+This definition of cybersecurity includes consideration of privacy, safety, and financial
+
+In all major
+operating systems policies, for all installed applications, are already or soon
+will be an important component of system security.
+-->
+
+In all major
+operating systems policies, for all installed applications, policies are already or soon
+will be an important component of system security.
+
+The current policies may support the practice of unethical issues through cyberspace.
+[This seems to be out of place. At the very least, this sentence should not occur
+in the middle of a paragraph. It would be even better if a new subsection is introduced
+ahead of this sentence.]
+
+These policies seek
+to achieve certain mandatory goals without the other goals.
+[What other goals? ?]
+
+For example, that
+surface web focused on transparency in tracking information sources to the ex-
+tent that the privacy of individuals and institutions was violated by government
+agencies or rights holders.
+[This seems to be an ethical concern; introducing this without some preparation
+will disturb the reader.]
+
+On the other hand, on the deep Internet, this pri-
+vacy is preserved in Tor, to the extent that this privacy is a starting point for
+the creation of a virtual crime world Dark Side (??).
+[Missing entries in your BiBTeX database! Also, you seem to be making a point, but
+the point you are making is not clear. You need to state clearly what you mean, 
+and then provide evidence to support your claim.]
+
+It seems that the lack of
+consistency between the primary objectives is a clear weakness in cybersecurity
+policies.
+[You have not made clear which policies are inconsistent, nor what the inconsistency is.]
+
+Stakeholders need to ”negotiate”
+-->
+Stakeholders need to ``negotiate'' [please use the right quotes]
+
 
