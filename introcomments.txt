@@ -1,0 +1,48 @@
+Comments
+--------
+
+INTRODUCTION --> Introduction
+
+1.1.1 Cybersecurity Definition
+[This material is important, but it might be better placed after some other more basic introductory ideas.]
+
+. Because of it is resent
+-->
+, however, because of its recent
+["resent" means "sent again", whereas "recent" means "in not to distant past"]
+
+Also, the current definitions
+-->
+Also, current interpretations of this term
+
+between governmental, professional and academic
+-->
+between governmental, professional and academic domains
+
+The second rapid developments
+-->
+The second is the rapid development
+
+change in the understanding of some terms
+-->
+change in the inpretation of key terms
+
+by reliable sources
+-->
+in current literature
+
+chapter 2 --> Chapter 2 [Name of chapter. Names have capital letters.]
+
+Then we propose a new definition representing what this term is in a different way.
+-->
+We then propose a new definition, with considerable advantages in clarity and simplicity, 
+which is more appropriate for the research reported in this dissertation.
+[But either of these sentences seems to imply that this new definition will be provided
+later, in Chapter 2. This is not the case. The definition is provided immediately!
+
+If the existing definitions are reviewed in Chapter 2, it is premature to introduce this
+definition here. What is the point of reviewing the definitions later, when you have alredy
+defined the term here? This needs to be re-organisd, or re-expressed. 
+
+One approach would be to discuss the alternative definitions briefly here, and explain
+that these will be discussed at more length later, in Chapter 2.]
