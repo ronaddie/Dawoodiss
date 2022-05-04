@@ -122,6 +122,27 @@ It seems that safety, privacy,
 and in fact all objectives must be taken into account simultaneously.
 [Citations seem to be missing here]
 
+1.1.3 Logic of Cybersecurity
+----------------------------
+One of the most important challenges facing cybersecurity is the automation of
+human values into software values.
+[The heading appears to be inconsistent with the content of this section.]
+
+[However, looking at this constructively, I think the first sentence here 
+reflects your viewpoint accurately, so we need to retain, amplify, and clarify it.
+I suggest to retain the heading "Logic of Cybersecurity" as a sub-heading.
+But, the main heading here should be "Human ethics and values"]
+
+automation --> insertion
+
+[I suspect what you really want to say here is that, fundamentally, 
+human values and ethics should, or must, take precedence in our design 
+of cybersecurity. The reason is that the whole system -- cyberspace --
+is a human system. If it doesn't serve the real needs of humans, it must
+be changed so that it does. You are trying to say this, and you are right.
+It needs to be said. Say it clearly! It is not earwash. By recognising this
+and taking it into account, we will make cyberspace much better.]
+
 
 
 
