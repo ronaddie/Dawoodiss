@@ -97,4 +97,31 @@ Stakeholders need to ”negotiate”
 -->
 Stakeholders need to ``negotiate'' [please use the right quotes]
 
+needs some guidelines or rules;
+-->
+needs some guidelines or rules.
+
+We have proposed, in particular, that
+all parties accept a ”social contract” which is, primarily, that all stakeholders
+honour their own policies.
+[This is an important idea; it is not introduced very effectively here. In particular,
+"have proposed" --> "propose".
+The past tense should be used for ideas presented earlier in the dissertation, not
+for work in already published papers. The reader should not be assumed to have read
+any papers by you or others, until, at the least, they have been discussed in the
+text. Since this is the first mention of "social contracts", it should not be referenced
+as if it has already been mentioned.
+
+A bettr approach here might be to use the future tense and refer to the treatment of this
+topic which will be given later. Future tense can be used for later parts of the dissertation.
+
+The past, present and future tense should be used from the point of view of the reader, 
+assuming that the read the whole dissertation, from start to finish.]
+
+It seems that safety, privacy,
+and in fact all objectives must be taken into account simultaneously.
+[Citations seem to be missing here]
+
+
+
 
