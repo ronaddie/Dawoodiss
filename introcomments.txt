@@ -46,3 +46,10 @@ defined the term here? This needs to be re-organisd, or re-expressed.
 
 One approach would be to discuss the alternative definitions briefly here, and explain
 that these will be discussed at more length later, in Chapter 2.]
+-->
+We now propose a new definition, with considerable advantages in clarity and simplicity, 
+which is more appropriate for the research reported in this dissertation.
+Alternative interpretations, or definitions, of cybersecurity will be considered in more depth
+in Chapter 2.
+
+
