@@ -6,27 +6,27 @@ Because of its recent origin,     ..done
 
 there seems to be little understanding of what it means
 -->
-there are differing interpretations of its meaning
+there are differing interpretations of its meaning   ..done
 
 fluctuate between difference and similarity
 [What does this mean? Please avoid this type of expression. ]
 -->
-fluctuate quite dramatically
+fluctuate quite dramatically  
 [Does the citation really support this assertion? Please make sure it does
-and if not, remove, or move the citation.]
+and if not, remove, or move the citation.] It does         ...done
 
 The second is the rapid developments
 -->
-The second is rapid development
+The second is rapid development                             ...done
 
 This discrepancy in the proposed definitions leads
 -->
-This diversity in assumed definitions leads
+This diversity in assumed definitions leads                  ...done
 
 It is also likely to cause significant
 problems in the context of organizational strategies, stakeholder policy consistency,
 business objectives, or international agreements.
-[or international --> and international]
+[or international --> and international]		    ...done
 
 In this research, we study the existing literature to determine the definitions pro-
 vided for the term cybersecurity by reliable sources.
@@ -46,18 +46,18 @@ adopt the new definition.]
 The definition we now give is somewhat broader than is often adopted
 but it has advantages of applicability and logical consistency which
 we hope the reader will appreciate when it has been tested in a 
-variety of contexts.
+variety of contexts.							...done
 
 Cybersecurity is the logical process
 [This definition should be inside a quote environment, ie \begin{quote} ... \end{quote}
 Also, please put the \em command inside the quote enviroment, which will 
 render this text in italics. Quotation marks (") are not needed if a quote
-environment is used.]
+environment is used.]         ;
 
 to be designed simultaneously
 -->
-to be designed in a fully coordinated manner
-[simultaneity is not the point; the design can be coordinated
+to be designed in a fully coordinated manner						..done
+[simultaneity is not the point; the design can be coordinated				...done
 without it, and simultaneity does not guarantee correct coordination.]
 
 1.1.2 Cybersecurity Policies
@@ -70,7 +70,7 @@ All devices, servers, agents, and even individual applications, running in a com
 device have an explicit or implicit {\em policy} which governs what this particular
 agent or process {\em permits} to occur, on its account. In all major operating systems
 policies, for all installed applications, are already or soon will be an important
-component of system security.
+component of system security.								..done
 
 
 
