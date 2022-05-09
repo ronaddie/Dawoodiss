@@ -1,5 +1,4 @@
-nor can it be guaranteed that people will not exploit the absence of
-such transparency to commit crimes or trade illegally through Deeb web.
+to commit crimes or trade illegally through Deeb web.
 
 ["Deeb web" is mis-spelled, and, in addition, has an inappropriate capital
 letter ("D"), and, in addition to that, lacks the article "the". By
@@ -23,4 +22,26 @@ is a little "softer". I can't think of the right word, or expression,
 at the moment, but I am confident it can be re-expressed a little better
 than this.]
 
+[Having thought about this further, it seems to me that in the West
+there is an important distinction between "immoral" and "illegal".
 
+Any behaviour or action which does not cause harm to another person 
+is unlikely to be declared _illegal_. Therefore, the class of behaviour/actions
+regarded as "immoral" is strictly larger than the class of behaviour/actions
+which are "illegal". 
+
+Likewise, it is unlikely that any behaviour/actions which are regarded
+as immoral by one or another party, or group, but do not cause
+harm to others, will ever be regulated, except by the receiving parties,
+and in that case, it can be imposed as a voluntary constraint.
+
+Another distinction which probably applies here is that the term "immorality"
+is not free from influence from partisan bias; in particular, what is moral
+or immoral varies considerably according to the ethnicity and religion
+of the claimant. The regulation which is generally accepted, over the
+internet, needs, in most cases, to be in accordance with _all_ major
+ethnic and religious principles, not just those of a minority.
+
+If the result is a system of regulation which appears to lack some critical
+features, so be it. The internet was not set up to take the role of
+school chaplin.
