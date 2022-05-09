@@ -11,7 +11,7 @@ rules for capital letters.  They are only used at the start of a sentence,
 for "proper names" (ie the name of something), and in acronyms. It has
 nothing to do with importance. You should understand that the deep web
 is a feature of the Internet. It deserves to be treated as an object,
-hence: "the" is required.
+hence: "the" is required.         ....done
 
 immoral issues
 
