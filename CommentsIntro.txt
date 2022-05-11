@@ -30,7 +30,7 @@ business objectives, or international agreements.
 
 In this research, we study the existing literature to determine the definitions pro-
 vided for the term cybersecurity by reliable sources.
-[Where is this done? Please indicate. E,g, by "we study" --> "we review, below,"]
+[Where is this done? Please indicate. E,g, by "we study" --> "we review, below,"]  ...done with   "in capter2" instead of "below"
 
 Then we propose a new definition
 representing what this term is in a different way.
