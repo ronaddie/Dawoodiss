@@ -1,4 +1,15 @@
 \subsection{Social Contract}
-Social contracts are considered a necessity and an essential factor for the well-being of societies because they regulate their members' relations within those societies \cite{Leviathan}. As social computing \cite{parameswaran2007social}, cyberspace may need a social contract which declares the responsibilities and rights of all members of cyberspace. Any such social contract will need to enable and manage the stakeholders' policies, rather than enforce them. Details of these policies will still need to be the responsibility of stakeholders that participate and contribute to cyberspace. However, the task of this social contract is to enable free and effective development, evolution, and deployment of these policies. 
+Social contracts are considered a necessity and an essential factor
+for the well-being of societies because they regulate their members'
+relations within those societies \cite{Leviathan}. As social computing
+\cite{parameswaran2007social}, cyberspace may need a social contract
+which declares the responsibilities and rights of all members of
+cyberspace. Any such social contract will need to enable and manage
+the stakeholders' policies, rather than enforce them. Details of these
+policies will still need to be the responsibility of stakeholders that
+participate and contribute to cyberspace. However, the task of this
+social contract is to enable free and effective development, evolution,
+and deployment of these policies.
 
-In this dissertation, the need for a social contract for cyberspace is demonstrated and a draft of such a social contract is proposed.
+In this dissertation, the need for a social contract for cyberspace is
+demonstrated and a draft of such a social contract is proposed.
