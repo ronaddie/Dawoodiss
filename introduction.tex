@@ -36,9 +36,20 @@ This definition of cybersecurity includes consideration of privacy, safety, and 
 anything that is mandatory. This view is adopted to allow the different mandatory goals
 to be designed in a fully coordinated manner, which is logically necessary.
 
+\subsection{Human ethics and values}
+Fundamentally, human ethics and values should, or must, take precedence in our design of cybersecurity. The reason is that the whole system -- cyberspace -- is a human system. If it doesn't serve the real needs of humans, it must be changed so that it does[]. 
+
+However, One of the most important challenges facing cybersecurity is the insertion of human values into software values and their maintenance.   
+The more deficient this system is in incorporating these values and ethics, the more the resulting software solutions are dependent on the human factor (stakeholders). Such solutions cannot always be trusted[]. For example, it cannot be guaranteed that governments will not exploit the transparency of tracking in search engines to pursue opponents of their political approach, nor can it be guaranteed that people will not exploit the absence of such transparency to commit crimes  such as illegally trading through the deep web. 
+
+In this dissertation, we have tried to develop a logical framework for cyber security that consists of two main stages. The first is by incorporating  human values and ethics as much as possible into software values through the design of stakeholder policies. The second is to propose a social contract for cyberspace that can manage these policies and ensure their respect by their owners.
+
+By recognizing this and taking it into account, we will make cyberspace much better, especially,  to support the rapid technological development and the increasing online services and to curb cybercrime practices, unethical or illegal activities.
+
 \subsection{Cybersecurity Policies}
 %The discrepancy in the current cybersecurity definitions and the difference in objectives lead to significant problems with policies consistency. Any inconsistency will lead to not being able to work together effectively.
 All devices, servers, agents, and even individual applications, running in a computer-based device have an explicit or implicit {\em policy} which governs what this particular agent or process {\em permits} to occur, on its account. In all major operating systems policies, for all installed applications, policies are already or soon will be an important component of system security.
+
 The current policies may support the practice 
 of unethical issues through cyberspace.
  These policies seek to achieve certain mandatory goals without the other goals.
@@ -73,15 +84,22 @@ agents are consistent, must make use of each agent's entire policy,
 not just a sub-policy in one sense (eg safety) or another. It seems
 that safety, privacy, and in fact all objectives must be taken into
 account simultaneously.
-\subsection{Human ethics and values}
-Fundamentally, human ethics and values should, or must, take precedence in our design of cybersecurity. The reason is that the whole system -- cyberspace -- is a human system. If it doesn't serve the real needs of humans, it must be changed so that it does. 
 
-However, One of the most important challenges facing cybersecurity is the insertion of human values into software values .   
-The more deficient this system is in transforming these values and ethics, the more the resulting software solutions are dependent on the human factor (stakeholders). Such solutions cannot always be trusted. For example, it cannot be guaranteed that governments will not exploit the transparency of tracking in search engines to pursue opponents of their political approach, nor can it be guaranteed that people will not exploit the absence of such transparency to commit crimes or trade illegally through the deep web. 
+\subsection{Objectives, Related Risks and Mandatory conditions}
+In this dissertation,  we seek to illuminate and establish sound principles of security design. Hence, accepting the idea that there are design objectives which necessitate sacrificing services for users is not attractive, and at the very least seems to be a compromise that we should not accept.
 
-In this dissertation, we have tried to develop a logical framework for cyber security that consists of two main stages. The first is through which human values and ethics are transformed as much as possible into software values through the design of stakeholder policies. The second is to propose a social contract for cyberspace that can manage these policies and ensure their respect by their owners
 
-By recognizing this and taking it into account, we will make cyberspace much better, especially,  to support the rapid technological development and the increasing online services and to curb cybercrime practices, unethical  issues and illegal trade.
+In Operations Research, one of the most successful methodologies, over several decades, is optimization. In this framework, a problem is defined by two features: (i) an objective, and (ii) the constraints. These features define an optimization problem, the solution of which is to find the design which maximizes the objective without failing to meet the constraints.
+
+This framework enables us to create a rigorous, scientific framework for many real world problems quite readily. We just have to find the constraints, and the objective, and then solve the optimization problem.
+
+
+When we attempt to put security into this framework, it becomes clear that although it works, accurately, it fails to achieve the right emphasis. In security, the emphasis must be almost exclusively on the constraints. The constraints, in a security problem, are the rules: including business rules, service protection rules, and all the security rules required by the stakeholders. The objective will, in most cases, be obvious, but not particularly relevant.
+
+It is usually felt that there are limited opportunities for achieving cost savings by searching for, or devising, better security strategies. There may be more such opportunities in the future, and this possibility should not, therefore, be entirely neglected. However, for the most part, the challenge, in security design, is not minimizing cost, or maximizing profit, but rather achieving certainty, that all required security rules have been enforced.
+
+Many of the rules expected or mandated by stakeholders fall into fairly standard categories, like legal requirements, ethics, etc, which are fairly similar across different stakeholders. Most of these 
+ requirements are well-known, but nevertheless, these requirements do call for rules that need to be enforced by security design. Therefore, it is useful for us to consider these requirements explicitly. We consider these generic rules first.
 
 \subsection{Logic of Cybersecurity}
  
@@ -113,30 +131,20 @@ proved to be sufficient. Other examples have also been investigated in
 
 
 
-\subsection{Mandatory Objectives}
-In this dissertation,  we seek to illuminate and establish sound principles of security design. Hence, accepting the idea that there are design objectives which necessitate sacrificing services for users is not attractive, and at the very least seems to be a compromise that we should not accept.
-
-
-In Operations Research, one of the most successful methodologies, over several decades, is optimization. In this framework, a problem is defined by two features: (i) an objective, and (ii) the constraints. These features define an optimization problem, the solution of which is to find the design which maximizes the objective without failing to meet the constraints.
-
-This framework enables us to create a rigorous, scientific framework for many real world problems quite readily. We just have to find the constraints, and the objective, and then solve the optimization problem.
-
-
-When we attempt to put security into this framework, it becomes clear that although it works, accurately, it fails to achieve the right emphasis. In security, the emphasis must be almost exclusively on the constraints. The constraints, in a security problem, are the rules: including business rules, service protection rules, and all the security rules required by the stakeholders. The objective will, in most cases, be obvious, but not particularly relevant.
-
-It is usually felt that there are limited opportunities for achieving cost savings by searching for, or devising, better security strategies. There may be more such opportunities in the future, and this possibility should not, therefore, be entirely neglected. However, for the most part, the challenge, in security design, is not minimizing cost, or maximizing profit, but rather achieving certainty, that all required security rules have been enforced.
-
-Many of the rules expected or mandated by stakeholders fall into fairly standard categories, like legal requirements, ethics, etc, which are fairly similar across different stakeholders. Most of these 
- requirements are well-known, but nevertheless, these requirements do call for rules that need to be enforced by security design. Therefore, it is useful for us to consider these requirements explicitly. We consider these generic rules first.
 
  
 \subsection{Social Contract}
+Social contracts are considered a necessity and an essential factor for the well-being of societies because they regulate their members' relations within those societies \cite{Leviathan}. As social computing \cite{parameswaran2007social}, cyberspace may need a social contract which declares the responsibilities and rights of all members of cyberspace. Any such social contract will need to enable and manage the stakeholders' policies, rather than enforce them. Details of these policies will still need to be the responsibility of stakeholders that participate and contribute to cyberspace. However, the task of this social contract is to enable free and effective development, evolution, and deployment of these policies. 
+
+In this dissertation, the need for a social contract for cyberspace is demonstrated and a draft of such a social contract is proposed. 
+
 According to Hobbes \cite{Leviathan}, without a social contract, life is subject to continual fear, and danger of violent death; and the life of man is solitary, poor, nasty, brutish, and short. 
 However, a social contract between the citizens of a society enables them to co-operate effectively, to achieve a better life without the need for constant fear.
 
 Social contracts have been adopted in many modern nations, and in many cases, they appear to provide a good foundation for civil society, providing safety, wide-ranging freedom, with a high standard of living. Attempts to formulate an international social contract have been at best partially successful. There is an international court of justice, but many nations do not accept its jurisdiction \cite{Robertson}.
-
+\if
 The Internet has made computing social  \cite{parameswaran2007social}. In turn, the Internet and the cyberspace based on it, is susceptible to a number of social ills that may befall any society, such as constant harassment, belligerent attacks on property, that is, cyberattacks, and invasions of privacy which seriously compromise the benefits for our social, educational, and commercial lives. By other words, with the convenience and intelligence offered by electronic agents inhabiting the web, and the world of apps, a crowd of unwanted denizens focused on criminality, exploitation, fraud, and chaos have taken the opportunities (of which there are many) to join us in cyberspace.  We must assume that whenever there is an opportunity for error, fraud, deception, or intimidation, it will be exploited. We need to actively defend against criminality, greed, parochialism, and chaos. Are these issues (which are surveyed in more detail in Section ??) due to the absence of a social contract? \\ In this study, We demonstrated the need for a social contract for cyberspace (and the Internet), i.e. a declaration of responsibilities and rights of all members of cyberspace, and also to propose a draft of such a social contract.
+\fi
 %\item \emph{proposed, demonstrated and developed by fair stakeholder policies that are formulated and agreed upon under the umbrella of a proposed social contract}, and then
 %\item  \emph{designed and implemented by software that enforces those policies and their social contract and ensures  all parties are using this software}.
 %\end{itemize}
