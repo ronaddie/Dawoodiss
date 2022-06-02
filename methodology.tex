@@ -1,13 +1,38 @@
 \chapter{Methodology}
 \section{Introduction}
-Cyberspace is the digital creativity environment in which we live and which is controlled by cybersecurity.  Perhaps the basic vision of cybersecurity is to reach a \emph{virtuous} digital world.  In order to reach such a strategic goal, the mission of cybersecurity must be how to insert human ethics and values into software values.  This matter in itself is not easy at all because it requires an ethical philosophy related to cybersecurity.  This philosophy proposes that cyberspace be an \emph{ideal} alternative to the real world as much as possible.  What we mean by \emph{idealism} here is that the presence of each member in this space is effective and not harmful to others.  To achieve this requires answering two important questions.
+Cyberspace is the digital creativity environment in which we live and
+which is controlled by cybersecurity.  Perhaps the basic vision of
+cybersecurity is to reach a \emph{virtuous} digital world.  In order to
+reach such a strategic goal, the mission of cybersecurity must be how
+to insert human ethics and values into software values.  This matter
+in itself is not easy at all because it requires an ethical philosophy
+related to cybersecurity.  This philosophy proposes that cyberspace
+be an \emph{ideal} alternative to the real world as much as possible.
+What we mean by \emph{idealism} here is that the presence of each member
+in this space is effective and not harmful to others.  To achieve this
+requires answering two important questions.
+
 \begin{enumerate}
 \item What is the current presence of members in cyberspace? And,
 \item how can this presence be digitally enhanced to be ideal?
 \end{enumerate}
-      Through this chapter, we tried to provide a convincing answer to both questions by developing a  logical framework for cybersecurity. %that proposes stakeholder policies and a social contract of cyberspace.
+
+Through this chapter, we tried to provide a convincing answer to both
+questions by developing a  logical framework for cybersecurity. 
+%that proposes stakeholder policies and a social contract of cyberspace.
+
+
 
 \section{Logical analysis}
+
+[One of the methods used in this work is to apply logic to cybersecurity objectives. 
+
+In particular, logic can be used to show {\em how} cybersecurity objectives can
+be met. Logic is the appropriate tool, for example, if the objective sought can
+be shown to follow, logically, from certain other rules.
+
+In some cases it may also be possible, and useful, to show that certain objectives can {\em only}
+be met in certain ways.]
 
 \section{Experiments using examples}
 \iflonger
@@ -20,12 +45,17 @@ that a more methodical security design philosophy which can guarantee
 secure design is not available.
 \fi
 
-\subsection{Web Service Security Design}\label{webservicessecurity}
+\section{Gathering ideas and reviewing ideas from literature}
+
+
+An important methodology in this dissertation, as in all scientific work, is to gather the thoughts of other researchers, who are struggling with the same problems as tackled here, and to identify key ideas and principles that have previously been suggested, and to recognise the most important of these and make use of them in this work.
+\if
 Because web services (including services provided via apps on mobile phones)
 are a recent development and continue to evolve in both details and fundamentals,
 principles of secure design of these services is also a new and evolving area of
-research and development \iflonger\cite{AddieColman2010,Addie_Moffatt_Dekeyser_Colman2011}.
-\else\cite{Addie_Moffatt_Dekeyser_Colman2011}.\fi
+research and development \cite{AddieColman2010,Addie_Moffatt_Dekeyser_Colman2011}.
+\else\cite{Addie_Moffatt_Dekeyser_Colman2011}.
+\fi
 
 This section reviews three different approaches for securing web sites/services.
 Each of these approaches is usually expressed as a completely independent
@@ -46,8 +76,15 @@ in Section \ref{expts}.
 The third approach is summarised in Subsection \ref{stsecanal} and applied
 to the Netml password reset system in Sections \ref{stakeholders} and \ref{proof}.
 
+%\subsection{Web Service Security Design}\label{webservicessecurity}
 
-\subsubsection{Good Security Design Practice}
+
+
+
+
+
+
+\subsection{Good Security Design Practice}
 Good design takes security, ease of access, and usability into account,
 striking a balance between protecting the system and ease of use. Good
 practice has evolved a number of practical approaches like  minimizing
@@ -63,7 +100,7 @@ layer of protection as a matter of standard practice, even when more
 sophisticated approaches are also in use \cite {ross2018systems}.
 
 
-\subsubsection{Security Auditing}\label{audit}
+\subsection{Security Auditing}\label{audit}
 
 Strategies for breaking into web systems or services are under continuous
 development by government and non-government organisations and individuals,
@@ -90,7 +127,9 @@ known, and hence can be adopted by the web site.
 Experiments of this type, and the resulting web service design improvements,
 are described in Section \ref{expts}.
 
-\subsubsection{Stakeholder Security Analysis}\label{stsecanal}
+
+
+\subsection{Stakeholder Security Analysis}\label{stsecanal}
 
 A more fundamental strategy which is not well-developed at present is
 to seek to develop provably secure protocols and software for all aspects
@@ -101,6 +140,37 @@ Section \ref{stakeholders}, is to consider the point of view of all legitimate s
 in relation to the service, and to enumerate a complete set of rules
 required by each of these stakeholders, sufficient to ensure that they
 will agree to actively participate in the service.
+
+
+\section{Stakeholder Security Analysis}
+
+[Stakeholder security analysis is a more specific form of logical analysis. Instead of dealing with
+objectives in general, it makes use of the obvious but useful fact that all systems have
+stakeholders, and the objectives of the system as a whole can be sub-divided into those
+which can be ascribed to each stakeholder. Once their objectives have been identified, they
+can be further analysed, refined, and reviewed. In particular, it is important to work out if
+their objectives are compatible.]
+The main result of this dissertation is to demonstrate  a secure methodical design philosophy.
+We call this {\em stakeholder security analysis}.
+
+In this section, we designed stakeholders' policies to incorporate human
+values and ethics as much as possible into software values
+
+Stakeholder security analysis proceeds as follows: 
+\begin{enumerate}[1.]
+\item Identify the key stakeholders.
+\item For each stakeholder, identify a set of rules {\em required}
+by these stakeholders. Note: the collected rules required
+by all stakeholders must be consistent.
+\item Implement procedures which ensure that all rules are enforced.
+\end{enumerate}
+
+Both a security audit and a stakeholder security analysis
+are applied in this dissertation to a specific subsystem of a web
+service system being developed and managed by the authors.
+Note: it is not suggested that stakeholder security analysis obviates
+the need for a security audit.
+
 \subsubsection{Stakeholder Roles}\label{strol}
 The roles are defined first, then their stakeholders, and access levels and features are set in those roles. Security rules are defined based on stakeholders roles, and not stakeholders themselves, where we can state the rule in terms of anyone who is playing a certain role. Stakeholder experiences should be shared to identify vulnerabilities that may occur while dealing with the service or part of the system under study. Most organizations consider the reputable more than the performance of their systems. Therefore, they adopt robust security solutions. However, access levels for sources as well as sensitive data often require additional restrictions above standard security requirements. Hence,  additional restrictions are identified and chosen with extreme care, ensuring their independence, and providing sources and data to the real interest without any other party who can access the current security restrictions.
 \subsubsection{Stakeholder Business Rules}\label{stbsnrul}
@@ -123,28 +193,25 @@ In addition, unrealistic assumptions may cause security vulnerability. Also, ver
 \subsubsection{Inforcable Stakeholder Security Rules}\label{Instsecrul}
 \subsubsection{Validation of Stakeholder Security Rules}\label{vlstsecrul}
 
-\section{Gathering ideas and reviewing ideas from literature}
+[It is not always possible to prove hypotheses, even when there are strong reasons for believing
+them to be true. In science, and even in mathematics, some valid hypotheses can only be demonstrated
+by examples. A very good example of this sort of hypothesis is Church's thesis, which is that
+all concepts of computability are equivalent to Turing computability. A very large number of papers
+were written, in the past, which showed that this or that type of computability was equivalent to
+Turing computability. Eventually, journals put a stop to such publications. The concept that there is
+really just one type of computable function had been established. But it was not a provable concept.
+It was necessary to prove it by examples.
 
-\section{Stakeholder Security Analysis}
+There are other advantages of examples. They are also an ideal way to demonstrate ideas in a 
+natural and attractive fashion.
+
+In this dissertation, many examples will be used to illustrate ideas which are in an obvious
+sense quite similar in multiple superficially different cases. The striking similarity, in
+different contexts, demonstrates that the concept is not an accident, but represents an important
+principle.]
 
 
-The main result of this dissertation is to demonstrate  a secure methodical design philosophy.
-We call this {\em stakeholder security analysis}.
 
-Stakeholder security analysis proceeds as follows: 
-\begin{enumerate}[1.]
-\item Identify the key stakeholders.
-\item For each stakeholder, identify a set of rules {\em required}
-by these stakeholders. Note: the collected rules required
-by all stakeholders must be consistent.
-\item Implement procedures which ensure that all rules are enforced.
-\end{enumerate}
-
-Both a security audit and a stakeholder security analysis
-are applied in this dissertation to a specific subsystem of a web
-service system being developed and managed by the authors.
-Note: it is not suggested that stakeholder security analysis obviates
-the need for a security audit.
 
 \iffalse
 \section{A social contract for cyberspace}
