@@ -113,16 +113,17 @@ Stakeholder analysis includes all those who have
 influence on decisions, events, or outcomes related to
 the system \cite{project2018guide,rose2013guide}. There
 are several ways to classify stakeholders
-\iflonger\cite{reed2009s,maguire2012role,savage1991strategies,maynard2011stakeholders,bourne2016stakeholder,grimble1997stakeholder,billgren2008approaching},
-\else
+%\iflonger
+\cite{reed2009s,maguire2012role,savage1991strategies,maynard2011stakeholders,bourne2016stakeholder,grimble1997stakeholder,billgren2008approaching},
+%\else
 \cite{maguire2012role,maynard2011stakeholders,bourne2016stakeholder},
-\fi
+%\fi
 some of which depend on their threat potential
-\iflonger
+%\iflonger
 \cite{almorsy2016analysis,savage1991strategies,scholl2005interoperability}.
-\else
+%\else
 \cite{almorsy2016analysis,savage1991strategies}.
-\fi
+%\fi
 Stakeholder analysis helps in determining: who would
 be an attacker, and how would a successful attack be carried out? Also,
 how should security rules be changed to make the system safer \cite{diver2007information}?
@@ -132,7 +133,9 @@ the point of view of this paper, is that if we are able to identify a sufficient
 set of rules that ensure the willing participation of each stakeholder, and 
 if we can enforce these rules, then the system is self-evidently secure. 
 
-This does not rule out the possibility that through experience stakeholders may, during the lifetime of a system, discover that there are rules which were not initially obvious and which needed to be added to their required rule set. For example, 
+This does not rule out the possibility that through experience stakeholders may, during the lifetime of a system, discover that there are rules which were not initially obvious and which needed to be added to their required rule set. 
+\if
+For example, 
 \begin{itemize}
 \item[•] \textbf{cross-site attack} User decides they require invulnerability to cross-site script attack.
 \item[•] \textbf{betcoins threat} 
@@ -141,7 +144,7 @@ This does not rule out the possibility that through experience stakeholders may,
 
 \end{itemize}
 
-
+\fi
  If sufficient care is taken with the stakeholder analysis, such events should be rare.
 
 
@@ -184,6 +187,7 @@ attack on the password reset system.
 
 This term refers to any rule concerning the way in which transactions are restricted. The focus is on business rules that may be related to the security of the password reset service.
 
+\iffalse
 \begin{table}[!htbp]	      %%%%%%%%%%%%%%   [!htbp]	 to put the table in the right place   %%%%%%%%%
 	\begin{center}
 \begin{tabular}{|l|p{5.5cm}|} \hline
@@ -215,6 +219,7 @@ This term refers to any rule concerning the way in which transactions are restri
 
 	\end{tabular} \end{center} \caption{ StAKEHOLDERS SWOT ANALYSIS }
 \label{Stkroles} \end{table}
+\fi
 
 
 
@@ -759,6 +764,48 @@ Preventing attacks by gaining access to a user's session are important and have 
 addressed, however the details of this work cannot be included in the present paper.
 \fi
 
+\section{Conclusion}\label{concl}
+
+In Section \ref{webservicessecurity}, three complementary approaches for achieving 
+rigorous security were reviewed. The first of these is a pragmatic list of good practices
+which help to minimise the effort required to create and maintain good security. If
+these practices are not followed, the other two approaches, which are more specific
+in addressing security requirements, will require too much effort to be put into practice.
+The second approach is to attempt a series of attacks by methods which are known to
+be currently active, and to use the known (and usually published) techniques to address
+them.These methods are used by attackers as they are easy to get the worked attacked vector 
+and they know they will work as uptake of fixes and patches is slow. 
+
+The third approach is a more systematic and rigorous complement to the second. Instead
+of enumerating and employing a series of exploits, the threats are systematically 
+classified in the form of a list of rules stated as the requirements of each of the
+stakeholders. This allows us to logically address the important question of {\em completeness}.
+Whereas a list of currently active exploits is inherently evolving and therefore incomplete,
+it is reasonable to ask each stakeholder (or their representative): ``is this list of rules
+sufficient, if guaranteed, for you to agree to actively participate in this service?''
+If all stakeholders are satisfied in this way, the web service is secure. Despite an agreement
+of this sort being established, naturally, if a new approach which undermines security in
+a way which one or more stakeholders were not able to anticipate is discovered, the rules
+which stakeholders require will need to change. At least, when this happens, we have an explanation:
+our fundamental understanding of the nature of the service has progressed.
+
+In addition, the third approach defines how to rigorously review the steps which are taken
+to address new exploits: these steps should be formulated sufficiently clearly, and in such
+a way, that the stakeholder rules are provable. This makes a critical connection between
+the code implementing a web service and the security rules it is expected to conform to.
+It is not necessary to adopt a special purpose programming language, or methodology,
+in order to achieve this level of rigour (although adopting special methods may
+make this task easier).
+
+The key new ideas in this paper are that: (a) there is a simple and logical security design
+philosophy, which is to identify the rules required by all stakeholders,
+and ensure they are guaranteed; (b) we can ensure some of these are
+satisfied by proving they must hold from some of the rules which are
+guaranteed. Note: proving that {\em all} rules hold, even for a small system
+like the one considered in this paper, is not feasible in a paper of this length.
+For systems which need a security guarantee, it may be feasible to prove that all
+stakeholder rules hold. However, many systems rely on correct behaviour by the
+stakeholders, which will limit what level of security can be achieved.
 
 	
 
