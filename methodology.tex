@@ -212,11 +212,11 @@ can be further analysed, refined, and reviewed. In particular, it is important t
 their objectives are compatible.]
 The main result of this dissertation is to demonstrate  a secure methodical design philosophy.
 We call this {\em stakeholder security analysis}.
-
+\iffalse
 %Hand book-----ch2-2.3.1 begin
 Every business, organization, or community has {\em stakeholders}. These are the people (or agents) who have an interest in any aspect of its operation. In many cases, there will be a large group of {\em clients}, i.e. individuals who receive a service. There may be one or more {\em owners}. There are also many other ways a person, agent, or entity can have an interest in a given organisation or entity. One organization can be a stakeholder in another.
 %Hand book-----ch2-2.3.1 end
-
+\fi
 In this section, we designed stakeholders' policies to incorporate human
 values and ethics as much as possible into software values
 
@@ -235,11 +235,57 @@ service system being developed and managed by the authors.
 Note: it is not suggested that stakeholder security analysis obviates
 the need for a security audit.
 
-\subsubsection{Stakeholder Roles}\label{strol}
-The roles are defined first, then their stakeholders, and access levels and features are set in those roles. Security rules are defined based on stakeholders roles, and not stakeholders themselves, where we can state the rule in terms of anyone who is playing a certain role. Stakeholder experiences should be shared to identify vulnerabilities that may occur while dealing with the service or part of the system under study. Most organizations consider the reputable more than the performance of their systems. Therefore, they adopt robust security solutions. However, access levels for sources as well as sensitive data often require additional restrictions above standard security requirements. Hence,  additional restrictions are identified and chosen with extreme care, ensuring their independence, and providing sources and data to the real interest without any other party who can access the current security restrictions.
+
+
+\subsubsection{Modular Security}\index{security!modular}
+
+Because security tends to deal with absolutes, i.e. the rules to be assumed, or enforced, are true or false, it is tempting to imagine that the entire system must be either secure or not secure. This is an instance of the autocracy fallacy. According to this point of view, the only possible political system, for efficiency and correctness, is autocracy. Ideally, the person in charge should be {\em me}, because then no mistakes can happen.
+
+However, in reality, almost all the computer and human systems with which we have to deal are imperfect. This includes their security. Real systems have security flaws, and yet they continue to function and provide service. When their flaws are discovered, we should endeavour to ensure that they are fixed as quickly as possible. But there is no need to pretend that such flaws do not exist. Furthermore, a security flaw in one aspect does not necessarily mean that security in any other area is also flawed.
+
+The method of analysis and design of security outlined in this Chapter can be applied, methodically, to a {\em component} of the whole system, with a view to creating, implementing, and validating a design that achieves its intended security objectives.
+\iffalse
 \subsubsection{Stakeholder Business Rules}\label{stbsnrul}
 Business rules refer to any rule relating to the way in which transactions are restricted. Business rules must be observed when designing and improving system security. In other words, even if the proposed security rules are enforced, they must be considered to be subject to the satisfactory standard by their professional organization. It is necessary to focus on Business rules  which are explicit rules on safety and try to study them and analyze them before drafting the security rules to avoid the contradiction.
 The expectations of stakeholders which constitute a security case are considered mandatory and must be included in a security rule.
+\fi
+\subsubsection{Business Rules}\index{rule!business}
+
+The analysis method investigated in this section makes use of {\em rules} which define the security of the system. The use of rules is not confined to security.
+A {\em rule} is {\em defined} in this book to mean any statement which defines
+a condition. In most cases, such rules are defined because it is intended that the condition {\em holds}, i.e. It is true, all the time. In some cases, this may be because it is {\em enforced}. In other cases, it is because it might follow other rules which are enforced. And of course, we shall consider cases where rules fail to hold, also.
+
+An example of a business rule which is not necessarily a security rule is: {\em all customers must pay for their meals before collecting them}. 
+
+The boundary between business rules which are concerned with security and those which are not may be unclear. When in doubt, the rule might need to be included with the security rules. This is because the purpose of security rules is to maintain the conditions for the mandatory objectives of the stakeholder, and if a {\em business rule} is required, for this well-being, then it must be maintained also.
+\iffalse
+\subsubsection{Business Rules}\index{rule!business}
+
+The analysis method investigated in Chapter \ref{analysischap} makes use of {\em rules} which define the security of the system. The use of rules is not confined to security.
+A {\em rule} is {\em defined} in this book to mean any statement which defines
+a condition. In most cases, such rules are defined because it is intended that the condition {\em holds}, i.e. It is true, all the time. In some cases, this may be because it is {\em enforced}. In other cases, it is because it might follow other rules which are enforced. And of course, we shall consider cases where rules fail to hold, also.
+
+An example of a business rule which is not necessarily a security rule is: {\em all customers must pay for their meals before collecting them}. 
+
+The boundary between business rules which are concerned with security and those which are not may be unclear. When in doubt, the rule might need to be included with the security rules. This is because the purpose of security rules is to maintain the conditions for the mandatory objectives of the stakeholder, and if a {\em business rule} is required, for this well-being, then it must be maintained also.
+\fi
+
+\subsubsection{Service Protection Rules}\index{service!protection}\index{rule!service protection}
+
+In the provision of services, which is a component of many businesses, it is frequently necessary to define and manage the performance with which the service is provided. For example: {\em Pizzas will be delivered within 15 minutes of leaving the oven.} As with other business rules, such rules cannot necessarily be separated neatly from security, or, if there is such a separation, it may lead to inappropriate strategies for achieving security objectives. For example, if the rules defining security are considered in isolation, without considering performance, simply denying access for {\em all} users might be considered a perfect security design.
+
+Rules which define the level of service which should be achieved by a system or service are termed {\em service protection rules}.
+
+\subsubsection{Objectives and Constraints}
+
+In Operations Research, one of the most successful methodologies, over several decades, is {\em optimization}. In this framework, a problem is defined by two features: (i) an {\em objective}, and (ii) the {\em constraints}. These features define an optimization problem, the solution of which is to find the design which maximizes the objective without failing to meet the constraints.
+
+This framework enables us to create a rigorous, scientific framework for many real-world problems quite readily. We just have to find the constraints, and the objective, and then solve the optimization problem.
+
+When we attempt to put security into this framework, it becomes clear that although it works, accurately, it fails to achieve the right emphasis. In security, the emphasis must be almost exclusively on the constraints. The constraints, in a security problem, are the rules: including business rules, service protection rules, and all the security rules required by the stakeholders. The objective will, in most cases, be obvious, but not particularly relevant.
+
+It is usually felt that there are limited opportunities for achieving cost savings by searching for, or devising, better security strategies. There may be more such opportunities in the future, and this possibility should not, therefore, be entirely neglected. However, for the most part, the challenge, in security design, is not {\em minimizing cost}, or {\em maximizing profit}, but rather {\em achieving certainty}, that all required security rules have been enforced.
+
 
 \subsection{Stakeholders}
 
@@ -249,6 +295,8 @@ individuals who receive a service. There may be one or more {\em owners}. There 
 in which a person, agent, or entity can have an interest in an a given organization or entity. One organization
 can be a stakeholder in another.
 
+\subsection{Stakeholder Roles}\label{strol}
+The roles are defined first, then their stakeholders, and access levels and features are set in those roles. Security rules are defined based on stakeholders roles, and not stakeholders themselves, where we can state the rule in terms of anyone who is playing a certain role. Stakeholder experiences should be shared to identify vulnerabilities that may occur while dealing with the service or part of the system under study. Most organizations consider the reputable more than the performance of their systems. Therefore, they adopt robust security solutions. However, access levels for sources as well as sensitive data often require additional restrictions above standard security requirements. Hence,  additional restrictions are identified and chosen with extreme care, ensuring their independence, and providing sources and data to the real interest without any other party who can access the current security restrictions.
 \subsection{Stakeholders Rules}
 
 Any business, organisation, club or association has {\em stakeholders}. A stakeholder is a person, or 
