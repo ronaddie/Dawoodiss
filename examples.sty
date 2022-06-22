@@ -1,0 +1,37 @@
+\let\pparr=\@@par
+\newtheorem{Example}{Example}[section]
+\newcount\@@boxed
+\newcount\@temp@
+\def\Rightbox{\ifodd\@@boxed\else
+             \global\@@boxed=1\hfill\hbox{\vrule width 0.3mm height 3mm
+             \hskip -0.3mm\vbox{\hsize 2.7mm\hrule width 2.7mm height 0.3mm
+             \vskip 2.4mm 
+             \hrule width 2.7mm height 0.3mm}\hskip -0.3mm
+             \vrule width 0.3mm height 3mm}\par\fi}
+\def\setboxnull{\global\@@boxed=0}
+\evensidemargin=\oddsidemargin
+\newenvironment{example}[1]{%
+\begin{Example}\ecaption{{\bf Example \theExample} #1\dotfill \ }
+\hspace{-2mm}.\ \ \rm
+\setboxnull{\bf #1}\vskip 1 ex plus 1 ex minus 1 ex \pparr}{\Rightbox\end{Example}}
+\newtheorem{Exercise}{Exercise}[section]
+\newenvironment{exercise}[1]{%
+\begin{Exercise}%
+\excaption{{\bf Exercise \theExercise} #1\dotfill\ }
+\hspace{-2mm}.\ \ \rm%
+\setboxnull %
+{\bf #1} %
+\vskip 1 ex plus 1 ex minus 1 ex %
+}{\Rightbox %
+\end{Exercise}
+}
+\def\continuedexample#1#2{\@temp@=\c@Example
+\global\c@Example=#1\global\advance\c@Example-1\example{#2 (continued)}%
+\global\c@Example=\@temp@}%
+\let\endcontinuedexample=\endexample
+\newcommand{\listofexamples}{\@starttoc{xmp}}
+\newcommand{\ecaption}[1]{\addcontentsline{xmp}{example}{#1}}
+\newcommand{\l@example}[2]{\par\noindent#1 {\itshape #2}}
+\newcommand{\listofexercises}{\@starttoc{exz}}
+\newcommand{\excaption}[1]{\addcontentsline{exz}{exercise}{#1}}
+\newcommand{\l@exercise}[2]{\par\noindent#1 {\itshape #2}}

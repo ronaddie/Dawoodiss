@@ -85,7 +85,7 @@ these are two different propositions, but nevertheless, the same logical framewo
 different contexts, and for this reason, and others, it is useful to use variables to denote truth values in this way.
 
 
-\begin{sbexample}{An example of a formal system}\label{certificatesex}%
+\begin{example}{An example of a formal system}\label{certificatesex}%
 Suppose we have the following propositions:
 \begin{eqnarray}\nonumber
 \textup{$p_1$}: &&\parbox{10cm}{Document $d$ of Joan is correctly signed by Joan.}\\\nonumber
@@ -153,7 +153,7 @@ have been introduced, in Section \ref{predicatesec}, we shall revisit this examp
 -- in Example \ref{predicatesex} -- and make use of a domain
 and predicates to define the the axioms, assumptions, and statements to be proved, more precisely.
 
-\end{sbexample}
+\end{example}
 
 The connectives ($\vee$, $\wedge$, $\supset$, and $\neg$) of Propositional calculus can be defined
 by {\em truth tables}, as shown in Tables \ref{veetable}--\ref{nottable}.
@@ -337,7 +337,7 @@ any statement at all can be proved from $\Gamma$, i.e. all statements are provab
 is {\em inconsistent}. Consistency is a very important property of any theory. Without it, the theory is of
 little use. Consistency is considered in more detail in Subsection \ref{consistencysec}.
 
-\begin{sbexample}{Some theorems}\label{sometheorems}%
+\begin{example}{Some theorems}\label{sometheorems}%
 \begin{enumerate}[(i)]
 \item\label{a->a} $A \supset A$;\\
 {\em Proof:}
@@ -375,7 +375,7 @@ Using the deduction theorem again we obtain the stated result.
 by modus ponens, again.
 
 \end{enumerate}
-\end{sbexample}
+\end{example}
 
 \begin{exercise}{One more theorem}%
 Prove
@@ -421,7 +421,7 @@ Note: if $A$ doesn't contain the variable $x$, (\ref{gen}) is true, but trivial.
 case is where $A$ does contain the variable $x$. It may be thought of thus: if we can prove $A(x)$ without
 knowing anything about $x$ (it is a variable), then we can infer $\forall xA(x)$.
 
-\begin{sbexample}{Formal statement of a natural argument}%
+\begin{example}{Formal statement of a natural argument}%
 Consider the famous argument from ancient Greek logic:
 \begin{quote}\em
 All men are mortal. Socrates is a man, hence Socrates is mortal.
@@ -447,9 +447,9 @@ first we derive
 \end{equation}
 from (\ref{allmen}) by the rule {\em Specialization} from Table \ref{Kleenerules}, then we apply modus ponens to 
 	(\ref{Socratesimp}) and (\ref{isman}) to obtain (\ref{SocratesMortal}).
-\end{sbexample}
+\end{example}
 
-\begin{sbexample}{Chain-saw security}\label{chainsawsecurityexample}%
+\begin{example}{Chain-saw security}\label{chainsawsecurityexample}%
 Chain saws are quite dangerous. Any contact of a moving chain, of a chain saw, with a human, is likely to cause
 serious harm. What can we do to avoid this risk? 
 
@@ -522,7 +522,7 @@ to another to indicate that there is a proof of the node at the destination of
 that edge, and a reference to the origin node occurs in that proof.
 \begin{figure}
 \centering
-\includegraphics[width=8cm]{chainsaw.png}
+\includegraphics[width=8cm]{figures/chainsaw.png}
 \caption{Dependency graph of chainsaw assumptions, axioms, enforced conditions, and objective}
 \label{chainsawdependence}.
 \end{figure}
@@ -664,7 +664,7 @@ we get a contradiction. Thus, the contradiction is confirmed, and we must conclu
 that ${\tt Contact(}c_0,h_0{\tt )} \wedge \big(\exists h,{\tt ChainRunning(}c,h{\tt )}\big)$ is false.
 \end{proof}
 
-\end{sbexample}
+\end{example}
 
 
 \begin{exercise}{A theorem about the weather}%
@@ -702,7 +702,7 @@ this must be the main risk we need to protect against in future.
 \end{exercise}
 
 
-\begin{sbexample}{Device drivers and kernel modules}\label{kernelmodulesexample}%
+\begin{example}{Device drivers and kernel modules}\label{kernelmodulesexample}%
 All major operating systems (Linux, Microsoft Windows, MacOS, FreeBSD, and Android)
 nowadays include {\em loadable kernel modules} \cite{loadableKernelModules}, 
 which are extensions to the operating system
@@ -719,7 +719,7 @@ As a consequence, users are accustomed to installing new loadable kernel modules
 if a loadable kernel module has a bug, or if it contains a security flaw (which might
 be {\em deliberate}). Thus, the really useful feature of loadable kernel modules is
 also. potentially, a serious flaw from the point of view of security.
-\end{sbexample}
+\end{example}
 
 \begin{exercise}{Loadable kernel modules}\label{loadableKernelModulesExz}%
 Think about what can be done to make loadable kernel modules safer. Make notes
@@ -728,7 +728,7 @@ this issue. Use the Wikipedia entry \cite{loadableKernelModules} on loadable ker
 modules, in particular, as a starting point for your inquiries.
 \end{exercise}
 
-\begin{sbexample}{A formal system with predicates}\label{predicatesex}%
+\begin{example}{A formal system with predicates}\label{predicatesex}%
 Now that we have introduced {\em predicates}, we can treat Example \ref{certificatesex}
 more thoroughly, and develop a logical system which captures the logic of digital 
 signatures both accurately and completely. The domain of objects here will include
@@ -931,11 +931,11 @@ propositions, conditions, etc, that follow from them, in this example, is shown 
 \ref{certificateinfgraph}.
 
 \begin{figure}
-\includegraphics[width=12cm]{certificate2}
+\includegraphics[width=12cm]{figures/certificate2}
 		\caption{The proof-dependency graph for the proof of objective $O_1$ from the enforced conditions
 		and axioms, for Example \ref{predicatesex}}\label{certificateinfgraph}
 \end{figure}
-\end{sbexample}
+\end{example}
 
 \begin{exercise}{A Proof I}\label{step3ex}
 Prove Item \ref{step3} from Example \ref{predicatesex}.
@@ -1044,7 +1044,7 @@ The appearance of a reference to a proposition, assumption, axiom, objective, or
 
 In the diagrams which are included below, the different types of rules are represented by nodes of different shapes and colours, as  indicated in the Legend, shown in Fig. \ref{legend}. \begin{figure}[bhpt]
 	\centering
-		\leavevmode\includegraphics[width=42mm]{legend.png}\ \\
+		\leavevmode\includegraphics[width=42mm]{figures/legend.png}\ \\
 		\caption{Legend for Inference graphs}\label{legend}
 \end{figure}
 
@@ -1273,11 +1273,11 @@ The roles are defined first, then their stakeholders, and access levels and feat
 Any business, organisation, club or association has {\em stakeholders}. A stakeholder is a person, or 
 entity, with some interest in activities of the organisation. Typically, there will be 4-5 key stakeholders.
 
-\begin{sbexample}{Stakeholders of a University}%
+\begin{example}{Stakeholders of a University}%
 Consider a university, for example. Key stakeholders are: (i) students, (ii) staff (which may be further
 subdivided into academic, administration, management, and support staff), (iii) employers of graduates,
 (iv) governments, and (v) parents of students.
-\end{sbexample}
+\end{example}
 
 Many of the rules expected or mandated by stakeholders fall into fairly standard categories, like
 {\em legal requirements}, {\em ethics}, etc, which are fairly similar across different stakeholders.
@@ -1292,7 +1292,7 @@ probably understood by the other stakeholders, or which they communicate to them
 either explicitly, or by their actions. Many of these expectations will lead
 to rules that are explicitly or implicitly imposed on the operation of the institution.
 
-\begin{sbexample}{Stakeholder Rules for a University}%
+\begin{example}{Stakeholder Rules for a University}%
 Continuing with the previous example, let us explore the rules that the stakeholders of a university
 expect (or insist) should hold.
 
@@ -1342,7 +1342,7 @@ Parents expect universities to treat their children with respect, to provide the
 a good education, assessed fairly, and without subjecting them to harrassment or
 abuse of any kind.
 
-\end{sbexample}
+\end{example}
 
 Much of what stakeholders expect and demand cannot actually be encapusulated in a {\em rule}.
 This doesn't mean that we should ignore such expectations. However, these expectations

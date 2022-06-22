@@ -678,12 +678,12 @@ can only be received or calculated by user $U$.
 \end{enumerate}
 \end{proposition}
 
-\begin{IEEEproof} 
+\begin{proof} 
 By assumption (\ref{validticket}), a user's password can only be changed
 if a ticket valid for changing that user's password is provided. By assumption (\ref{userrestricted}),
 such a ticket can only be received or calculated by the User for whom it is valid. Hence, the only
 user who can change a password is the user themselves.
-\end{IEEEproof}
+\end{proof}
 
 To apply this proposition we need to verify that the assumptions hold in the Netml system.
 This is where the ``real work'' has to be done. Assumption (\ref{validticket}) requires

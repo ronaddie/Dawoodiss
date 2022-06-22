@@ -125,9 +125,9 @@ install:
 .pdf.ps:
 	pdftops $*.pdf
 .tex.ps: $< $*.aux
-	pdflatex $<
-	if ! chkdiff $* ; then pdflatex $< ; fi
-	if ! chkdiff $* ; then pdflatex $< ; fi
+	pdflatex -shell-escape $<
+	if ! chkdiff $* ; then pdflatex -shell-escape $< ; fi
+	if ! chkdiff $* ; then pdflatex -shell-escape $< ; fi
 	chkdiff $*
 	pdftops $*.pdf
 .tex.dvi: $< $*.aux
@@ -165,9 +165,9 @@ install:
 		done ; \
 	overwrite $*.tex /usr/bin/perl -n -e '$$_ =~ s/\\Img{(.*)\.eps}/\\Img{$$1.pdf}/;' -e 'print;' < $*.tex
 .tex.pdf: $< $*.aux
-	pdflatex $<
-	if ! chkdiff $* ; then pdflatex $< ; fi
-	if ! chkdiff $* ; then pdflatex $< ; fi
+	pdflatex -shell-escape $<
+	if ! chkdiff $* ; then pdflatex -shell-escape $< ; fi
+	if ! chkdiff $* ; then pdflatex -shell-escape $< ; fi
 	chkdiff $*
 .tex.bsh: $<
 	tex2bash $*
