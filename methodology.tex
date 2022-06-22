@@ -46,6 +46,977 @@ In some cases it may also be possible, and useful, to show that certain objectiv
 be met in certain ways.]
 
 In this section, we developed concepts and tools which assist cybersecurity professionals to define the mandatory objectives of their systems, the rules which enforce these objectivities, and the reasoning behind the choice of these rules. The concepts and tools we proposed and illustrated in this section will be shown, in Chapter 5, to be sufficient to record and analyse these rules, both the objectives and the rules which are enforced, and to ensure that there are no logical flaws in the system which has been designed. Note that we assume our cybersecurity objectives include the control of all important risks. 
+
+%Hand book-----ch2 begin
+\subsection{Logic}\label{logicsec}\index{logic}
+
+Assuming we have discovered and expressed all the conditions for the mandatory objectives for our organization, how do we now ensure that they hold? There are some conditions that we can impose directly. For example, door locks can be installed which require key-cards, which are issued to all employees. This enforces a condition: 
+\begin{quote}\em
+People entering a building must posess a key card.
+\end{quote}
+(For the moment, let us ignore the possibility that two people enter at once, after presentation of a single key-card.)
+
+There are many conditions that can be directly enforced. However, most of the conditions that we seek to ensure are not directly enforceable but instead will depend on a number of other conditions in a complicated web of logical connections.
+
+Everyone uses logic on a daily basis. Reality imposes logic upon us; consistently, and hence no one deviates {\em too} far from being logical. Despite this, there are areas of our professional lives where the need for logic is somewhat greater, and at the same time there are pressures, and biases, that tend to create a counter-pressure that enables sloppy or lazy thinking, and hence inhibits logic from fully functioning as it needs to in our decision making. For example, it may be company policy to publicly reveal all breaches of client privacy as soon as they occur, but such revelations will usually also reveal one or more faults or breaches of correct practices, and there may be many individuals who are personally disadvantaged by publicly revealing these faults or breaches.
+
+Also, there are a number of logical fallacies that regularly occur in the way we think which we can't afford to allow to compromise our decision-making in the area of security.
+
+Security is an area where there is a need for clear thinking, free of influence from other goals, be they personal, financial, or something else. This is a practical explanation of why, in this dissertation, logic is adopted as the key discipline on which we can base our investigation, and development, of a methodology for cyber-security.
+
+\subsection{Propositional Logic}\index{propositional logic}
+
+In Propositional logic, there are certain basic propositions about which we argue, or develop deductions, 
+which are {\em atomic}, i.e. we do not attempt to break these basic propositions down further. For this reason,
+these propositions have {\em names}, but no internal details. Some propositions can be analysed into {\em combinations}
+of other propositions, formed from component propositions and operators which apply to these. The most important
+logical operators are `and' ($\wedge$), `or' ($\vee$), `not' ($\neg$), and `implies' ($\supset$).
+
+If $p_1$ and $p_2$ are two propositions, $p_1\wedge p_2$ denotes the proposition $p_1$ {\em and} $p_2$,
+$p_1 \vee p_2$ denotes the proposition $p_1$ {\em or} $p_2$, 
+$\neg p_1$ denotes the proposition not $p_1$, and $p_1 \supset p_2$ denotes
+the proposition $p_1$ {\em implies} $p_2$.
+
+Propositional variables, like $p_1$ and $p_2$, are assumed to take one of the two values true, or false.
+In some instances, the propositional variables may have the same {\em meaning}, in an informal sense,
+in two situations, and yet take different values in each case. For example, $p_1$ might denote ``John has
+had breakfast''.  This proposition might be false at 6.00am and true at 9.00am. As far as logic is concerned,
+these are two different propositions, but nevertheless, the same logical framework can apply in two
+different contexts, and for this reason, and others, it is useful to use variables to denote truth values in this way.
+
+
+\begin{sbexample}{An example of a formal system}\label{certificatesex}%
+Suppose we have the following propositions:
+\begin{eqnarray}\nonumber
+\textup{$p_1$}: &&\parbox{10cm}{Document $d$ of Joan is correctly signed by Joan.}\\\nonumber
+\textup{$p_2$}:&& \parbox{10cm}{The certificate of Joan is correctly signed by CertiSign.}\\\nonumber
+\textup{$p_3$}:&& \parbox{10cm}{CertiSign has a certificate.}\\\nonumber
+\textup{$p_4$}:&& \parbox{10cm}{The certificate of CertiSign has a valid signature.}\\\nonumber
+\textup{$p_5$}:&& \parbox{10cm}{Joan is a signatory of document d.}
+\end{eqnarray}
+
+Informally, from $p_1$, $p_2$, $p_3$ and $p_4$, we can conclude $p_5$. However, we would like to 
+elaborate a more formal proof that statement $p_5$ follows from $p_1$, \dots, $p_4$. To do this
+we need to make some assumptions, which in the language of formal logic, are known as {\em axioms}.
+It may seem that by adopting these axioms we have somehow bypassed the real work of proving $p_5$.
+However, from the point of view of formal logic, it is precisely the task of {\em finding the
+right axioms}, that is at the heart of correctly understanding and analysing the logical underpinnings of
+any subject.
+
+{\bf Proposed Axioms for Certificates}
+\begin{itemize}
+	\item[A1] A certificate is {\em valid} if it's signature is a valid hash of 
+		the certificate document when checked by the public certificate of
+		the signing authority and the signing authority is valid.
+	\item[A2] Entity $P$ is a signatory of document $d$ if the public certificate of $P$
+		is valid and the signature attached to it is a valid hash of $d$ when checked by that certificate.
+	\item[A3] A signing authority with a valid public certificate is valid.
+	\item[A4] Verisign is a valid signing authority.
+\end{itemize}
+
+To prove $p_4$ we are going to need some additional {\em intermediate} propositions, namely:
+\begin{eqnarray}
+		p_6:&&\hbox{The public certificate of Certisign is a valid.}\nonumber\label{v1}\\
+		p_7:&&\hbox{Certisign is a valid signing authority.}\nonumber\label{v1}\\
+		p_8:&&\hbox{Joan's certificate is valid.}\nonumber\label{v1}
+\end{eqnarray}
+
+{\bf Proof}
+\begin{enumerate}[1.]
+\item $p_6$ follows from A1, A4 and $p_3$. 
+
+\item $p_7$ follows from $p_6$ and A3. 
+
+\item $p_8$ follows from $p_7$ and A1. 
+
+\item Lastly, $p_5$ then follows from A2, $p_8$, and $p_1$.
+\end{enumerate}
+
+{\bf Comments}
+
+Each of the {\em deductions} in this proof is a valid interpretation of the propositions. For example,
+in Line 1 of the proof,
+A1 gives conditions under which a certificate is valid, the other two propositions invoked ensure
+that these conditions are valid, and hence the conclusion of A1 is valid, and this is $p_5$. However,
+we have not yet formalised the concept of {\em deduction}. In fact, this example requires the additional
+concepts which will be introduced in the next subsection for the full concept of deduction
+that needs to be explained here.
+
+In particular, we also need the concept of a {\em domain} of objects, to which our propositions
+apply. In natural languages, the sentences are not atomic constructs with nothing more than a name, but
+are composed of {\em words}, some of which refer to {\em objects}. Some of these objects play the role of
+{\em actors}, syntactically appearing as a {\em subject}, and others play a more passive role, and these
+play the role of {\em object}. In most languages, every sentence also contains a {\em verb}. To
+go some way toward this level of detail, in the {\em predicate calculus}, we have a domain
+of objects, and a collection of predicates, which apply to these objects. After these concepts
+have been introduced, in Section \ref{predicatesec}, we shall revisit this example 
+-- in Example \ref{predicatesex} -- and make use of a domain
+and predicates to define the the axioms, assumptions, and statements to be proved, more precisely.
+
+\end{sbexample}
+
+The connectives ($\vee$, $\wedge$, $\supset$, and $\neg$) of Propositional calculus can be defined
+by {\em truth tables}, as shown in Tables \ref{veetable}--\ref{nottable}.
+\begin{table}
+\begin{minipage}{0.5\linewidth}
+\begin{center}
+\caption{Truth table for $\vee$}\label{veetable}~\\[5mm]
+\begin{tabular}{|c|c|c|}
+\hline
+$ a$&$ b$&\bf $a\vee b$\\
+\hline
+T & T& T\\
+F & T& T\\
+T & F& T\\
+F & F& F\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{center}
+\caption{Truth table for $\wedge$}\label{wedgetable}~\\[5mm]
+\begin{tabular}{|c|c|c|}
+\hline
+$ a$&$ b$&\bf $a\wedge b$\\
+\hline
+T & T& T\\
+F & T& F\\
+T & F& F\\
+F & F& F\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{table}
+
+\begin{table}
+\begin{minipage}{0.5\linewidth}
+\caption{Truth table for $\supset$}\label{imptable}~\\[5mm]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$ a$&$ b$&\bf $a\supset b$\\
+\hline
+T & T& T\\
+F & T& T\\
+T & F& F\\
+F & F& T\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\caption{Truth table for $\neg$}\label{nottable}~\\[5mm]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$ a$&\bf $\neg a$\\
+\hline
+T & F\\
+F & T\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{table}
+
+Using these tables, we can make truth tables for any expression involving a finite number of propositional
+variables. Such a formula which alway takes the value {\em true}, is called a {\em tautology}. For example,
+$p\supset p$ or $p \vee \neg p$, $\neg (p\wedge\neg p)$.
+
+Another way to determine all the true statements from the Propositional Calculus is to start with a finite
+set of {\em axioms}\index{axiom} (all of which are tautologies), and generate all other true statements from these by
+means of one or more rules. There is a specific rule which has traditionally been used, known as {\em modus ponens}\index{modus ponens},
+which is can be written:
+\begin{equation}\label{modusponens}
+A, A \supset B \vdash B.
+\end{equation}
+The symbol $\vdash$ can be read: ``is sufficient to deduce''. In words (\ref{modusponens})
+says: ``We can infer $B$ from $A$ and $A\supset B$.
+
+A sufficient set of axioms to be able to generate all the tautologies of the Propositional calculus, by
+just using modus ponens, is as follows \cite{Kleene52}:
+\begin{eqnarray}\label{A->B->A}
+&&A \supset (B\supset A) \\ \label{Ax1b}
+&&(A\supset B) \supset ((A \supset (B\supset C))\supset(A\supset C))  \\
+\label{^inf}
+&&A \supset (B \supset A \wedge B) \\
+		\label{a&b->a}
+&&A\wedge B \supset A \\
+		\label{a&b->b}
+&&A\wedge B \supset B \\
+&&A\supset A \vee B \\
+&&B\supset A \vee B \\
+&&(A \supset C) \supset ((B\supset C) \supset (A\vee B \supset C)) \\
+\label{2ndlastaxiom}
+&& (A \supset B) \supset ((A\supset \neg B) \supset \neg A) \\\label{negneg}
+&& \neg\neg A \supset A.
+\end{eqnarray}
+
+It is not obvious that these axioms, together with the rule modus ponens, is sufficient
+to deduce all the true statements of the propositional calculus. This is shown, however,
+in \cite[Theorem 10]{Kleene52}.
+
+Each of (\ref{A->B->A})--(\ref{negneg}) is a {\em schema}
+for axioms, not just one specific axiom. For example, in the case of Axiom (\ref{A->B->A}),
+we can substitute any syntactically valid formula for A, and any {\em other} syntactically valid formuls
+for B. The formulae substituted for A must all be the same. For example,
+$$
+\neg\neg C \supset (\neg D \supset \neg\neg C)
+$$
+is an {\em instance} of axiom (\ref{A->B->A}).
+
+\subsection{Some Important Reasoning Methods}\label{reasoningmethods}
+
+Although proofs can be constructed by sequences of statements, annotated by explanations of the reasoning,
+in practice we use some higher level arguments which make the reasoning easier to follow. Two
+of these higher level methods are now introduced: the {\em deduction theorem} \cite[\S 21--22]{Kleene52}
+and {\em proof by contradiction}. The first is the deduction theorem:
+
+\begin{theorem}\index{deduction}
+If $\Gamma$, $A \vdash B$ then $\Gamma \vdash A \supset B$.
+\end{theorem}
+
+\begin{proof}
+See \cite[\S 21--22]{Kleene52}.
+\end{proof}
+
+The following is a version of proof by contradiction, or, in the latin, {\em reductio ad absurdum}\index{contradiction}.
+\begin{theorem}\label{reductioadabsurdum}
+If $\Gamma$, $\neg A \vdash B$ and also $\Gamma$, $\neg A \vdash \neg B$ then $\Gamma \vdash A $.
+\end{theorem}
+
+\begin{proof}
+See \cite[Theorem 2]{Kleene52}.
+\end{proof}
+
+There are several more convenient and natural rules of deduction presented 
+in \cite[Theorem 2]{Kleene52}. These are presented in Table \ref{Kleenerules}.
+Using these rules makes it a lot easier to explain a logical argument. Most of these rules
+are regularly used in rational discussion in the normal course of life. Some rules are a little
+more specialized, but even in these cases the correctness of the deduction is obvious
+to anyone with higher education. The real challenge in using these rules is being
+sufficiently self-aware to recognise that they are being used.
+
+In this table, $\Gamma$ denotes a {\em set} of statements. Each rule forms a pair with
+another rule, with one of them termed {\em introduction} and the other {\em elimination}.
+For example, {\em Conjunction introduction} allows us to deduce $A\wedge B$ from $A$ together with $B$,
+while {\em Conjunction elimination} allows us to deduce $A$ from $A\wedge B$, and also $B$ from $A\wedge B$.
+In the case of the rule {\em Generalization}, it is the quantifier ($\forall$) which is being eliminated
+and a more natural name for the elimination version of this rule is {\em Specialization}.
+\begin{table}
+		\centering
+		\caption{Expanded rules of deduction}\label{Kleenerules}
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+				\hline
+		\bf Introduction & \bf Elimination\\
+				\hline
+		(Implication) If $\Gamma, A \vdash B$, then $\Gamma \vdash A\supset B$. &
+		$A, A\supset B \vdash B$ (Modus ponens).\\
+				\hline
+		(Conjunction) $A, B \vdash A \wedge B$. & $A\wedge B \vdash A$, $A\wedge B \vdash B$\\
+				\hline
+		(Disjunction) $A \vdash A \vee B $, $B \vdash A \vee B $ . & If $\Gamma$, $A\vdash C $ and $\Gamma$, $B \vdash C$,
+				then $\Gamma, A\vee B \vdash C$ (Proof by cases).\\
+				\hline
+		(Negation) If $\Gamma$, $A \vdash B$ and $\Gamma$, $A \vdash \neg B $ 
+				then $\Gamma \vdash \neg A$ (Proof by contradiction) & $\neg\neg A \vdash A$.\\
+				\hline
+		(Generalization) $A(x) \vdash \forall xA(x)$ & (Specialization) $\forall x A(x) \vdash A(t)$.\\
+				\hline
+		(Existence) $A(t) \vdash \exists x A(x)$ & If $\Gamma(x)$, $A(x) \vdash C$, then
+				$\Gamma(x)$, $\exists x A(x) \vdash C$.\\
+				\hline
+\end{tabular}
+\end{table}
+%
+
+An important consequence of Theorem \ref{reductioadabsurdum} is that if $\Gamma\vdash B$ and $\Gamma\vdash\neg B$,
+any statement at all can be proved from $\Gamma$, i.e. all statements are provable. In this case we say $\Gamma$ 
+is {\em inconsistent}. Consistency is a very important property of any theory. Without it, the theory is of
+little use. Consistency is considered in more detail in Subsection \ref{consistencysec}.
+
+\begin{sbexample}{Some theorems}\label{sometheorems}%
+\begin{enumerate}[(i)]
+\item\label{a->a} $A \supset A$;\\
+{\em Proof:}
+\begin{eqnarray}\label{i1}
+\hspace{-4cm}&&A \supset (A \supset A)\\
+\noalign{from (\ref{A->B->A})}
+\label{i2}
+\hspace{-4cm}&&(A\supset(A\supset A)) \supset ((A \supset ((A\supset A)\supset A))\supset(A\supset A))  \\
+\noalign{from (\ref{Ax1b}), using $A\supset A$ in place of B, and A in place of C}
+\label{i3}
+\hspace{-4cm}&& (A \supset ((A\supset A)\supset A))\supset(A\supset A)  \\
+\noalign{modus ponens with (\ref{i1}) and (\ref{i2})}
+\label{i4}
+\hspace{-4cm}&&A\supset ((A\supset A)\supset A) \\
+\noalign{from (\ref{A->B->A})}
+\hspace{-4cm}&&A \supset A\\ 
+\noalign{by modus ponens, again, this time using (\ref{i4}) and (\ref{i3}).}
+\nonumber\hspace{-4cm}&&
+\end{eqnarray}
+
+\item\label{converse} $(A\supset B) \supset (\neg B \supset \neg A)$;\\
+{\em Proof:}
+Suppose $A\supset B$ and $\neg B$. 
+Using (\ref{A->B->A}), $\vdash A\supset \neg B$.
+Thus, by (\ref{2ndlastaxiom}), $\vdash \neg A$. Hence, the deduction theorem, $\vdash \neg B \supset \neg A$.
+Using the deduction theorem again we obtain the stated result.
+
+\item\label{infjoin} $A, B \vdash A \wedge B$.\\
+{\em Proof:}
+\begin{eqnarray}\label{iii1}
+\hspace{-4cm}&&A, (\ref{^inf}) \vdash B \supset (A \wedge B) \\
+\noalign{modus ponens}
+\hspace{-4cm}&&B, (\ref{iii1}) \vdash A \wedge B
+\end{eqnarray}
+by modus ponens, again.
+
+\end{enumerate}
+\end{sbexample}
+
+\begin{exercise}{One more theorem}%
+Prove
+$\neg\neg\neg A \supset \neg A$.
+\end{exercise}
+
+\subsection{The Predicate Calculus}\label{predicatesec}\index{predicate calculus}
+
+The range of systems that can be modelled with the propositional calculus is
+very limited. In particular, it lacks the concept of a domain of objects about which
+statements are being made. The predicate calculus \cite{Mendelson64} adds the concept of {\em predicate},
+which is a symbolic statement about one or more objects, e.g. $P(a,b)$. In this example,
+$P$ is the predicate, and $a$ and $b$ are objects. Although we will often find it useful
+to ascribe a meaning to such predicates, for example we might say $P(a,b)$ means, intuitively,
+that $a$ is a parent of $b$, there is no formal mechanism within the predicate calculus
+for assigning a meaning to predicates. In effect, this is left to the much less direct
+impact of the axioms which we select and then analyse, which the predicates of a system
+are subject to.
+
+The predicate calculus also adds the concept of {\em variables} (more specifically {\em domain
+variables}), which may appear in the argument list of predicates. These are generally denoted
+by lower case letters, e.g. $x$, $y$, $a$, $b$, and sometimes $x_1$, \dots.
+
+Another construct is added to the syntax of propositions in the predicate calculus: {\em quantifiers}.
+There are two such quantifiers: the universal quantifier, $\forall$, and the existential quantifier: $\exists$.
+The expression $\forall x A(x)$, for example, should be read: ``for all $x$, $A(x)$'', and the expression
+$\exists x A(x)$, should be read: ``there exists an $x$ such that $A(x)$''.
+
+The predicate calculus is also provided with two additional axioms and one additional rule
+of inference. Here are the two axioms:
+\begin{eqnarray}\label{specialization}
+		&&\forall x A(x) \supset A(t) \\ 
+\noalign{where $t$ is a term which is free for $x$ in $A(x)$, and} \label{slipthrough}
+&&\forall x(A \supset B) \supset (A \supset \forall xB),
+\end{eqnarray}
+if $A$ is a formula containing no occurrences of $x$.
+
+The additional rule of inference is known as {\em generalization}\index{generalization}, and it is:
+\begin{equation}\label{gen}
+A \vdash \forall x A(x).
+\end{equation}
+Note: if $A$ doesn't contain the variable $x$, (\ref{gen}) is true, but trivial. So, the interesting
+case is where $A$ does contain the variable $x$. It may be thought of thus: if we can prove $A(x)$ without
+knowing anything about $x$ (it is a variable), then we can infer $\forall xA(x)$.
+
+\begin{sbexample}{Formal statement of a natural argument}%
+Consider the famous argument from ancient Greek logic:
+\begin{quote}\em
+All men are mortal. Socrates is a man, hence Socrates is mortal.
+\end{quote}
+We can re-express this argument in formal logic, using the predicates
+${\tt isMortal}(x)$ and ${\tt isMan}(x)$. The first statement
+can now be written, formally, as
+\begin{equation}\label{allmen}
+\forall x, {\tt isMan}(x) \supset {\tt isMortal}(x),
+\end{equation}
+the second as 
+\begin{equation}\label{isman}
+	{\tt isMan}({\tt Socrates}),
+\end{equation}
+and the last statement can be written
+\begin{equation}\label{SocratesMortal}
+	{\tt isMortal}({\tt Socrates}).
+\end{equation}
+To {\em prove} that (\ref{SocratesMortal}) follows from (\ref{allmen}) and (\ref{isman}),
+first we derive 
+\begin{equation}\label{Socratesimp}
+	{\tt isMan}({\tt Socrates}) \supset {\tt isMortal}({\tt Socrates})
+\end{equation}
+from (\ref{allmen}) by the rule {\em Specialization} from Table \ref{Kleenerules}, then we apply modus ponens to 
+	(\ref{Socratesimp}) and (\ref{isman}) to obtain (\ref{SocratesMortal}).
+\end{sbexample}
+
+\begin{sbexample}{Chain-saw security}\label{chainsawsecurityexample}%
+Chain saws are quite dangerous. Any contact of a moving chain, of a chain saw, with a human, is likely to cause
+serious harm. What can we do to avoid this risk? 
+
+Here is a strategy: 
+\begin{itemize}
+\item chain saws should be equipped with devices which do everything possible to
+stop the chain from moving at times when there is a risk of injury;
+\item all chain saw operators should be trained in their correct use.
+\end{itemize}
+
+Although this seems like common sense, only part of this strategy is currently implemented
+in Australia at the moment. Chain saws are equipped with a {\em brake} which prevents the 
+chain from moving. This brake can be used by the operator to stop chain movement when
+the saw is not in use; and the brake is automatically enacted if the bar of the saw jumps
+up, in a way which could cause harm. However, training is not mandatory. 
+
+Let us assume that training {\em is} mandatory, for the sake of this example, and spell out
+the logic according to which we have protected chain saw operators from potential injury.
+
+\newpage
+{\bf Axioms}
+\begin{enumerate}[{A}1.]
+\item\label{A1} Moving chain saws can only come in contact with a human body if the brake is off or
+the chain saw is in use and the chain comes in contact with an object which causes it to rear up.
+% \end{enumerate}
+
+\hspace{-9mm}{\bf Assumptions}
+
+% \begin{itemize}
+\item\label{A2} After training, operators act according to their training.
+\item\label{A3} Whenever the chain saw ``rears up'' so violently that the operator will
+not be able to stop it coming into contact with their body, the brake will act to stop
+the chain moving.
+\end{enumerate}
+
+{\bf Enforced conditions}
+
+\begin{enumerate}[{E}1.]
+\item\label{E1} All operators are trained.
+
+\item\label{E2} Training includes the requirement that the chain brake is {\em on} whenever
+the chain saw is not in use.
+\end{enumerate}
+
+{\bf Objective}
+
+\begin{enumerate}[{O}1.]
+\item\label{O1} There can never be any contact between a moving chain saw and a human body.
+\end{enumerate}
+
+\begin{proof}
+According to A\ref{A1}, the only way a chain can come into contact with a human
+is if the brake is off or it is in use. However, since all operators are trained,
+according to E\ref{E1}, and after training, operators always act in accordance with
+the training, by A\ref{A2}, and the training includes the instruction that
+the chain saw must have the brake on whenever it is not in use, by E\ref{E2}, 
+the brake must be off only when is it in use.
+
+So for contact to occur, the chain saw must be in use, and by \ref{A1} (again),
+the chain saw must come into contact with an object which causes it to rear up.
+In this case, by \ref{A3}, if the reaction is violent enough to overcome
+the operator's strength, the brake will act, and the chain will be stopped.
+Hence, in this case also, the chain cannot come into contact with a human
+while moving.
+\end{proof}
+
+This appears to be a valid proof. The dependence graph of this proof is shown in Figure 
+\ref{chainsawdependence}. In this graph, there is an edge from one node
+to another to indicate that there is a proof of the node at the destination of
+that edge, and a reference to the origin node occurs in that proof.
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{chainsaw.png}
+\caption{Dependency graph of chainsaw assumptions, axioms, enforced conditions, and objective}
+\label{chainsawdependence}.
+\end{figure}
+
+It is not necessary to make this proof any more clear. 
+
+However, if we want to understand how the reasoning in this proof can
+be represented in the predicate calculus, we must make it clear what
+are the predicates, and re-express the axioms, assumptions, enforced
+conditions, and objectives, using these predicates.  The predicates are
+defined in Table \ref{chainsawpredicates} and the axioms etc, can then
+be expressed as follows. Some subtle changes (including an additional
+axiom) have emerged in the course of this translation.
+
+iffalse
+\begin{table}
+\centering
+\caption{Predicates used to ensure safety of chainsaw operation}\label{chainsawpredicates}
+\begin{tabular}{|@{\tt}l|@{\hspace{5mm}}p{7cm}|}
+\hline
+\bf Predicate&\bf Meaning\\
+\hline
+Contact(x,y)& $x$ is a chainsaw which contacts human $y$\\
+Braked(x)& The brake of chainsaw $x$ is on\\
+UseOnTimber(x,y)& The chainsaw $x$ is in use by human $y$\\
+Trained(x)& The operator $x$ has been trained\\
+RearUp(x)& The chain saw $x$ rears up\\
+ChainRunning(x) & The chain of chain saw $x$ is running\\
+ChainRunning(x,h) & The chain of chain saw $x$ is running, under operator $h$\\
+\hline
+\end{tabular}
+\end{table}
+
+{\bf Axioms}
+\begin{enumerate}[{A}1.]
+\item\label{A1a} $\forall c, h, \left(\hbox{\tt Contact(c,h)} \wedge 
+		\hbox{ChainRunning(}c{\tt )}\right) 
+\supset\big( (\neg {\tt braked(c)} \wedge$\\
+$ \neg\exists h_2,{\tt UseOnTimber(c,h_2)}) \vee (\exists h_3,{\tt UseOnTimber(c,h_3)}$\\ 
+	$\wedge {\tt RearUp(c)})\big)$.
+\item\label{A1b} $\forall c, {\tt braked(c)} \supset (\neg\exists h,{\tt ChainRunning(c,h)})$.
+\item\label{A1c} $\forall c, h, {\tt ChainRunning(c,h)} \supset \neg\exists h_1\not=h, {\tt ChainRunning(}c,h_1
+		{\tt )}$.
+% \item\label{A1b} $\forall c: {\tt braked(c)} \supset (\neg{\tt UseOnTimber(c)})$.
+% \end{enumerate}
+
+\hspace{-9mm}{\bf Assumptions}
+
+% \begin{itemize}
+\item\label{A2a} $\forall h,c: {\tt Trained(h)} \supset \neg\exists c:\left(\neg {\tt UseOnTimber(c,h)} \wedge \neg{\tt braked(c)} \right)$
+\item\label{A3} $\forall c: {\tt RearUp(c)} \supset {\tt braked}(c)$.
+\end{enumerate}
+
+{\bf Enforced conditions}
+
+\begin{enumerate}[{E}1.]
+\item\label{E1} 
+$\forall h,c: {\tt Trained}(h) \supset \left( {\tt UseOnTimber(c,h)} \vee {\tt braked(c)} \right)$.
+
+\item\label{E2} $\forall h, c: (\neg{\tt Trained(h)}) \supset (\neg{\tt ChainRunning(c,h)})$.
+
+\item\label{E3} ${\tt ChainRunning(}c{\tt )} \supset \exists h,{\tt ChainRunning}(c,h{\tt )}$.
+\end{enumerate}
+
+{\bf Objective}
+
+\begin{enumerate}[{O}1.]
+\item\label{O1} $\forall c,h: \neg\left({\tt Contact(c,h)} 
+		\wedge \big({\tt ChainRunning(}c{\tt )}\big)\right)$.
+\end{enumerate}
+
+In preparation for proving O\ref{O1}, we first prove:
+
+\begin{proposition}\label{chrun--trained}
+		${\tt ChainRunning}(c,h) \supset {\tt Trained}(h)$.
+\end{proposition}
+
+\begin{proof}
+		This is the contrapositive of E\ref{E2}.
+\end{proof}
+
+\begin{proof}
+Now that we have predicates to express the axioms, assumptions, etc, we can express the proof 
+more rigorously. The proof is essentially the same (although some subtle mistakes will now
+be corrected). 
+
+Let's use proof by contradiction, i.e. we assume 
+\begin{equation}\label{assumedforcontradiction}
+{\tt Contact(}c_0,h_0{\tt )} 
+\wedge {\tt ChainRunning(}c_0{\tt )}
+\end{equation}
+for some $h_0$ and $c_0$, 
+and then show that this leads to a contradiction.
+
+By A\ref{A1a}, it follows that either 
+\begin{eqnarray}\label{conjunction} \nonumber
+&&\neg{\tt braked}(c_0) \wedge \neg \exists h_2,{\tt UseOnTimber(}c_0,h_2{\tt )}\\
+\noalign{~~~~~~~~~~or~}
+		&&\left(\exists h,{\tt UseOnTimber(}c_0, h{\tt )}\right) \wedge {\tt RearUp(}c_0{)}
+\end{eqnarray}
+
+Let us consider the first of these two cases, 
+\begin{equation}\label{notbrakedorinuse}
+		\neg{\tt braked}(c_0) \wedge \neg\exists h_2,{\tt UseOnTimber(}c_0,h_2{\tt )}.
+\end{equation}
+In plain English, ``The chain is not braked, and the chainsaw is not being used to cut wood.''
+By the second part of (\ref{assumedforcontradiction}) and E\ref{E3},
+\begin{equation}\label{someonemustberunningit}
+	\exists h_1, {\tt ChainRunning(}c_0,h_1{\tt )}.
+\end{equation}
+(E\ref{E3} is due to the fact that unless someone is pressing
+the trigger of a chainsaw, the chain will not run. This is a second safety feature of chainsaws.)
+By Proposition \ref{chrun--trained}, we conclude that for some $h_1$,
+${\tt Trained(}h_1{\tt )}\wedge {\tt ChainRunning(}c_0,h_1{\tt )}$.
+Hence, by A\ref{A1c}, 
+$$
+\neg \left( \exists h_1,\left({\tt ChainRunning(}c,h_1{\tt )}
+\wedge \left(\neg{\tt Trained(}h_1{\tt )}\right) \right)\right).
+$$
+By E\ref{E1}, ${\tt ChainRunning}(c,h) \supset {\tt Trained}(h)$, and combining this
+with A\ref{A1c}, we find 
+\begin{equation}\label{mustbetrained}
+{\tt ChainRunning}(c,h) \supset \forall h_1, \left( {\tt ChainRunning}(c,h_1) \supset {\tt Trained}(h_1)\right).
+\end{equation}
+Let $h_1$ be a human whose existence is asserted in (\ref{someonemustberunningit}). By (\ref{mustbetrained}), 
+${\tt Trained}(h_1)$, so by E\ref{E1}, 
+$$
+\forall c: {\tt Trained}(h_1) \supset \left( {\tt UseOnTimber(c,h_1)} \vee {\tt braked(c)} \right),
+$$
+which contradicts (\ref{notbrakedorinuse}).
+
+Now let us consider the second case, ${\tt UseOnTimber(}c_0{\tt )} \wedge {\tt RearUp(}c_0{)}$.
+By (\ref{a&b->b}), ${\tt RearUp(}c_0{)}$. Hence, by A\ref{A3}, {\tt braked($c_0$)}. 
+It therefore follows from A\ref{A2a}, that $\neg\exists h_0, {\tt ChainRunning(}c_0,h_0{\tt )}$.
+But this contradicts our original assumption, ${\tt Contact(}c_0,h_0{\tt )} 
+\wedge \exists h_0, {\tt ChainRunning(}c,h_0{\tt )}$. 
+Thus, in both cases from the conjunction, (\ref{conjunction}),
+we get a contradiction. Thus, the contradiction is confirmed, and we must conclude
+that ${\tt Contact(}c_0,h_0{\tt )} \wedge \big(\exists h,{\tt ChainRunning(}c,h{\tt )}\big)$ is false.
+\end{proof}
+
+\end{sbexample}
+
+
+\begin{exercise}{A theorem about the weather}%
+Suppose ``John always carries an umbrella when rain has been forecast for the today''. Create 
+logical predicates, which refer to a domain which includes John, and umbrellas,
+and express this statement using formal logic.
+Next, formulate and express, in formal logic, the statement: ``If John
+is not carrying his umbrella, then rain was not forecast for today''.
+Using logic, prove that this second statement follows from the first one.
+\end{exercise}
+
+\begin{exercise}{Logical Fallacies}
+Identify which of the following arguments contain logical errors 
+and, when there is an error, explain the mistake.
+	\begin{enumerate}[(a)]
+		\item % Mixing up contrapositives
+John always carries his umbrella with him when rain is forecast, hence,
+if we see John carrying his umbrella, rain must have been forecast.
+		\item % Correct contrapositive
+John always carries his umbrella with him when rain is forecast, hence,
+if John is not carrying his umbrella, rain must not have been forecast.
+		\item % Use of one example to prove a universal
+Rain was forecast today and I see that Joan is carrying her umbrella, so,
+Joan must always carry an umbrella when rain has been forecast.
+		\item % Mis-calculated nots
+On every day except Tuesday, Jim doesn't ride to work,
+and he only has morning coffee before 10.00 am when he did not ride, 
+hence on Tuesdays, if he has coffee, it will be after 10.00 am.
+		\item % Use of one example to prove a universal (second case)
+Our network was just broken into by an attacker who was an unhappy ex-employee
+who was able to obtain administrator credentials through some inside information
+about the IT operational procedures we used to practice. It follows that
+this must be the main risk we need to protect against in future.
+	\end{enumerate}
+\end{exercise}
+
+
+\begin{sbexample}{Device drivers and kernel modules}\label{kernelmodulesexample}%
+All major operating systems (Linux, Microsoft Windows, MacOS, FreeBSD, and Android)
+nowadays include {\em loadable kernel modules} \cite{loadableKernelModules}, 
+which are extensions to the operating system
+which can be added to, or installed, often without restarting the operating system.
+Traditionally, this software runs with the same privilege level as the kernel itself.
+
+Loadable kernel modules are extremely useful for enabling operating systems to adapt
+to innovation in hardware, for example. A manufacturer of a device which provides a new
+feature, for a phone, computer, or tablet, for example, can write and distribute a 
+loadable kernel module which communicates with the device and enables software to use
+it.
+
+As a consequence, users are accustomed to installing new loadable kernel modules. Unfortunately,
+if a loadable kernel module has a bug, or if it contains a security flaw (which might
+be {\em deliberate}). Thus, the really useful feature of loadable kernel modules is
+also. potentially, a serious flaw from the point of view of security.
+\end{sbexample}
+
+\begin{exercise}{Loadable kernel modules}\label{loadableKernelModulesExz}%
+Think about what can be done to make loadable kernel modules safer. Make notes
+recording your ideas. Then, try to find what has been done, in the industry, to address
+this issue. Use the Wikipedia entry \cite{loadableKernelModules} on loadable kernel 
+modules, in particular, as a starting point for your inquiries.
+\end{exercise}
+
+\begin{sbexample}{A formal system with predicates}\label{predicatesex}%
+Now that we have introduced {\em predicates}, we can treat Example \ref{certificatesex}
+more thoroughly, and develop a logical system which captures the logic of digital 
+signatures both accurately and completely. The domain of objects here will include
+{\em documents}, {\em signers}, {\em signatures}, {\em certificates}, and {\em certificate authorities}.
+Note that the predicate calculus does not allow for the concept of differentiating
+different {\em types} of object. 
+
+Predicate calculus with types is possible, but would not introduced
+significant changes from the point of view of logic. For more discussion of logic with
+types, see Subsection \ref{logic_alternatives}\index{logic!typed}.
+
+The predicates we need in this example are listed in Table \ref{certificatepredicates},
+and the specific objects, and their names, used in the proof that Joan is a signatory,
+are listed in Table \ref{joanobjects}.
+
+\begin{table}
+\centering
+\begin{tabular}{|@{\tt}l@{\hspace{2mm}}|p{75mm}|}
+\hline
+\bf Predicate&\bf Meaning\\
+\hline
+HasSig(x,y)& $x$ is a document and $y$ is its signature\\
+IsSignedBy(x,y,z)& $x$ is a document which is correctly signed by entity $y$ using certificate $z$\\
+IsValidAccTo(x,y,z)& $x$ is a signature for document $y$ which is valid according to certificate $z$\\ 
+IsValidSignatory(d,A,c)& $A$ is the signatory of the document $d$ according to 
+the {\em valid} certificate $c$\\
+IsValidSignatory(d,A)& $A$ is the signatory of the document $d$\\
+HasCert(B,c)& $c$ is a certificate owned by $B$\\
+IsValidCert(x)& $x$ is a valid certificate\\
+IsValidAuth(X,x)& $X$ is a valid certificate authority according to their certificate, $x$\\
+\hline
+\end{tabular}
+\caption{Predicates used to validate signatures}\label{certificatepredicates}
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}{|@{\tt}l@{\hspace{2mm}}|p{6cm}|}
+\hline
+\bf Name&\bf Description\\
+\hline
+CA& Certisign digital certificate authority\\
+VA& Verisign\\
+cc& The certificate owned by Certisign which authorizes them as a certificate signing authority\\
+js& Joan's certificate\\
+ds& The signature on Joan's document\\
+\hline
+\end{tabular}
+\caption{Names of objects and entities which appear in the proof that Joan is the signatory of the document}\label{joanobjects}
+\end{table}
+
+The axioms we identified in Example \ref{certificatesex} can now be written, more precisely:
+\begin{enumerate}[{A}1]\small
+		\item \label{A1}$\forall A, c, s, \exists ac:\hbox{\tt HasSig}(c,s) \wedge \hbox{\tt IsValidAccTo}(s,c,ac) \\
+			\wedge \hbox{\tt IsValidSignatory}(c,A,ac) \supset \hbox{\tt IsValidCert}(c)$.
+	\item \label{A2}$\forall A, d$, ac:\\
+	$\left(\exists ds: \hbox{\tt HasSig}(d,ds) \wedge \hbox{\tt IsValidAccTo}(ds,d,ac) \wedge \hbox{\tt HasCert}(A,ac)\right) \\
+			\supset \hbox{\tt IsSignedBy}(d,A,ac)$.
+	\item \label{A3}$\forall A, d,ac: \hbox{\tt IsSignedBy}(d,A,ac) \wedge \hbox{\tt IsValidAuth}(A,ac) \\
+			\supset \hbox{\tt IsValidSignatory}(d,A,ac)$.
+	\item \label{A4}
+$\forall A, c: \hbox{\tt HasCert}(A,c) \wedge \hbox{\tt IsValidCert}(c) \supset \hbox{\tt IsValidAuth}(A,c)$.
+	\item \label{A5}
+			$\left(\exists c: \hbox{\tt IsValidSignatory}(\hbox{\tt d},\hbox{\tt A},\hbox{\tt c})\right) \equiv
+\hbox{\tt IsValidSignatory}(\hbox{\tt d},\hbox{\tt A})$.
+	\item \label{A6}
+			$\forall c, \hbox{\tt HasCert}(VA,c) \supset \hbox{\tt IsValidAuth}(\hbox{\tt VA,c})$.
+\end{enumerate}
+
+
+The enforced conditions, using the predicates listed in Table 
+\ref{certificatepredicates}, can be stated as follows:
+\begin{eqnarray}\nonumber
+\textup{$E_1$}:&&\hspace{-5mm}\parbox{10cm}{{\tt HasSig(d,ds)}}\\ \nonumber
+\textup{$E_2$}:&&\hspace{-5mm}\parbox{10cm}{{\tt IsValidAccTo(ds,d,jc)}}\\\nonumber
+\textup{$E_3$}:&&\hspace{-5mm}\parbox{10cm}{{\tt HasCert(J,jc)}.}\\\nonumber
+\textup{$E_4$}:&&\hspace{-5mm}\parbox{10cm}{{\tt HasSig(jc,jcs)}}\\ \nonumber
+\textup{$E_5$}:&&\hspace{-5mm}\parbox{10cm}{{\tt IsValidAccTo(jcs,jc,cc)}}\\ \nonumber
+\textup{$E_6$}:&&\hspace{-5mm}\parbox{10cm}{{\tt HasCert(CA,cc)}}\\ \nonumber
+\textup{$E_7$}:&&\hspace{-5mm}\parbox{10cm}{{\tt HasSig(cc,ccs)}}\\ \nonumber
+\textup{$E_8$}:&&\hspace{-5mm}\parbox{10cm}{{\tt IsValidAccTo(ccs,cc,vc)}}\\ \nonumber
+\textup{$E_9$}:&&\hspace{-5mm}\parbox{10cm}{{\tt HasCert(VA,vc)}}\\ \nonumber
+\end{eqnarray}
+
+
+To break the proof of O into small peices, we introduce the following
+intermediate propositions:
+
+\begin{eqnarray}\nonumber
+\textup{$p_1$}:&&\hspace{-5mm}\parbox{10cm}{{\tt IsValidAuth(VA,vc)},}\\ \nonumber
+\textup{$p_2$}:&&\hspace{-5mm}\parbox{10cm}{{\tt IsValidSignatory(cc,VA)},}\\ \nonumber
+\textup{$p_3$}:&&\hspace{-5mm}\parbox{10cm}{\tt IsValidAuth(CA,cc),}\\\nonumber
+\textup{$p_4$}:&&\hspace{-5mm}\parbox{10cm}{{\tt IsValidSignatory(jc,CA)},}\\ \nonumber
+\textup{$p_5$}:&&\hspace{-5mm}\parbox{10cm}{\tt IsValidAuth(J,jc).}\\\nonumber
+\end{eqnarray}
+
+
+{\bf Proof}
+\begin{enumerate}[1.]
+		\item{}\label{step1}
+$p_1$: {\tt IsValidAuth(}VA,vc{\tt )}
+
+By $E_9$, {\tt HasCert(}VA,vc{\tt )}, so by A\ref{A6},
+{\tt IsValidAuth(}VA,vc{\tt )}. 
+
+\item{}\label{step2} 
+%\iffalse
+$p_2$: {\tt IsValidSignatory(}cc,VA{\tt )}\\[5mm]
+
+Using (\ref{specialization}), we can infer a version of A2 with {\tt cc} substituted for $d$,
+{\tt VA} substituted for $A$, and {\tt ccs} substituted for $s$:
+\begin{eqnarray}\label{A1a}\nonumber
+&&\hspace{-7mm}\hbox{\tt HasSig(cc,ccs) $\wedge$ IsValidAccTo(ccs,cc,vc)$\wedge$ HasCert(VA,vc)} \\
+		&&\hspace{-7mm}\nonumber
+\supset \hbox{\tt IsSignedBy}({\tt cc, VA, vc}).
+\end{eqnarray}
+
+Now the first of the LHS terms is $E_7$, the second is $E_8$, and the third is $E_{9}$.
+So by m.p., {\tt IsSignedBy}({\tt cc, VA, vc}). Now, using A\ref{A3}, and $p_1$, we conclude
+that \hbox{\tt IsValidSignatory}({\tt cc, VA}).
+%\else
+%See Exercise \ref{step2ex}.
+%\fi
+
+
+\item{}\label{step3} 
+$p_3$: {\tt IsValidAuth(}CA,cc{\tt )}
+\iffalse
+
+By $E_7$: {{\tt HasSig(cc,ccs)}};
+$E_8$: {{\tt IsValidAccTo(ccs,cc,vc)}};
+and $p_2$: {\tt IsValidSignatory(}cc,VA,vc{\tt )};
+and A\ref{A1}, {\tt IsValidCert(}CA,cc{\tt )}. 
+
+By $E_6$, {\tt HasCert(}CA,cc{\tt )}, so by A\ref{A4},
+{\tt IsValidAuth(}CA,cc{\tt )}. 
+\else
+See Exercise \ref{step3ex}.
+\fi
+
+\item{}\label{step4} 
+$p_4$: {\tt IsValidSignatory(}jc, CA{\tt )}
+\iffalse
+
+Using (\ref{specialization}), we can infer a version of A2 with {\tt jc} substituted for $d$,
+{\tt CA} substituted for $A$, and {\tt jcs} substituted for $s$:
+\begin{eqnarray}\label{A1a}\nonumber
+&&\hspace{-7mm}\hbox{\tt HasSig(jc,jcs) $\wedge$ IsValidAccTo(jcs,jc,cc)$\wedge$ HasCert(CA,cc)} \\
+		&&\hspace{-7mm}\nonumber
+\supset \hbox{\tt IsSignedBy}({\tt jc, CA, cc}).
+\end{eqnarray}
+
+Now the first of the LHS terms is $E_4$, the second is $E_5$, and the third is $E_{6}$.
+So by m.p., {\tt IsSignedBy}({\tt jc, CA, cc}). Now, using A\ref{A3}, and $p_3$, we conclude
+that \hbox{\tt IsValidSignatory}({\tt jc, CA}).
+\else
+See Exercise \ref{step4ex}.
+\fi
+%
+
+\item{}\label{step5} 
+$p_5$: {\tt IsValidAuth(J,jc).}
+\iffalse
+
+By $E_4$: {{\tt HasSig(jc,jcs)}};
+
+$E_5$: {{\tt IsValidAccTo(jcs,jc,cc)}};
+$p_4$: {\tt IsValidSignatory(}cc,J,jc{\tt )};
+and A\ref{A1}, {\tt IsValidCert(}J,jc{\tt )}. 
+
+By $E_3$, {\tt HasCert(}J,jc{\tt )}, so by A\ref{A4},
+{\tt IsValidAuth(}J,jc{\tt )}. 
+\else
+See Exercise \ref{step5ex}.
+\fi
+
+
+\item{}\label{step6} 
+$O_1$: {\tt IsValidSignatory(d,J)}.
+
+Using (\ref{specialization}), we can infer a version of A2 with {\tt d} substituted for $d$,
+{\tt J} substituted for $A$, and {\tt ds} substituted for $s$:
+\begin{eqnarray}\label{A1a}\nonumber
+&&\hspace{-7mm}\hbox{\tt HasSig(d,ds) $\wedge$ IsValidAccTo(ds,d,jc)$\wedge$ HasCert(J,jc)} \\
+		&&\hspace{-7mm}\nonumber
+\supset \hbox{\tt IsSignedBy}({\tt d, J, jc}).
+\end{eqnarray}
+As before, the LHS elements of this inference have already been proved in $E_1$, $E_2$, and $E_3$,
+so \hbox{\tt IsSignedBy}({\tt d,J,jc}) is true. Now, using A\ref{A3}, and noting that
+have already shown $p_5$: {\tt IsValidAuth(J,jc).}
+
+This proves $O_1$.
+%
+%
+\end{enumerate}
+
+The inference graph which connects each proposition, condition, axiom, or objective to the 
+propositions, conditions, etc, that follow from them, in this example, is shown in Figure
+\ref{certificateinfgraph}.
+
+\begin{figure}
+\includegraphics[width=12cm]{certificate2}
+		\caption{The proof-dependency graph for the proof of objective $O_1$ from the enforced conditions
+		and axioms, for Example \ref{predicatesex}}\label{certificateinfgraph}
+\end{figure}
+\end{sbexample}
+
+\begin{exercise}{A Proof I}\label{step3ex}
+Prove Item \ref{step3} from Example \ref{predicatesex}.
+\end{exercise}
+\iffalse
+\begin{answer}{}
+$p_3$: {\tt IsValidAuth(}CA,cc{\tt )}
+
+By $E_7$: {{\tt HasSig(cc,ccs)}};
+$E_8$: {{\tt IsValidAccTo(ccs,cc,vc)}};
+and $p_2$: {\tt IsValidSignatory(}cc,VA,vc{\tt )};
+and A\ref{A1}, {\tt IsValidCert(}CA,cc{\tt )}. 
+
+By $E_6$, {\tt HasCert(}CA,cc{\tt )}, so by A\ref{A4},
+{\tt IsValidAuth(}CA,cc{\tt )}. 
+\end{answer}
+\fi
+
+\begin{exercise}{A Proof II}\label{step4ex}
+Prove Item \ref{step4} from Example \ref{predicatesex}.
+\end{exercise}
+\iffalse
+\begin{answer}{}
+$p_4$: {\tt IsValidSignatory(}jc, CA{\tt )}
+
+Using (\ref{specialization}), we can infer a version of A2 with {\tt jc} substituted for $d$,
+{\tt CA} substituted for $A$, and {\tt jcs} substituted for $s$:
+\begin{eqnarray}\label{A1a}\nonumber
+&&\hspace{-7mm}\hbox{\tt HasSig(jc,jcs) $\wedge$ IsValidAccTo(jcs,jc,cc)$\wedge$ HasCert(CA,cc)} \\
+		&&\hspace{-7mm}\nonumber
+\supset \hbox{\tt IsSignedBy}({\tt jc, CA, cc}).
+\end{answer}
+\fi
+
+\begin{exercise}{A Proof III}\label{step5ex}
+Prove Item \ref{step5} from Example \ref{predicatesex}.
+\end{exercise}
+
+\iffalse
+\begin{answer}{}
+$p_5$: {\tt IsValidAuth(J,jc).}
+
+By $E_4$: {{\tt HasSig(jc,jcs)}};
+
+$E_5$: {{\tt IsValidAccTo(jcs,jc,cc)}};
+$p_4$: {\tt IsValidSignatory(}cc,J,jc{\tt )};
+and A\ref{A1}, {\tt IsValidCert(}J,jc{\tt )}. 
+
+By $E_3$, {\tt HasCert(}J,jc{\tt )}, so by A\ref{A4},
+{\tt IsValidAuth(}J,jc{\tt )}. 
+\end{answer}
+\fi
+
+
+
+\subsection{The Syntax of Formal Logic}
+
+The syntax of the propositional and predicate calculus is not dissimilar to that of a modern
+progamming language. Close attention was paid to its syntax, because from the {\em formalist}
+point of view, absolute clarity in these details was essential. 
+
+
+According to the {\em formalist} interpretation of mathematics, mathematics
+is {\em conceptually} nothing more than the manipulation of symbols according to the rules of
+the predicate calculus. This is a highly artificial interpretation of mathematics and does
+not genuinely represent mathematical thought. This idea was primarily entertained as a way
+to justify reasoning concerned with infinite quantities (like the set of all natural numbers,
+or the set of all real numbers), without having to justify the existence of these abstract
+concepts.
+
+For this reason, great care has been taken to define the syntax of the
+predicate calculus.  Since neither computers, nor computer languages,
+existed when the predicate calculus was developed, methods for describing
+its syntax had to be developed.  We refer the reader to texts on logic,
+like \cite{Kleene52}, \cite{Mendelson64} for these details.  It should
+be noted that we have introduced one small variation from conventional
+practice, which is that we use multi-character names for predicates, and
+objects. This has been done to make their interpretation easier. Brevity
+should not take precedence over clarity in the present context.
+
+%Hand book-ch2 end
 \subsection{cybersecurity architecture}
 The concept that cybersecurity architecture is the discovery, definition and validation of {\em rules} (mandatory objectives and their conditions) is introduced.
 
