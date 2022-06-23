@@ -14,3 +14,15 @@ In truth, if your vision of an ideal cyberspace is too different from
 your colleagues, it may not be feasible to convince them of its correctness.
 If you disagree, ie you think you can convince them, then you will need
 to undertake that task -- ie explain why your vision is the right one.]
+
+[In the Western view, the ethics of others can be different from our own,
+without necessity for conflict. There are, probably, some ethical principles
+which are "universal", ie we all share them. Respect for life, for property,
+for example. But there are other values (ethics) which are not universal.
+I think the fact that human values vary from person to person does not invalidate
+your "project". But it does affect it. In particular, the fact that values
+varies is, in a sense, why we need a "social contract".]
+
+In order to reach such a strategic goal, the mission
+of cybersecurity must be how to insert human ethics and values into software
+values.
