@@ -86,3 +86,26 @@ questions by developing a logical framework for cybersecurity.
 [tried --> try (use present tense wherever possible)]
 [chapter --> dissertation; what you are saying here is relevant to the 
 whole dissertation, not just this chapter.]
+
+[The text up to this point makes sense, and presents a bold program
+for approaching cybersecurity in a different way (even with my
+changes). But in what sense is it about methodology? 
+
+The reader does want to understand _how_ this project can be
+achieved. Especially when the chapter is called "Methdology".
+What you need to explain is _how_ can ethical principles be
+incorporated in cybersecurity design.
+
+Given the preceding text, the reader will be ready to accept a radical
+proposal for the method. This is good. Even if you propose a method that
+is unconventional, if it seems to be the right method for this
+difficult proposal (of incorporating ethics in cybersecurity systems),
+the reader will accept it.
+
+I therefore suggest adding:]
+
+What is the right methodology to discover how to incorporate ethical
+principles in cybersecurity design?
+
+[The next section now makes sense. It can be viewed as an answer to that
+question.]
