@@ -35,4 +35,54 @@ actually address this task. So, the action must be more "subtle"]
 In order to reach such a strategic goal, the mission
 of cybersecurity must be to incorporate human ethics and values in software.
 
+This matter in itself is not easy at all because it requires an ethical
+philosophy related to cybersecurity.
+[True. But even before the difficulty, it is important to comment on
+the fact that you have "concluded" that this _need_ is now clear.
+Your argument is, I believe, correct, but unless you spell it out,
+the reader will not even attempt to agree. On the other hand, if
+you propose this idea as a "hypothesis", you are _inviting_ the reader
+to agree, and then, in a sense, they are forced to accept your idea.]
+-->
+Traditionally, software developers do not envisage 
+ethical objectives as legitimate, or feasible, goals. In this
+dissertation we propose a contrary hypothesis, namely that
+ethical objectives are not only feasible, but essential.
+Incorporation of ethical objectives is not easy because it requires 
+development of a different philosophy of cybersecurity software.
 
+This philosophy proposes that cyberspace
+be an ideal alternative to the real world as much as possible. What we mean
+by idealism here is that the presence of each member in this space is effective
+and not harmful to others.
+[You are proposing that the reader adopt a new philosophy of life.
+This is hard to justify in a technical dissertation. A more reasonable
+strategy is to propose that the reader adopt a new philosophy concerning
+what can be done in software. If this is sufficient, for your goal, it
+is the correct strategy. The key to achieving your goal, without forcing
+all users to adopt ethical principles that they don't agree with, is
+to seek agreement only on a core set of ethical principles: the social
+contract.]
+-->
+This new, different philosophy of cybersecurity software proposes
+that there are some core ethical principles that every reasonable
+person must accept, that these core principles _must_ be incorporated
+in our cybersecurity systems, and once this is done, any mandatory ethical 
+principles that are important to individuals, but which are not
+uniformly adopted, and in fact vary significantly from one to another, can
+be accomodated by applying the core ethical principles that are mutually
+agreed.
+
+1. What is the current presence of members in cyberspace? And,
+-->
+1. Fundamentally, what does membership of cyberspace constitute -- what are
+the actions it enables, the impacts it allows, its obligations, and its rights? and,
+
+2. how can this membership, with all that it entails, be guided or constrained to
+fit the reasonable ethical principles of the members.
+
+Through this chapter, we tried to provide a convincing answer to both 
+questions by developing a logical framework for cybersecurity.
+[tried --> try (use present tense wherever possible)]
+[chapter --> dissertation; what you are saying here is relevant to the 
+whole dissertation, not just this chapter.]
