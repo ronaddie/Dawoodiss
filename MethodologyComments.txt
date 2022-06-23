@@ -26,3 +26,13 @@ varies is, in a sense, why we need a "social contract".]
 In order to reach such a strategic goal, the mission
 of cybersecurity must be how to insert human ethics and values into software
 values.
+[I don't think "insert" is the right action here. It suggests that ethics and values
+are like a "rule book" that can be replaced, or modified. But it is not enough
+to replace a rule book, in general, because the system must actually "obey"
+the rule book. That is part of your project also. And some of your work
+actually address this task. So, the action must be more "subtle"]
+-->
+In order to reach such a strategic goal, the mission
+of cybersecurity must be to incorporate human ethics and values in software.
+
+
