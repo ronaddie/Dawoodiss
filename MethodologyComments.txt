@@ -1,0 +1,16 @@
+Comments on Chapter 3, Methodology
+----------------------------------
+
+Perhaps the basic vision of cybersecurity is to reach
+a virtuous digital world.
+[This is a very "personal" statement. It needs to be
+re-expressed to be more "universal". From an Australian
+point of view "virtue" is not so clearly a "universal goal".]
+-->
+Perhaps the basic vision of cybersecurity is to ensure a safe digital world.
+
+[This restatement of your view is much less bold, less ambitious. Please consider.
+In truth, if your vision of an ideal cyberspace is too different from
+your colleagues, it may not be feasible to convince them of its correctness.
+If you disagree, ie you think you can convince them, then you will need
+to undertake that task -- ie explain why your vision is the right one.]
