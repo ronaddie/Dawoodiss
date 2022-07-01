@@ -26,4 +26,11 @@ the paper in which it was originally reported. You were one of the authors,
 but the work of the other authors needs to be acknowledged. You need
 therefore to: (a) explain that you are describing original work by
 yourself, with colleagues; (b) list the colleagues with whom it was
-done; (c) cite the paper in which this work was previously described.]
+done; (c) cite the paper in which this work was previously described.
+
+Also, the title "Original Design of Password Reset Service"
+is odd as a way to introduce these experiments. What would make more sense
+here is to have a heading which explains that a Password Reset 
+Service is being "security-audited". The idea that this should be done
+was introduced earlier, so it makes sense to explain that it is being
+done here.]
