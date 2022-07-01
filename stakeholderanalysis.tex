@@ -23,14 +23,13 @@
 
 %\PARstart{V}{ulnerabilities} of web systems take a great variety of forms
 
-Cybersecurity issues and ethics  take a great variety of forms and new ones appear to emerge regularly, so it can seem an endless process to manage and maintain the cyber spase \cite{josang2005user}. An approach used periodically is to assign the task of attack or harm   a service in cyber space  to an individual or a team and then address the discovered weaknesses. We call this a {\em security audit}. The approach of searching for weaknesses and fixing them is so widely used that it might reasonably be regarded as a design philosophy.
-This approach has been used in this dissertation, and the results of
-both the attacks and the resulting defences are reported.
-However, this approach is somewhat pessimistic in that it {\em assumes}
-that a more methodical security design philosophy which can guarantee
-secure design is not available. The main result
-of this dissertation is to demonstrate such a methodical design philosophy.
-We call this {\em stakeholder security analysis}.
+Cybersecurity issues and ethics take a great variety of forms and new ones appear to emerge regularly, so it can seem an endless process to manage and maintain both of them\cite{josang2005user}. 
+
+An approach used periodically is to assign the task of attacking or harming a service in cyberspace to an individual or a team and then address the discovered weaknesses. We call this a {\em security audit}. The approach of searching for weaknesses and fixing them is so widely used that it might reasonably be regarded as a design philosophy.
+
+This approach has been used in \cite{sheniar2018experiments}, and the results of both the attacks and the resulting defences are reported. However, this approach is somewhat pessimistic in that it {\em assumes} that a more methodical security design philosophy that can guarantee a secure design is not available. 
+
+The main result of this dissertation is to demonstrate such a methodical design philosophy. We call this {\em stakeholder security analysis}.
 
 Stakeholder security analysis proceeds as follows: 
 \begin{enumerate}[1.]
@@ -41,9 +40,13 @@ by all stakeholders must be consistent.
 \item Implement procedures which ensure that all rules are enforced.
 \end{enumerate}
 
+
+Both a security audit and a stakeholder security analysis have been applied to a specific subsystem of a web service system, the password reset service of the Netml system, being developed and managed by the authors \cite{sheniar2018experiments}.
+\iffalse 
 Both a security audit and a stakeholder security analysis
 are applied in this dissertation to a specific subsystem of a web
 service system being developed and managed by the authors.
+\fi
 Note: it is not suggested that stakeholder security analysis obviates
 the need for a security audit.
 
@@ -109,30 +112,124 @@ which relies on it, so the second system must be one with significantly
 greater importance, for the user, for this type of design to be
 satisfactory.\\
 
+\section{Original Design of Password Reset Service}\label{initial}
+
+The original design of the password reset
+service of the Netml system is described in Figures \ref{usersdl} and
+\ref{seqdgnetmlorg}.
+\begin{figure}
+\begin{center}
+\vspace{5mm}
+\includegraphics[width=37mm]{figures/resetpwd.png}
+\caption{SDL diagram for User behaviour when resetting the password}
+\label{usersdl}
+\end{center}
+\end{figure}
+
+There is nothing exceptional about this design. However, in Section \ref{expts}
+we discover that there are mistakes in the implementation of this design which
+make it insecure.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=5cm]{figures/User.png}
+\caption{Sequence diagram for the Netml password reset  system }
+\label{seqdgnetmlorg}
+\end{figure}
+	
+
+\section{Break-in experiments}\label{expts}
+\begin{figure}
+	\centering
+		\includegraphics[width=6cm]{figures/attacker.png}
+\caption{Sequence diagram for the Netml password reset  system under attack }
+\label{seqdgnetmlattack}
+\end{figure}
+A series of experiments in which the system is attacked,
+successfully, and then modified, are described in this section.
+These experiments took the form described in Subsection \ref{audit},
+i.e. a series of attacks were undertaken in accordance with known
+vulnerabilities and observed behaviour of the system.
+
+\subsection{First Experiment}
+A detail not mentioned in Section \ref{initial} is that when an attempt
+to update a user's password is made, with an invalid ticket, the web 
+page which is prepared to report an error includes both the invalid
+ticket, and the value that the ticket should have taken. This is a fatal
+mistake (from the point of view of good security). There is no need
+to report to an ordinary user what the value of the ticket should
+have been. The reason this was included in the error-report web page
+was to enable the software to be readily tested and debugged. However,
+this information should have been removed from the error page
+in the working system.
+
+The procedure used to change the password of a different user was as
+described in Figure \ref{seqdgnetmlattack}. First, the password reset system was used to reset the password
+of the attacker (a perfectly valid procedure, with no ill intent or 
+consequence). During this process, the URLs used at each stage
+were observed. In particular, the URL which was used to complete
+the reset of the password of user \verb|addie11| was of the form
+shown in Listing \ref{registration}.
+\begin{listing}{\scriptsize
+\begin{minted}[breaklines]{text}
+https://netml.usq.edu.au/netml4_6/registration.jsp?
+resetpwd=true&ticket=12345&uname=u1047621&fullName=fake&
+email=u1047621@umail.usq.edu.au&organisation=USQ
+\end{minted}
+}
+\caption{Form of URL which causes the password change web page to be displayed}
+\label{registration}
+\end{listing}
+A URL of this form was then used with the target user's email address and 
+an invalid ticket. This generated an error report page which revealed
+the value the ticket should have had. Finally, the correct ticket was
+inserted into the URL and it was sent to the server. This URL caused
+the web page for supplying a new password to be displayed, which was then
+used to change the target user's password.
+
+\subsection{Second Experiment}
+After this defect was corrected, by removing the display of the valid
+ticket in the error report web page, 
+another experiment was carried out.
+In some cases the algorithm used to generate tickets is known by attackers
+because the source code for the server may be available or the attackers
+may be able to guess the ticket algorithm
+\cite{wang2018end}. In the revised Netml system, tickets were calculated as:
+\begin{minted}[breaklines]{java}
+hexsha(username+Calendar.getInstance()
+.get(Calendar.DAY_OF_YEAR))
+\end{minted}
+In the present case this algorithm was deliberately revealed to the attacker.
+
+In response to this attack, the ticket algorithm was changed to that 
+shown in Listing \ref{ticketalg}. No attacks of the sort
+described in this section were then able to succeed. A proof that
+these type of attacks can't succeed is given in Section \ref{proof}.
+% \section{The Revised Design}\label{designsec}  
+
 
 \section{Stakeholder Security Analysis}\label{stakeholders}
 
 Stakeholder analysis includes all those who have
 influence on decisions, events, or outcomes related to
-the system \cite{project2018guide,rose2013guide}. There
-are several ways to classify stakeholders
-%\iflonger
-\cite{reed2009s,maguire2012role,savage1991strategies,maynard2011stakeholders,bourne2016stakeholder,grimble1997stakeholder,billgren2008approaching},
-%\else
+the system \cite{project2018guide,rose2013guide}. There are several ways to classify stakeholders  
+\iflonger\cite{reed2009s,maguire2012role,savage1991strategies,maynard2011stakeholders,bourne2016stakeholder,grimble1997stakeholder,billgren2008approaching},
+\else
 \cite{maguire2012role,maynard2011stakeholders,bourne2016stakeholder},
-%\fi
+\fi
 some of which depend on their threat potential
-%\iflonger
-\cite{almorsy2016analysis,savage1991strategies,scholl2005interoperability}.
-%\else
-\cite{almorsy2016analysis,savage1991strategies}.
-%\fi
-Stakeholder analysis helps in determining: who would
+\iflonger
+\cite{almorsy2016analysis,diver2007information,savage1991strategies,scholl2005interoperability}.
+\else
+\cite{almorsy2016analysis,diver2007information,savage1991strategies}.
+\fi
+
+In \cite{sheniar2018experiments}, stakeholder security analysis helped in determining: who would
 be an attacker, and how would a successful attack be carried out? Also,
-how should security rules be changed to make the system safer \cite{diver2007information}?
+how should security rules be changed to make the system safer?
 
 However, the most important reason for a careful stakeholder analysis, from
-the point of view of this paper, is that if we are able to identify a sufficient
+the point of view of this dissertation, is that if we are able to identify a sufficient
 set of rules that ensure the willing participation of each stakeholder, and 
 if we can enforce these rules, then the system is self-evidently secure. 
 
@@ -187,9 +284,9 @@ account passwords. Members of this role can cause a successful attack
 on their accounts. For example, sharing access information to an inbox
 that contains password notification email can result in a successful
 attack on the password reset system.
-
+\iffalse
 This term refers to any rule concerning the way in which transactions are restricted. The focus is on business rules that may be related to the security of the password reset service.
-
+\fi
 \iffalse
 \begin{table}[!htbp]	      %%%%%%%%%%%%%%   [!htbp]	 to put the table in the right place   %%%%%%%%%
 	\begin{center}
@@ -227,33 +324,13 @@ This term refers to any rule concerning the way in which transactions are restri
 
 
 \subsubsection{Admin}
-Admin users are able to access all the same services and information as
-ordinary users and, in addition, are able to see a variety of reports
-which are not available to ordinary users. There are different {\em
-levels} of admin access, and at a sufficiently high admin access level,
-data stored by other users is visible. This is a feature which is
-convenient for users when they need help with their use of the system,
-although it may be desirable under some circumstances to allow users to
-have privacy from admin users as well as from other users. Administration
-role in this system consists of Individuals that can play the role of
-attackers. For example, an administration's member who has an authorized
-access to the user's inbox that contains the password notification email.
-
+Admin users are able to access all the same services and information as ordinary users and, in addition, are able to see a variety of reports which are not available to ordinary users. There are different {\em levels} of admin access, and at a sufficiently high admin access level, data stored by other users are visible. This is a feature that is convenient for users when they need help with their use of the system, although it may be desirable under some circumstances to allow users to have privacy from admin users as well as from other users. The administration role in this system consists of Individuals that can play the role of attackers. For example, an administration member who has authorized access to the user's inbox that contains the password notification email.
 
 \subsubsection{Guest}
-Guest users are able to access, and run algorithms on, networks which are publicly accessible.
+Guest users are able to access, and run algorithms on, networks that are publicly accessible.
 
 \subsubsection{Attackers} 
-Although attacker's have no inherent rights, it is useful to consider
-the objectives and motivations of attackers to better understand the
-strategies most effective in thwarting them. In particular, this role
-includes who can achieve a successful attack on the password reset
-system. As mentioned previously, the attacker may be an administrative
-member. The others, For example, who can eavesdrop on the password
-notification email  if it is an encrypted email, or who  can   discover
-the contents of the password notification email  when the inbox of the
-account user is not password protected.
-
+Although the attackers have no inherent rights, it is useful to consider the objectives and motivations of attackers to better understand the strategies most effective in thwarting them. In particular, this role includes who can achieve a successful attack on the password reset system. As mentioned previously, the attacker may be an administrative member. The others, for example, can eavesdrop on the password notification email if it is an encrypted email or can discover the contents of the password notification email when the inbox of the account user is not password protected.
 \iffalse
 \begin{itemize}
 \item Disgruntled staff or developers.
@@ -269,7 +346,7 @@ However,  this role includes who can achieve a successful attack on the password
 
 \subsection{Stakeholder rules}\label{rules}
 
-In this subsection, a subset of the rules for two of the key stakeholders have been
+In \cite{sheniar2018experiments}, a subset of the rules for two of the key stakeholders have been
 identified and are tabulated in Table  as
 shown in tables \ref{Userrules} and   \ref{adminrules}.  Rules are classified as mandatory (M) 
 or optional (O).  A complete set of rules is beyond the scope of this paper.
@@ -553,13 +630,7 @@ and repair their own problem, without calling the help desk;
 
 \subsubsection{Attacker rule-sets}
 \fi
-Attackers might be considered as stakeholders in their own right, and it is
-important to consider them in this way, however in the security design
-the objectives or rules which stakeholders adopt are not ones which we seek
-to enforce or support. In fact we seek precisely the opposite -- to thwart
-these objectives. Furthermore, the rules of the other stakeholders will normally
-encompass these requirements. Hence, in the present context it is not necessary
-to include rules expressing the point of view of attackers.
+Attackers might be considered stakeholders in their own right, and it is important to consider them in this way, however, in the security design, the objectives or rules that those stakeholders adopt are not ones that we seek to enforce or support. In fact, we seek precisely the opposite -- to thwart these objectives. Furthermore, the rules of the other stakeholders will normally encompass these requirements. Hence, in the present context, it is not necessary to include rules expressing the point of view of attackers.
 
 \iffalse
 \begin{itemize}
@@ -575,37 +646,18 @@ not password protected.
 \end{itemize}
 \fi
 
-\section{Proofs of correctness}\label{proof}
+\subsection{Proofs of correctness}\label{proof}
 
-In this subsection we describe, in detail, how to enforce rules U1--U4.
+In \cite{sheniar2018experiments} we described, in detail, how to enforce rules U1--U4.
 The procedure for implementing other rules (e.g. A1--A4) follows the same pattern.
 
-Proving correctness of some aspects of a system is very straightforward
-and all that is necessary is to review the normal procedures adopted
-by software developers and remark that these are adequate. This applies
-to rules U1--U3. The reason these rules are easy to prove
-is that, by their nature, these rules can be demonstrated by a single
-example. Testing, which is the normal procedure adopted by software developers,
-is therefore adequate to {\em prove} that these rules are correctly enforced.
+Proving the correctness of some aspects of a system is very straightforward and all that is necessary is to review the normal procedures adopted by software developers and remark that these are adequate. This applies to rules U1--U3. The reason these rules are easy to prove is that, by their nature, these rules can be demonstrated by a single example. Testing, which is the normal procedure adopted by software developers, is therefore adequate to {\em prove} that these rules are correctly enforced.
 
-The distinction between rules which are easy to prove and those which are difficult
-to prove is {\em logical}, i.e. by their logical nature 
-some rules can be proved by a single instance, while others require a series of 
-deductive steps. 
+The distinction between rules which are easy to prove and those which are difficult to prove is {\em logical}, i.e. by their logical nature some rules can be proved by a single instance, while others require a series of deductive steps. 
 
-Rules which are difficult to prove are often difficult to implement correctly, also.
-While attempting to prove the security rules for the password reset subsystem, mistakes
-in its implementation were discovered which had to be corrected before the system could be
-proved to be correct. This occurred in other aspects of the system (which were
-analysed in a similar manner, but for which details have not been included
-in the paper), also. This supports the practical utility of the methodology 
-investigated in this paper.
+Rules which are difficult to prove are often difficult to implement correctly, also. While attempting to prove the security rules for the password reset subsystem, mistakes in its implementation were discovered which had to be corrected before the system could be proved to be correct. This occurred in other aspects of the system (which were analysed in a similar manner, but for which details have not been included in the paper), also. This supports the practical utility of the methodology investigated in this dissertation.
 
-The complete set of rules for this system is a superset of those listed in Subsection \ref{rules}
-and so a complete security design and implementation will need to include
-specification of those rules and their proofs to be complete. 
-In this section, we show that Rules U1--U3 hold and
-Rule U4 holds, i.e. it is not possible to break into the system.
+The complete set of rules for this system is a superset of those listed in Subsection \ref{rules} and so a complete security design and implementation will need to include specification of those rules and their proofs to be complete.  In this section, we show that Rules U1--U3 hold and Rule U4 holds, i.e. it is not possible to break into the system.
 
 \begin{listing}
 \caption{Code for changing passwords}\label{ticketcode}
@@ -661,11 +713,8 @@ Rule U4 holds, i.e. it is not possible to break into the system.
 }
 \end{listing}
 
-If all users are treated identically, if Rules U1--U3 are verified for one user, they
-must be valid for all other users. If there are, in fact, distinct classes of user which 
-are treated differently, it will, more generally, be sufficient to check these rules for 
-users in each class. Even in this case, however, it will usually be straightforward to check
-each of these rules for each class of user.
+If all users are treated identically, if Rules U1--U3 are verified for one user, they must be valid for all other users. If there are, in fact, distinct classes of users which are treated differently, it will, more generally, be sufficient to check these rules for users in each class. Even in this case, however, it will usually be straightforward to check each of these rules for each class of user.
+
 
 \subsection{Proof of U4}
 \begin{proposition}
@@ -682,30 +731,12 @@ can only be received or calculated by user $U$.
 \end{proposition}
 
 \begin{proof} 
-By assumption (\ref{validticket}), a user's password can only be changed
-if a ticket valid for changing that user's password is provided. By assumption (\ref{userrestricted}),
-such a ticket can only be received or calculated by the User for whom it is valid. Hence, the only
-user who can change a password is the user themselves.
+By assumption (\ref{validticket}), a user's password can only be changed if a ticket valid for changing that user's password is provided. By assumption (\ref{userrestricted}), such a ticket can only be received or calculated by the User for whom it is valid. Hence, the only user who can change a password is the user themselves.
 \end{proof}
 
-To apply this proposition we need to verify that the assumptions hold in the Netml system.
-This is where the ``real work'' has to be done. Assumption (\ref{validticket}) requires
-checking the code for the Netml system. The relevant code is shown in Listing \ref{ticketcode}.
-Observe that if the ticket provided by the user is not valid, the password will not be updated.
-In addition, the only other place where user passwords are updated cannot be accessed
-if the email address provided already exists in the database. Hence Assumption (\ref{validticket})
-holds. Note that proof of this assumption relies on an inherently complex observation that
-there is only one possible location where passwords can be changed as a consequence of a 
-password reset request.
+To apply this proposition, we need to verify that the assumptions hold in the Netml system. This is where the ``real work'' has to be done. Assumption (\ref{validticket}) requires checking the code for the Netml system. The relevant code is shown in Listing \ref{ticketcode}. Observe that if the ticket provided by the user is not valid, the password will not be updated. In addition, the only other place where user passwords are updated cannot be accessed if the email address provided already exists in the database. Hence Assumption (\ref{validticket}) holds. Note that proof of this assumption relies on an inherently complex observation that there is only one possible location where passwords can be changed as a consequence of a password reset request.
 
-Assumption (\ref{userrestricted}) also requires checking the source code of the system.
-There are two aspects of this functionality which need to be checked: (i) that tickets
-valid for changing the password of user $U$ can only be received by user $U$; and (ii)
-tickets valid for user $U$ can't be calculated or guessed (in a feasible time), by a
-user other than $U$. The algorithm for calculating tickets is shown in Listing \ref{ticketalg}.
-This algorithm uses the Java class \verb|SecureRandom| as the source of random numbers
-used to generate tickets. This class provides a cryptographically strong 
-random number generator\iflonger \cite{SecureRandomJavadoc},\else,\fi which means that it produces 
+Assumption (\ref{userrestricted}) also requires checking the source code of the system. There are two aspects of this functionality that need to be checked: (i) that tickets valid for changing the password of user $U$ can only be received by user $U$; and (ii) tickets valid for user $U$ can't be calculated or guessed (in a feasible time), by a user other than $U$. The algorithm for calculating tickets is shown in Listing \ref{ticketalg}. This algorithm uses the Java class \verb|SecureRandom| as the source of random numbers used to generate tickets. This class provides a cryptographically strong random number generator\iflonger \cite{SecureRandomJavadoc},\else,\fi which means that it produces 
 a {\em non-deterministic} sequence of random numbers.
 % \begin{quote}
 % ``This class provides a cryptographically strong random number generator
@@ -719,31 +750,14 @@ a {\em non-deterministic} sequence of random numbers.
 % Recommendations for Security.''
 % \end{quote}
 
-This addresses (ii). Requirement (i) relies, in turn, on the assumption that
-user $U$ manages their email in such a way that they, and only they, can receive email
-sent to their email address. The Netml software sends tickets valid for a certain email
-address only to that email address, but if a user allows someone else to know their email
-account password, another user use this to gain access to their Netml account, by requesting
-a password change, and then accessing the email which enables the password to the changed.
+This addresses (ii). Requirement (i) relies, in turn, on the assumption that user $U$ manages their email in such a way that they, and only they, can receive email sent to their email address. The Netml software sends tickets valid for a certain email address only to that email address, but if a user allows someone else to know their email account password, another user uses this to gain access to their Netml account, by requesting a password change and then accessing the email which enables the password to the changed.
 
-If $U$ uses un-encrypted email, it is also possible for anyone with physical
-access to the network by means of which the email is transferred to gain access
-to the ticket and thereby to change the password of a user who is attempting to 
-reset their password.
+If $U$ uses an unencrypted email, it is also possible for anyone with physical access to the network by means of which the email is transferred to gain access to the ticket and thereby change the password of a user who is attempting to reset their password.
 
-This method of re-setting an account password should not be used if the sensitivity of
-the information protected is greater than that of an email account.
+This method of resetting an account password should not be used if the sensitivity of the information protected is greater than that of an email account.
 
 \subsection{Proof of U8}
-The code which checks the timeliness with which a ticket provided in an email
-is used to reset a password is shown in Listing \ref{tickettimeliness}. It can 
-be seen from this code that if the ticket used is not the same as the one
-generated and stored in the system, when the user requested to reset their password,
-or if it is used on a different day, or at a time more than 30 minutes after it was
-generated, the script which is used to reset a users password will, instead, display
-a login screen. Thus, it is only possible to use a password reset ticket within 31 minutes
-of it being issued. Proof that tickets are valid for at least 30 minutes is not included here
-because this is best undertaken by testing.
+The code which checks the timeliness with which a ticket provided in an email is used to reset a password is shown in Listing \ref{tickettimeliness}. It can be seen from this code that if the ticket used is not the same as the one generated and stored in the system when the user requested to reset their password, or if it is used on a different day, or at a time more than 30 minutes after it was generated, the script which is used to reset a user's password will, instead, display a login screen. Thus, it is only possible to use a password reset ticket within 31 minutes of it being issued. Proof that tickets are valid for at least 30 minutes is not included here because this is best undertaken by testing.
 \begin{listing}
 \caption{Algorithm for checking ticket timeliness}\label{tickettimeliness}
 {\footnotesize
@@ -769,46 +783,13 @@ addressed, however the details of this work cannot be included in the present pa
 
 \section{Conclusion}\label{concl}
 
-In Section \ref{webservicessecurity}, three complementary approaches for achieving 
-rigorous security were reviewed. The first of these is a pragmatic list of good practices
-which help to minimise the effort required to create and maintain good security. If
-these practices are not followed, the other two approaches, which are more specific
-in addressing security requirements, will require too much effort to be put into practice.
-The second approach is to attempt a series of attacks by methods which are known to
-be currently active, and to use the known (and usually published) techniques to address
-them.These methods are used by attackers as they are easy to get the worked attacked vector 
-and they know they will work as uptake of fixes and patches is slow. 
+In \cite{sheniar2018experiments}, three complementary approaches for achieving rigorous security were reviewed. The first of these is a pragmatic list of good practices which help to minimize the effort required to create and maintain good security. If these practices are not followed, the other two approaches that are shown in this chapter, which are more specific in addressing security requirements, will require too much effort to be put into practice. The second approach is to attempt a series of attacks by methods that are known to be currently active and to use the known (and usually published) techniques to address them. These methods are used by attackers as they are easy to get the worked attacked vector and they know they will work as uptake of fixes and patches is slow. 
 
-The third approach is a more systematic and rigorous complement to the second. Instead
-of enumerating and employing a series of exploits, the threats are systematically 
-classified in the form of a list of rules stated as the requirements of each of the
-stakeholders. This allows us to logically address the important question of {\em completeness}.
-Whereas a list of currently active exploits is inherently evolving and therefore incomplete,
-it is reasonable to ask each stakeholder (or their representative): ``is this list of rules
-sufficient, if guaranteed, for you to agree to actively participate in this service?''
-If all stakeholders are satisfied in this way, the web service is secure. Despite an agreement
-of this sort being established, naturally, if a new approach which undermines security in
-a way which one or more stakeholders were not able to anticipate is discovered, the rules
-which stakeholders require will need to change. At least, when this happens, we have an explanation:
-our fundamental understanding of the nature of the service has progressed.
+The third approach is a more systematic and rigorous complement to the second. Instead of enumerating and employing a series of exploits, the threats are systematically classified in the form of a list of rules stated as the requirements of each of the stakeholders. This allows us to logically address the important question of {\em completeness}. Whereas a list of currently active exploits is inherently evolving and therefore incomplete, it is reasonable to ask each stakeholder (or their representative): ``is this list of rules sufficient, if guaranteed, for you to agree to actively participate in this service?'' If all stakeholders are satisfied in this way, the web service is secure. Despite an agreement of this sort being established, naturally, if a new approach that undermines security in a way that one or more stakeholders were not able to anticipate is discovered, the rules which stakeholders require will need to change. At least, when this happens, we have an explanation: our fundamental understanding of the nature of the service has progressed.
 
-In addition, the third approach defines how to rigorously review the steps which are taken
-to address new exploits: these steps should be formulated sufficiently clearly, and in such
-a way, that the stakeholder rules are provable. This makes a critical connection between
-the code implementing a web service and the security rules it is expected to conform to.
-It is not necessary to adopt a special purpose programming language, or methodology,
-in order to achieve this level of rigour (although adopting special methods may
-make this task easier).
+In addition, the third approach defines how to rigorously review the steps which are taken to address new exploits: these steps should be formulated sufficiently clearly, and in such a way, that the stakeholder rules are provable. This makes a critical connection between the code implementing a web service and the security rules it is expected to conform to. It is not necessary to adopt a special-purpose programming language, or methodology, in order to achieve this level of rigour (although adopting special methods may make this task easier).
 
-The key new ideas in this paper are that: (a) there is a simple and logical security design
-philosophy, which is to identify the rules required by all stakeholders,
-and ensure they are guaranteed; (b) we can ensure some of these are
-satisfied by proving they must hold from some of the rules which are
-guaranteed. Note: proving that {\em all} rules hold, even for a small system
-like the one considered in this paper, is not feasible in a paper of this length.
-For systems which need a security guarantee, it may be feasible to prove that all
-stakeholder rules hold. However, many systems rely on correct behaviour by the
-stakeholders, which will limit what level of security can be achieved.
+The key new ideas in this chapter are that: (a) there is a simple and logical security design philosophy, which is to identify the rules required by all stakeholders and ensure they are guaranteed; (b) we can ensure some of these are satisfied by proving they must hold from some of the rules which are guaranteed. Note: proving that {\em all} rules hold, even for a small system like the one considered in this paper, is not feasible in a paper of this length. For systems that need a security guarantee, it may be feasible to prove that all stakeholder rules hold. However, many systems rely on correct behaviour by the stakeholders, which will limit what level of security can be achieved.
 
 	
 

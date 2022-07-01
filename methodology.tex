@@ -1121,7 +1121,8 @@ principles of secure design of these services is also a new and evolving area of
 research and development \cite{AddieColman2010,Addie_Moffatt_Dekeyser_Colman2011}.
 \else\cite{Addie_Moffatt_Dekeyser_Colman2011}.
 \fi
-
+\section{Experiments and Proofs}
+\iffalse 
 This section reviews three different approaches for securing web sites/services.
 Each of these approaches is usually expressed as a completely independent
 philosophy for achieving good security. We shall see that these approaches 
@@ -1131,7 +1132,9 @@ i.e.  guarantee, security, because no logical system can claim certainty in an a
 sense (in mathematical logic, this fact is expressed in G\"odel's incompleteness theorem), the strategy 
 of attacking the system remains useful, even after it has been
 methodically proved to be correct.
-
+\fi
+This section reviews three different approaches for securing cyberspace services. Each of these approaches is usually expressed as a completely independent philosophy for achieving good security. As has been applied in \cite{sheniar2018experiments}, we shall see that these approaches are actually complementary, and to achieve rigorous security all three approaches are needed. Note that although we describe a design philosophy that is able, formally, to prove, i.e. guarantee, security, because no logical system can claim certainty in an absolute sense (in mathematical logic, this fact is expressed in G\"odel's incompleteness theorem), the strategy of attacking the system remains useful, even after it has been methodically proved to be correct.
+\iffalse
 The present paper does not apportion equal emphasis on all approaches
 because the original contribution of this paper is 
 in the third of them, together with the way the second approach joins
@@ -1140,12 +1143,11 @@ is the one summarised in Subsection \ref{audit} and applied
 in Section \ref{expts}.
 The third approach is summarised in Subsection \ref{stsecanal} and applied
 to the Netml password reset system in Sections \ref{stakeholders} and \ref{proof}.
+\fi
+We do not apportion equal emphasis on all approaches because the original contribution of this dissertation is in the third of them, together with the way the second approach joins with the third to form a more comprehensive whole. The second approach is the one summarised in Subsection \ref{audit} and applied in Section \ref{expts}. The third approach is summarised in Subsection \ref{stsecanal} and applied to the Netml password reset system in Sections \ref{stakeholders} and \ref{proof}.
+
 
 %\subsection{Web Service Security Design}\label{webservicessecurity}
-
-
-
-
 
 
 
@@ -1159,7 +1161,7 @@ defaults \cite{lai2018impact}, using the principle of defence in depth
 keeping security simple \cite{thomsen2018network}, and fixing security
 issues correctly \iflonger\cite {ali2018security, tabassum2018evaluating}.
 \else \cite {tabassum2018evaluating}.\fi
-These approaches  are used for  maintaining and improving security which
+ These approaches  are used for  maintaining and improving security which
 are so natural and important that they should be adopted as a first
 layer of protection as a matter of standard practice, even when more
 sophisticated approaches are also in use \cite {ross2018systems}.
