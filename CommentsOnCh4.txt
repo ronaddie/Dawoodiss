@@ -1,0 +1,29 @@
+Experiments and Proofs in Cybersecurity
+---------------------------------------
+
+Introduction
+------------
+cyber spase --> cyberspace
+
+This approach
+has been used in this dissertation, and the results of both the attacks and the
+resulting defences are reported.
+[This approach was used rather selectively, in just one case, I suspect: the pwd reset attack . Please
+provide a cross-reference to the place where this work is reported, in the dissertation.]
+
+Both a security audit and a stakeholder security analysis are applied in this
+dissertation to a specific subsystem of a web service system being developed and
+managed by the authors.
+[Please add cross-references to the parts of your dissertation that you are referring to.
+Make sure to use \label{xx} (to place the marker) and \ref{xx} to refer to another location.]
+
+Original Design of Password Reset Service
+-----------------------------------------
+[At this point, the dissertation stops reviewing literature and describes
+work which you participated in. But you have failed to acknowledge
+the others with whom this work was done, and you have not cited
+the paper in which it was originally reported. You were one of the authors,
+but the work of the other authors needs to be acknowledged. You need
+therefore to: (a) explain that you are describing original work by
+yourself, with colleagues; (b) list the colleagues with whom it was
+done; (c) cite the paper in which this work was previously described.]
