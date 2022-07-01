@@ -34,3 +34,8 @@ here is to have a heading which explains that a Password Reset
 Service is being "security-audited". The idea that this should be done
 was introduced earlier, so it makes sense to explain that it is being
 done here.]
+
+[Figures 4.1 and 4.2 are not relevant. They are not referenced in the text
+of the dissertation. There is no reason to refer to them, because the experiments
+in which these diagrams are relevant are not included in your chapter. They
+should not be included. Please remove the figures.]
