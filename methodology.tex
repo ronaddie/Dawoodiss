@@ -1144,7 +1144,7 @@ in Section \ref{expts}.
 The third approach is summarised in Subsection \ref{stsecanal} and applied
 to the Netml password reset system in Sections \ref{stakeholders} and \ref{proof}.
 \fi
-We do not apportion equal emphasis on all approaches because the original contribution of this dissertation is in the third of them, together with the way the second approach joins with the third to form a more comprehensive whole. The second approach is the one summarised in Subsection \ref{audit} and applied in Section \ref{expts}. The third approach is summarised in Subsection \ref{stsecanal} and applied to the Netml password reset system in Sections \ref{stakeholders} and \ref{proof}.
+We do not apportion equal emphasis on all approaches because the original contribution of this dissertation is in the third of them, together with the way the second approach joins with the third to form a more comprehensive whole. The second approach is the one summarised in Subsection \ref{audit} and applied in Section \ref{secadit}. The third approach is summarised in Subsection \ref{stsecanal} and applied to the Netml password reset system in Sections \ref{stakeholders} and \ref{proof}.
 
 
 %\subsection{Web Service Security Design}\label{webservicessecurity}
@@ -1202,31 +1202,33 @@ A more fundamental strategy which is not well-developed at present is
 to seek to develop provably secure protocols and software for all aspects
 of a web service \cite{whitman2011principles,mailloux2018examination,bishop2005introduction}.
 
-The first step in this approach, which is developed further in 
+The first step in this approach, which is described in Section \ref{stkanalch3} and developed further in 
 Section \ref{stakeholders}, is to consider the point of view of all legitimate stakeholders
 in relation to the service, and to enumerate a complete set of rules
 required by each of these stakeholders, sufficient to ensure that they
 will agree to actively participate in the service.
 
 
-\section{Stakeholder Security Analysis}
+\section{Stakeholder Security Analysis}\label{stkanalch3}
 
-[Stakeholder security analysis is a more specific form of logical analysis. Instead of dealing with
+Stakeholder security analysis is a more specific form of logical analysis. Instead of dealing with
 objectives in general, it makes use of the obvious but useful fact that all systems have
 stakeholders, and the objectives of the system as a whole can be sub-divided into those
 which can be ascribed to each stakeholder. Once their objectives have been identified, they
 can be further analysed, refined, and reviewed. In particular, it is important to work out if
-their objectives are compatible.]
-The main result of this dissertation is to demonstrate  a secure methodical design philosophy.
-We call this {\em stakeholder security analysis}.
+their objectives are compatible.
+%The main result of this dissertation is to demonstrate  a secure methodical design philosophy.
+%We call this {\em stakeholder security analysis}.
 \iffalse
 %Hand book-----ch2-2.3.1 begin
 Every business, organization, or community has {\em stakeholders}. These are the people (or agents) who have an interest in any aspect of its operation. In many cases, there will be a large group of {\em clients}, i.e. individuals who receive a service. There may be one or more {\em owners}. There are also many other ways a person, agent, or entity can have an interest in a given organisation or entity. One organization can be a stakeholder in another.
 %Hand book-----ch2-2.3.1 end
 \fi
+\iffalse
 In this section, we designed stakeholders' policies to incorporate human
 values and ethics as much as possible into software values
-
+\fi
+\iffalse
 Stakeholder security analysis proceeds as follows: 
 \begin{enumerate}[1.]
 \item Identify the key stakeholders.
@@ -1292,7 +1294,7 @@ This framework enables us to create a rigorous, scientific framework for many re
 When we attempt to put security into this framework, it becomes clear that although it works, accurately, it fails to achieve the right emphasis. In security, the emphasis must be almost exclusively on the constraints. The constraints, in a security problem, are the rules: including business rules, service protection rules, and all the security rules required by the stakeholders. The objective will, in most cases, be obvious, but not particularly relevant.
 
 It is usually felt that there are limited opportunities for achieving cost savings by searching for, or devising, better security strategies. There may be more such opportunities in the future, and this possibility should not, therefore, be entirely neglected. However, for the most part, the challenge, in security design, is not {\em minimizing cost}, or {\em maximizing profit}, but rather {\em achieving certainty}, that all required security rules have been enforced.
-
+\fi
 
 \subsection{Stakeholders}
 
