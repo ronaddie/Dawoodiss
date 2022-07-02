@@ -15,3 +15,22 @@ for the dissertation, and for you, because adding these explanations
 and cross-references will allow the work to become much better, to become
 clear to the reader, to become substantial, to become convincing, and to
 allow you to express your views.] 
+
+Cybersecurity is essentially the enforcing of the rules(mandatory objectives and
+their conditions) required by the stakeholders of the system under considera-
+tion.
+[This is too simplified, too direct. This approach to cybersecurity is not
+"conventional". It is not essential to think or believe the same thing as
+others, but it is important to be aware of what other's believe, and to
+acknowledge it. 
+
+In particular, to suggest that cybersecurity _as_a_whole_ is about enforcing rules
+is not realistic. There are other aspects. It is not cybersecurity that is about
+rules, but cybersecurity architecture.]
+-->
+Cybersecurity architecture is essentially identifying the rules (mandatory objectives and
+their conditions) required by the stakeholders of the system under consideration.
+The rules ascribed to each stakeholder must be enforcable, and the security that they
+provide will not contribute to system security unless they _are_ enforced. If we 
+are able to be certain that all rules are enforced, cybersecurity in the sense
+defined by these rules will be assured.
