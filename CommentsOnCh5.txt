@@ -34,3 +34,12 @@ The rules ascribed to each stakeholder must be enforcable, and the security that
 provide will not contribute to system security unless they _are_ enforced. If we 
 are able to be certain that all rules are enforced, cybersecurity in the sense
 defined by these rules will be assured.
+
+The collection of cybersecurity rules forms a graph, in which the vertices
+represent cybersecurity rules,
+[The rulesgraph paper should be cited here.]
+
+(Rerup 2018) [This is an incorrect citation. Rerup does not say anything like
+the previous sentence. Using this incorrect citation will mislead the reader
+and it could be quite dangerous to mislead the reader in this way. The best
+approach is to be accurate.]
