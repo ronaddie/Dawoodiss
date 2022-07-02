@@ -27,10 +27,10 @@ Cybersecurity issues and ethics take a great variety of forms and new ones appea
 
 An approach used periodically is to assign the task of attacking or harming a service in cyberspace to an individual or a team and then address the discovered weaknesses. We call this a {\em security audit}. The approach of searching for weaknesses and fixing them is so widely used that it might reasonably be regarded as a design philosophy.
 
-This approach has been used in \cite{sheniar2018experiments}, and the results of both the attacks and the resulting defences are reported. However, this approach is somewhat pessimistic in that it {\em assumes} that a more methodical security design philosophy that can guarantee a secure design is not available. 
+This approach has been used in \cite{sheniar2018experiments}, and the results of both the attacks and the resulting defences are reported in section \ref{secadit}. However, this approach is somewhat pessimistic in that it {\em assumes} that a more methodical security design philosophy that can guarantee a secure design is not available. 
 
-The main result of this dissertation is to demonstrate such a methodical design philosophy. We call this {\em stakeholder security analysis}.
-
+The main result of this dissertation is to demonstrate such a methodical design philosophy. We designed in Section \ref{stakeholders} stakeholders' policies to incorporate human values and ethics as much as possible into software values.
+\iffalse
 Stakeholder security analysis proceeds as follows: 
 \begin{enumerate}[1.]
 \item Identify the key stakeholders.
@@ -39,9 +39,9 @@ by these stakeholders. Note: the collected rules required
 by all stakeholders must be consistent.
 \item Implement procedures which ensure that all rules are enforced.
 \end{enumerate}
+\fi
 
-
-Both a security audit and a stakeholder security analysis have been applied to a specific subsystem of a web service system, the password reset service of the Netml system, being developed and managed by the authors \cite{sheniar2018experiments}.
+As shown in sections \ref{secadit} and \ref{stakeholders}, both a security audit and a stakeholder security analysis have been applied to a specific subsystem of a web service system, the password reset service of the Netml system, being developed and managed by the authors \cite{sheniar2018experiments}.
 \iffalse 
 Both a security audit and a stakeholder security analysis
 are applied in this dissertation to a specific subsystem of a web
@@ -51,6 +51,7 @@ Note: it is not suggested that stakeholder security analysis obviates
 the need for a security audit.
 
 \subsection{The Netml System}
+\iffalse
 \begin{figure}
 	\centering
 		\includegraphics[width=6cm]{figures/vpn.png}
@@ -64,12 +65,12 @@ the need for a security audit.
 \caption{Traffic traces}
 \label{Traffictraces}
 \end{figure}
-
+\fi
 The Netml system provides services for analysis, design, and implementation
 of networks \cite{addie2011netml}. These services are provided by means of a web
-site Figure \ref{corporatenetwork}. No software is installed on users' computers (except in the form
+site. No software is installed on users' computers (except in the form
 of cached javascript). This system is used in teaching, by
-computer science students, and in research into network analysis and design Figure  \ref{Traffictraces}. 
+computer science students, and in research into network analysis and design. 
 \iflonger
 Most of the users of the Netml system, do not use it for an extended period of
 time and therefore do not develop complex networks which incorporate a significant
@@ -112,7 +113,7 @@ which relies on it, so the second system must be one with significantly
 greater importance, for the user, for this type of design to be
 satisfactory.\\
 
-\section{Original Design of Password Reset Service}\label{initial}
+\section{Security Auditing}\label{secadit}
 
 The original design of the password reset
 service of the Netml system is described in Figures \ref{usersdl} and
@@ -126,7 +127,7 @@ service of the Netml system is described in Figures \ref{usersdl} and
 \end{center}
 \end{figure}
 
-There is nothing exceptional about this design. However, in Section \ref{expts}
+There is nothing exceptional about this design. However, in Subsection \ref{brkexpts}
 we discover that there are mistakes in the implementation of this design which
 make it insecure.
 
@@ -138,7 +139,7 @@ make it insecure.
 \end{figure}
 	
 
-\section{Break-in experiments}\label{expts}
+\subsection{Break-in experiments}\label{brkexpts}
 \begin{figure}
 	\centering
 		\includegraphics[width=6cm]{figures/attacker.png}
@@ -151,7 +152,7 @@ These experiments took the form described in Subsection \ref{audit},
 i.e. a series of attacks were undertaken in accordance with known
 vulnerabilities and observed behaviour of the system.
 
-\subsection{First Experiment}
+\subsubsection{First Experiment}
 A detail not mentioned in Section \ref{initial} is that when an attempt
 to update a user's password is made, with an invalid ticket, the web 
 page which is prepared to report an error includes both the invalid
@@ -187,7 +188,7 @@ inserted into the URL and it was sent to the server. This URL caused
 the web page for supplying a new password to be displayed, which was then
 used to change the target user's password.
 
-\subsection{Second Experiment}
+\subsubsection{Second Experiment}
 After this defect was corrected, by removing the display of the valid
 ticket in the error report web page, 
 another experiment was carried out.
@@ -212,7 +213,8 @@ these type of attacks can't succeed is given in Section \ref{proof}.
 
 Stakeholder analysis includes all those who have
 influence on decisions, events, or outcomes related to
-the system \cite{project2018guide,rose2013guide}. There are several ways to classify stakeholders  
+the system \cite{%project2018guide
+,rose2013guide}. There are several ways to classify stakeholders  
 \iflonger\cite{reed2009s,maguire2012role,savage1991strategies,maynard2011stakeholders,bourne2016stakeholder,grimble1997stakeholder,billgren2008approaching},
 \else
 \cite{maguire2012role,maynard2011stakeholders,bourne2016stakeholder},
@@ -224,12 +226,10 @@ some of which depend on their threat potential
 \cite{almorsy2016analysis,diver2007information,savage1991strategies}.
 \fi
 
-In \cite{sheniar2018experiments}, stakeholder security analysis helped in determining: who would
-be an attacker, and how would a successful attack be carried out? Also,
-how should security rules be changed to make the system safer?
+Stakeholder analysis can determine: who would be the attacker, and how a successful attack would be carried out. Also, how should security rules be changed to make the system safer.
 
 However, the most important reason for a careful stakeholder analysis, from
-the point of view of this dissertation, is that if we are able to identify a sufficient
+the point of view of this dissertation and \cite{sheniar2018experiments}, is that if we are able to identify a sufficient
 set of rules that ensure the willing participation of each stakeholder, and 
 if we can enforce these rules, then the system is self-evidently secure. 
 
@@ -246,6 +246,16 @@ For example,
 
 \fi
  If sufficient care is taken with the stakeholder analysis, such events should be rare.
+ 
+ Stakeholder security analysis proceeds as follows: 
+\begin{enumerate}[1.]
+\item Identify the key stakeholders.
+\item For each stakeholder, identify a set of rules {\em required}
+by these stakeholders. Note: the collected rules required
+by all stakeholders must be consistent.
+\item Implement procedures which ensure that all rules are enforced.
+\end{enumerate}
+
 
 
 
@@ -789,7 +799,7 @@ The third approach is a more systematic and rigorous complement to the second. I
 
 In addition, the third approach defines how to rigorously review the steps which are taken to address new exploits: these steps should be formulated sufficiently clearly, and in such a way, that the stakeholder rules are provable. This makes a critical connection between the code implementing a web service and the security rules it is expected to conform to. It is not necessary to adopt a special-purpose programming language, or methodology, in order to achieve this level of rigour (although adopting special methods may make this task easier).
 
-The key new ideas in this chapter are that: (a) there is a simple and logical security design philosophy, which is to identify the rules required by all stakeholders and ensure they are guaranteed; (b) we can ensure some of these are satisfied by proving they must hold from some of the rules which are guaranteed. Note: proving that {\em all} rules hold, even for a small system like the one considered in this paper, is not feasible in a paper of this length. For systems that need a security guarantee, it may be feasible to prove that all stakeholder rules hold. However, many systems rely on correct behaviour by the stakeholders, which will limit what level of security can be achieved.
+The key new ideas in this chapter are that: (a) there is a simple and logical security design philosophy, which is to identify the rules required by all stakeholders and ensure they are guaranteed; (b) we can ensure some of these are satisfied by proving they must hold from some of the rules which are guaranteed. Note: proving that {\em all} rules hold, even for a small system like the one considered in \cite{sheniar2018experiments}, is not feasible in a paper of this length. For systems that need a security guarantee, it may be feasible to prove that all stakeholder rules hold. However, many systems rely on correct behaviour by the stakeholders, which will limit what level of security can be achieved.
 
 	
 
