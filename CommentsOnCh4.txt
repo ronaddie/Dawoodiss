@@ -53,8 +53,22 @@ analysis (as we define it) at all. It is just a statement that could be true.
 It is not enough to write statements which could be true. You should only
 write what you believe to be true, and for which you have clear evidence.]
 
-However, the most important
+However, the most important ...
 [Now you give a correct description of stakeholder security analysis. Good.
 But "However" might not be appropriate.]
+
+[Checking against Nabeel's dissertation shows that part of the presentation on
+the password reset system is already in Nabeel's dissertation. This must be
+cited and explained. Not all of this work is in his dissertation. It is best
+to be quite precise about what is and is not in his dissertation.
+--
+It seems that the whole of pages 44-50 is already published in Nabeel's dissertation.
+This must be acknowledged. Also, please check the conclusion of this chapter. If it is
+copied from Nabeel's dissertation, it should be re-written.
+]
+
+
+
+
 
 

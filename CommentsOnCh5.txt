@@ -1,0 +1,17 @@
+Cybersecurity Design: More Experiments and Further Development
+--------------------------------------------------------------
+
+The aim of cybersecurity design is to discover or instantiate: axioms, assump-
+tions, and enforced rules which enable us to prove that the objectives are true.
+some intermediate propositions that we also wish to prove.
+
+[Even if the reader agrees with this statement, it needs justification, and cross-referencing.
+Where does this idea come from? What is the justification? What about 
+the views of others, which are so much easier to believe? Are they wrong?
+Why are they wrong?
+
+Adding the necessary cross-references and justification is a good thing
+for the dissertation, and for you, because adding these explanations
+and cross-references will allow the work to become much better, to become
+clear to the reader, to become substantial, to become convincing, and to
+allow you to express your views.] 
