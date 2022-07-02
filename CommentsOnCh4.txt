@@ -39,3 +39,22 @@ done here.]
 of the dissertation. There is no reason to refer to them, because the experiments
 in which these diagrams are relevant are not included in your chapter. They
 should not be included. Please remove the figures.]
+
+[Institute (2018) is not a valid citation. The author is not called 
+Institute. That is the name of the host institution. 
+Please remove or replace this citation.]
+
+In (Sheniar et al. 2018a), stakeholder security analysis helped in determining:
+who would be an attacker, and how would a successful attack be carried out?
+Also, how should security rules be changed to make the system safer?
+[The first statement is not a question, so please replace "?" by ".".
+Also, the first statement is not a correct description of stakeholder security
+analysis (as we define it) at all. It is just a statement that could be true.
+It is not enough to write statements which could be true. You should only
+write what you believe to be true, and for which you have clear evidence.]
+
+However, the most important
+[Now you give a correct description of stakeholder security analysis. Good.
+But "However" might not be appropriate.]
+
+
