@@ -43,3 +43,78 @@ represent cybersecurity rules,
 the previous sentence. Using this incorrect citation will mislead the reader
 and it could be quite dangerous to mislead the reader in this way. The best
 approach is to be accurate.]
+
+5.1.1 Objectives of this research
+[This subsection seems to be out of place. Probably best to remove it.]
+
+5.1.2 Stakeholder Analysis
+[Repeated subsection heading. Remove.]
+
+[Surely "stakeholder analysis" was treated earlier? I suspect the reason this
+introductory paragraph is here is because it was appropriate in the paper from
+which it has been drawn. This is not a good reason to included it here.
+
+Instead, what is needed here, is to explain that what follows is a _different_
+example.
+
+The original material presented in this chapter is the concept of "inference graph".
+It is good to present it here, but it needs to be _explained_. In what sense
+does the inference graph support the overall plan of the dissertation?
+
+The answer is that it is a way to _illustrate_ and _explain_ how the policies 
+of the stakeholders are enforced. 
+
+The password reset example is good, but it seems likely that a good deal of what
+is presented in this chapter was already present in the preceding chapter! It is
+not satisfactory to present the same contents twice.
+
+It is ok to present the inference graph of the password reset example, and of the 
+parcel box example, in this chapter. This is original content, not presented
+in Nabeel's dissertation, for example, and not presented earlier in your dissertation.
+
+The duplicated material needs to be removed. Please compare the two treatments and
+if one is more accurate and clear, use that one. But don't include both.
+
+The inference graphs for _both_ examples can be presented in this chapter.
+
+Alternatively, it might make sense to re-arrange Chapters 4 and 5 so that all of the
+purely logical treatments are in Ch 4 and all of the inference graphs are
+in Ch 5. If the current arrangement is kept mostly unchanged, Ch 4 could 
+be reorganised to have both the logic
+and the graph for the pwd reset system, while Ch 5 would have both the logic
+and the graph for the parcel box example.
+
+I see that there is actually a third example (certificates) in Ch 5. So, if
+basically the original arrangement is kept, this would be just in Ch 5 (which
+is how it is now), while in the alternative arrangement, the logic
+for certificates would need to move to Ch 4.
+
+For the moment, its probably best to stick with the current arrangement. But,
+the reader needs to be informed about this arrangement, by providing a "preview"
+of all three examples. This could be at the start of Ch 4, or perhaps even in
+an earlier chapter, eg in Ch 3.
+]
+
+Tables 5.1 - 5.3
+[These tables are all too narrow. They need to be made wider, so they fit into 
+a page more easily. They will be much easier to read then.]
+
+5.3 Examples
+
+[This is not the correct section heading to include here. It makes sense to have a heading
+called "Examples", if the preceding text presents the theory that is now illustrated
+by a series of examples. But you have already used an example, in the preceding chapter,
+namely the pwd reset system. So the dissertation has already chosen _not_ to have
+a section of examples. 
+
+Each chapter needs to have its own clear goals and achievements. These should be explained,
+at the start of the chapter, and reviewed, at the end of the chapter. This is very reassuring
+for the reader. It also helps you to do a good job of organising the contents. ]
+
+If, as is currently the case, examples are distributed through the dissertation,
+when a new example is presented, the section heading should clearly state that
+a new example is introduced here, and name it. Eg "Example: A Password Reset System",
+or "Example: a Parcel Box". The examples could be numbered, in which case, it would
+become "Example 1. A Password Reset System" etc. 
+
+These examples should also be outlined much earlier, eg in Ch 1.]
