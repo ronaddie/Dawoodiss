@@ -1,17 +1,23 @@
 \chapter{Cybersecurity Design: More Experiments and Further Development}
-The aim of cybersecurity design is to discover or instantiate:
-axioms, assumptions, and enforced rules which enable us to
-prove that the objectives are true.
-some intermediate propositions that we also wish to prove.
 
 \section{Introduction}\label{introsec} \thispagestyle{empty}
-Cybersecurity is essentially the enforcing of the rules(mandatory objectives and their conditions) required by the stakeholders of the system under consideration.  The collection of cybersecurity rules forms a graph, in which the vertices represent cybersecurity rules, and the edges represent {\em inference}, in the sense that the collection of vertices with edges {\em terminating} at a certain vertex, $V$ for example, correspond to the set of rules which are sufficient to prove the rule corresponding to $V$. This representation of cybersecurity provides a way to develop cybersecurity architecture\cite{Rerup2018}. These diagrams can also be used in security design, as a way to validate security designs, for documentation, and as a way to visualise and develop alternative designs.
+
+In this chapter, we develop concepts and tools which assist cybersecurity professionals to define the security objectives of their systems, the rules which enforce this security, and the reasoning
+behind the choice of these rules. The concepts and tools we proposed and illustrated in \cite{sheniar2019Graph} will be shown to be sufficient to record and analyse these rules, both the objectives and the rules which are enforced, and to ensure that there are no logical flaws in the system which has been designed. Note that we assume our cybersecurity objectives include the control of all important risks. 
+
+According to \cite{sheniar2019Graph}, the aim of cybersecurity architecture is to discover or instantiate: axioms, assumptions, and enforced rules which enable us to prove that the objectives are true. some intermediate propositions that we also wish to prove.
+\subsection{Cybersecurity Architecture}\label{cybarcht}
+Cybersecurity architecture is essentially identifying the rules (mandatory objectives and their conditions) required by the stakeholders of the system under consideration.
+The rules ascribed to each stakeholder must be enforcable, and the security that they
+provide will not contribute to system security unless they are enforced. If we 
+are able to be certain that all rules are enforced, cybersecurity in the sense
+defined by these rules will be assured. The collection of cybersecurity rules forms a graph, in which the vertices represent cybersecurity rules, and the edges represent {\em inference} \cite{sheniar2019Graph}, in the sense that the collection of vertices with edges {\em terminating} at a certain vertex, $V$ for example, correspond to the set of rules which are sufficient to prove the rule corresponding to $V$. This representation of cybersecurity provides a way to develop cybersecurity architecture. These diagrams can also be used in security design, as a way to validate security designs, for documentation, and as a way to visualise and develop alternative designs.
 
 %\section{Knowledge Graphs for cybersecurity}
 Cybersecurity systems have used Knowledge Graphs (KG) to store and  retrieve data  to make decisions about cyber-attacks 
 \iffalse 
-We believe that improving the base cyber threat intelligence representation will help improve the overall quality and performance of systems. The dependence of various cybersecurity informatics systems on various knowledge representation schemes makes it imperative that we develop systems that improve these representations. In some cases, a knowledge graph can have incorrect relationships between two cybersecurity entities, or may not even assert a relationship or a few missing relationships. In such a case, we can say that there are a few missing of relationships. we improve knowledge graphs by validating relationships and asserting values for missing relationships \fi \cite{pingle2019relext,jia2018practical, ghose2019multimodal, deng2019knowledge}. Graphical representation of logical or structural properties of computer systems is a well-established practice in computer science \cite{engelen2010integrating}. Inference graphs, as introduced and explained in this paper, provide a graphical representation of cybersecurity architecture.
-
+We believe that improving the base cyber threat intelligence representation will help improve the overall quality and performance of systems. The dependence of various cybersecurity informatics systems on various knowledge representation schemes makes it imperative that we develop systems that improve these representations. In some cases, a knowledge graph can have incorrect relationships between two cybersecurity entities, or may not even assert a relationship or a few missing relationships. In such a case, we can say that there are a few missing of relationships. we improve knowledge graphs by validating relationships and asserting values for missing relationships \fi \cite{pingle2019relext,jia2018practical, ghose2019multimodal, deng2019knowledge}. Graphical representation of logical or structural properties of computer systems is a well-established practice in computer science \cite{engelen2010integrating}. Inference graphs, as introduced and explained in this chapter, provide a graphical representation of cybersecurity architecture.
+\iffalse
 \subsection{Objectives of this research}
 
 The aim of this research is to develop concepts and tools which assist
@@ -32,15 +38,28 @@ by one of the authors, which was analysed and solved previously \cite{exptsandpr
 so in this case the inference graph is used to illustrate the proofs which were developed then.
 In Example 3, finding the correct proofs was a complicated task which was
 facilitated by the use of the inference graph of rules and objectives of the system.}
+\fi
 
 
 
-\subsection{Stakeholder Analysis}
+\subsection{Stakeholder Policies}
+One of the methods used in this dissertation is to apply logic to cybersecurity objectives. In particular, logic can be used to show {\em how} cybersecurity objectives can be met. Logic is the appropriate tool, for example, if the objective sought can be shown to follow, logically, from certain other rules. In some cases, it may also be possible, and useful, to show that certain objectives can {\em only} be met in certain ways.
 
-\subsection{Stakeholder Analysis}
+As set out in Chapter \ref{Ch4}, the stakeholder security analysis is a more specific form of logical analysis. Instead of dealing with objectives in general, it makes use of the obvious but useful fact that all systems have stakeholders, and the objectives of the system as a whole can be sub-divided into those which can be ascribed to each stakeholder. Once their objectives have been identified, they can be further analysed, refined, and reviewed. In particular, it is important to work out if their objectives are compatible.
+
+The most important reason for careful stakeholder policies, from the point of view of this dissertation, is that if we are able to identify a sufficient set of rules to ensure the willing participation of each stakeholder, and if we can enforce these rules, then the system is self-evidently secure.
+
+However, the main result presented in this chapter is the concept of inference graph \ref{inferencesec}. It is a way to illustrate and explain how the policies of the stakeholders are enforced. 
+
+\iffalse
 Stakeholder analysis \cite{exptsandproofs,project2018guide,rose2013guide} begins by identifying those who influence or who are influenced by decisions or outcomes of the system. There are several ways to classify stakeholders  some of which depend on their threat potential. 
+\fi
 
-As set out in \cite{exptsandproofs}, the most important reason for a careful stakeholder analysis, from the point of view of this paper, is that if we are able to identify a sufficient set of rules to ensure the willing participation of each stakeholder, and if we can enforce these rules, then the system is self-evidently secure.  Through experience, stakeholders may, during the lifetime of a system, discover that there are rules which were not initially obvious and that need to be added to their required rule set. This should not inhibit us from attempting to identify as complete as possible a set of stakeholder rules. Furthermore, if sufficient care is taken with stakeholder analysis, discoveries of missing rules should be infrequent.
+\iffalse
+As set out in Chapter \ref{Ch4}, the most important reason for careful stakeholder policies, from the point of view of this dissertation, is that if we are able to identify a sufficient set of rules to ensure the willing participation of each stakeholder, and if we can enforce these rules, then the system is self-evidently secure. 
+
+Through experience, stakeholders may, during the lifetime of a system, discover that there are rules which were not initially obvious and that need to be added to their required rule set. This should not inhibit us from attempting to identify as complete as possible a set of stakeholder rules. Furthermore, if sufficient care is taken with stakeholder analysis, discoveries of missing rules should be infrequent.
+\fi
 
 \iffalse
 \subsection{Commonsense security}
@@ -81,8 +100,18 @@ and the only practical way to develop this layout is by manual editing.
 In addition, the tools developed in this research, which are described in Section \ref{softwaresec},
 may be used via the most recent version of the public Netml server.
 
+
+
 Section \ref{inferencesec} defines and explains the concept of an inference graph.
-Section \ref{examplesec} uses three examples to illustrate their use. Section \ref{softwaresec}
+Section \ref{examplesec} uses three examples to illustrate their use. {\em In Example 1 of Section \ref{examplesec},
+we see how a key design objective is achieved rigorously by a clever decision
+which emerges from the use the cybersecurity inference graph of this system.
+Example 2 is based on a cybersecurity weakness in a web service administered 
+by one of the authors, which was analysed and solved previously \cite{exptsandproofs}
+so in this case the inference graph is used to illustrate the proofs which were developed then.
+In Example 3, finding the correct proofs was a complicated task which was
+facilitated by the use of the inference graph of rules and objectives of the system.}
+ Section \ref{softwaresec}
 describes the software tools which have been developed to enable inference
 graphs to be readily developed and managed. Finally, Section \ref{concsec}
 presents conclusions. A sample of the software which has been developed is presented in the appendix.
@@ -154,7 +183,7 @@ indicated in the Legend, shown in Fig. \ref{legend}.
 
 \section{Examples}\label{examplesec}
 
-\subsection{A parcel box}
+\subsection{Example 1: A parcel box}
 
 Consider a box for delivering parcels which can be opened only by the owner and those delivering parcels
 
@@ -213,7 +242,7 @@ of the cybersecurity inference graph. Objective O1 could be ensured by {\em assu
 deliverers can be trusted}, but a significantly better design results by searching for 
 an alternative to this risky assumption.}
 
-\subsection{A password reset system}
+\subsection{Example 2: A password reset system}
 Consider a portal which maintains accounts for users of its services and which has a {\em password reset service}, such as discussed in \cite{exptsandproofs}. The rules which apply to the stakeholders of a service for which a password reset service is available are listed in Table \ref{pwresetrules}.
 \begin{table}[tb]
 \caption{Rules for the tickets in a password reset system}\label{pwresetrules}
@@ -309,7 +338,7 @@ In response to this attack, the ticket algorithm was changed to that shown in Li
 described in this section were then able to succeed. A proof that these types of attacks can't succeed is given in Section \ref{proof}. 
 \fi
 
-\subsection{Signatures}
+\subsection{Example 3: Signatures}
 The validity of the signature of
 a document can be checked by the digital signature algorithm.
 Once this checking has been done, we can be confident that a person
