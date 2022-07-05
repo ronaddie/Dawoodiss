@@ -1,6 +1,29 @@
 A Social Contract for Cyberspace
 --------------------------------
 
-[There is just one paragraph so far. This paragraph is a good start, but needs a lot 
-of expansion.]
+This chapter links the whole work together.
+[A bit too direct. The key role of this chapter should be emphasised, both here, and in the introduction,
+but a bit more softly. In fact, what follows is adequate to get the point across.
+-->
+[delete]
 
+i.e. We all share them
+-->
+i.e. we all share them
+
+But there are other values (ethics) that are not universal.
+-->
+But there are other values (ethics, or agreed principles of behaviour in general) 
+that are not universal.
+
+We think
+the fact that human values vary from person to person does not invalidate
+the incorporation of human and ethical values into software values.
+-->
+The fact that human values vary from person to person does not obviate
+the need to incorporate human and ethical values (and principles
+of operation in general) into software.
+
+However, the authors in (Sheniar et al. 2021) expected
+-->
+However, the authors in (Sheniar et al. 2021) expect
