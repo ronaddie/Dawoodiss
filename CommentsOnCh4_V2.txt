@@ -5,14 +5,14 @@ Introduction
 ------------
 reported in section 4.2
 -->
-reported in Section 4.2
+reported in Section 4.2                                                  .....Done
 [Names start with capital letter. "Section 4.2" is a name.]
 
 The approach of searching
 for weaknesses and fixing them is so widely used that it might reasonably be
 regarded as a design philosophy.
 [add]
-It is sometimes referred to as ``ethical hacking''.
+It is sometimes referred to as ``ethical hacking''.                    .......Done
 
 We designed in Section 4.3 stakeholders’ policies to incorporate
 human values and ethics as much as possible into software values.
@@ -23,13 +23,13 @@ to most readers, to claim too much. It is therefore better to
 "qualify" such a claim.]
 -->
 Section 4.3 below shows how stakeholders' policies can be designed
-to incorporate human values and ethics into cybersecurity design.
+to incorporate human values and ethics into cybersecurity design.       .....Done
 
 The original design of the password reset service of the Netml system is described
 in Figures 4.1 and 4.2. [Make sure to cite all the other documents where this
 system and its analysis is presented. I suggest to include these citations
 _emphatically_, eg cite _all_ the documents at the start, and then repeat
-individual citations later.]
+individual citations later.]                                           ......Done
 
 However, in Subsection 4.2.1
 we discover that there are mistakes in the implementation of this design which
@@ -45,7 +45,7 @@ Listing 1
 where this is done, and the code. I have sent the sbook, and some examples
 of how to do it. It is important to do this.]
 
-4.1.1 The Netml System
+4.1.1 The Netml System ........Done
 ----------------------
 
 [The user has no idea why this is being introduced here. Naturally they will

@@ -25,11 +25,12 @@
 
 Cybersecurity issues and ethics take a great variety of forms and new ones appear to emerge regularly, so it can seem an endless process to manage and maintain both of them\cite{josang2005user}. 
 
-An approach used periodically is to assign the task of attacking or harming a service in cyberspace to an individual or a team and then address the discovered weaknesses. We call this a {\em security audit}. The approach of searching for weaknesses and fixing them is so widely used that it might reasonably be regarded as a design philosophy.
+An approach used periodically is to assign the task of attacking or harming a service in cyberspace to an individual or a team and then address the discovered weaknesses. We call this a {\em security audit}. The approach of searching for weaknesses and fixing them is so widely used that it might reasonably be regarded as a design philosophy. It is sometimes referred to as ``ethical hacking''.
 
-This approach has been used in \cite{sheniar2018experiments}, and the results of both the attacks and the resulting defences are reported in section \ref{secadit}. However, this approach is somewhat pessimistic in that it {\em assumes} that a more methodical security design philosophy that can guarantee a secure design is not available. 
+This approach has been used in \cite{sheniar2018experiments}, and the results of both the attacks and the resulting defences are reported in Section \ref{secadit}. However, this approach is somewhat pessimistic in that it {\em assumes} that a more methodical security design philosophy that can guarantee a secure design is not available. 
 
-The main result of this dissertation is to demonstrate such a methodical design philosophy. We designed in Section \ref{stakeholders} stakeholders' policies to incorporate human values and ethics as much as possible into software values.
+The main result of this dissertation is to demonstrate such a methodical design philosophy. Section 4.3 below shows how stakeholders' policies can be designed
+to incorporate human values and ethics into cybersecurity design.
 \iffalse
 Stakeholder security analysis proceeds as follows: 
 \begin{enumerate}[1.]
@@ -66,6 +67,8 @@ the need for a security audit.
 \label{Traffictraces}
 \end{figure}
 \fi
+We now consider a web service that is readily available for experiments concerned with cybersecurity. This system is typical of many web services in many respects and hence provides a good test-bed for such experiments.
+
 The Netml system provides services for analysis, design, and implementation
 of networks \cite{addie2011netml}. These services are provided by means of a web
 site. No software is installed on users' computers (except in the form
@@ -111,13 +114,17 @@ in this second system (for example, if the user has revealed their email passwor
 to another user, or has allowed others' free access to their phone) will compromise the password reset system
 which relies on it, so the second system must be one with significantly
 greater importance, for the user, for this type of design to be
-satisfactory.\\
+satisfactory.
+
+In Section \ref{secadit}, which follows, an attempt to attack this system is undertaken which reveals a cybersecurity flaw, which is then addressed by a redesign of the system. In the following section \ref{stakeholders}, by logical analysis, the redesigned system is {\em proved} to be no longer vulnerable to attack. Conclusions are presented in Section \ref{concl}. 
+
+The work in sections \ref{secadit} and \ref{stakeholders} were previously reported in \cite{sheniar2018experiments}.
+
 
 \section{Security Auditing}\label{secadit}
 
-The original design of the password reset
-service of the Netml system is described in Figures \ref{usersdl} and
-\ref{seqdgnetmlorg}.
+As reported in \cite{sheniar2018experiments}. The original design of the password reset
+service of the Netml system is described in figures \ref{usersdl}, \ref{seqdgnetmlorg}, and \ref{brkexpts}.
 \begin{figure}
 \begin{center}
 \vspace{5mm}
