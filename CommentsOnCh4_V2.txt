@@ -42,4 +42,36 @@ SDL diagram [might be good to cite a reference for SDL. It is not all that well-
 Listing 1
 
 [This can be done _much_ better by means of minted. I will send a study book
-where this is done, and the code.]
+where this is done, and the code. I have sent the sbook, and some examples
+of how to do it. It is important to do this.]
+
+4.1.1 The Netml System
+----------------------
+
+[The user has no idea why this is being introduced here. Naturally they will
+assume that in some way the Netml system is relevant to cybersecurity.
+This is not the case (except later, when it is used to display inference
+graphs). It is essential to explain that the Netml system is being
+considered here as _an example_ of a web service. Therefore, add something
+like the following, at the start of this subsection.]
+-->
+We now consider a web service which is readily available for experiments
+concerned with cybersecurity. This system is typical of many web services
+in many respects, and hence provides a good test-bed for such experiments.
+
+Any defect in this second system (for example,
+if the user has revealed their email password to another user, or has allowed
+others’ free access to their phone) will compromise the password reset system
+which relies on it, so the second system must be one with significantly greater
+importance, for the user, for this type of design to be satisfactory.
+
+[Here would be a good place to add a summary and explanation of what follows.
+E.g.:]
+In Section \ref{resetexpts}, which follows, an attempt to attack this system
+is undertaken which reveals a cybersecurity flaw, which is then addressed
+by a redesign of the system. In the following section, by logical
+analysis, the redesigned system is {\em proved} to be no longer vulnerable 
+to attack. Conclusions are presented in Section \ref{Ch4conc}. 
+
+The work in Section \ref{resetexpts} was previously reported in \cite{x,y}; and that
+in Section \ref{resetstakeholderanalysis} in \cite{z,w}.
