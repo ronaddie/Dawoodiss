@@ -103,19 +103,11 @@ In addition, the tools developed in this research, which are described in Sectio
 may be used via the most recent version of the public Netml server.
 
 
-
+\subsection{Outline of this chapter}
 Section \ref{inferencesec} defines and explains the concept of an inference graph.
-Section \ref{examplesec} uses three examples to illustrate their use. {\em In Example 1 of Section \ref{examplesec},
-we see how a key design objective is achieved rigorously by a clever decision
-which emerges from the use the cybersecurity inference graph of this system.
-Example 2 is based on a cybersecurity weakness in a web service administered 
-by one of the authors, which was analysed and solved previously \cite{exptsandproofs}
-so in this case the inference graph is used to illustrate the proofs which were developed then.
-In Example 3, finding the correct proofs was a complicated task which was
-facilitated by the use of the inference graph of rules and objectives of the system.}
- Section \ref{softwaresec}
+Section \ref{examplesec} uses three examples to illustrate their use. Section \ref{swinfgrahp}
 describes the software tools which have been developed to enable inference
-graphs to be readily developed and managed. Finally, Section \ref{concsec}
+graphs to be readily developed and managed. Finally, Section \ref{concch5}
 presents conclusions. A sample of the software which has been developed is presented in the appendix.
 
  
@@ -184,8 +176,8 @@ indicated in the Legend, shown in Fig. \ref{legend}.
 \end{figure}
 
 \section{Examples}\label{examplesec}
-
-\subsection{Example 1: A parcel box}
+This section uses three examples to illustrate the concept of an inference graph use. {\em In Example 1 in Subsection \ref{exm1} , we see how a key design objective is achieved rigorously by a clever decision that emerges from the use of the cybersecurity inference graph of this system. Example 2 in Subsection \ref{exm2} is based on a cybersecurity weakness in a web service administered by one of the authors, which was analysed and solved previously \cite{exptsandproofs} so in this case, the inference graph is used to illustrate the proofs which were developed then. In Example 3 in Subsection \ref{exm3}, finding the correct proofs was a complicated task facilitated by using the inference graph of rules and objectives of the system.}
+\subsection{Example 1: A parcel box}\label{exm1}
 
 Consider a box for delivering parcels which can be opened only by the owner and those delivering parcels
 
@@ -205,7 +197,7 @@ in Table \ref{parcelrules}.
 \centering
 \caption{Rules for a parcel box}\label{parcelrules}\ \\
 \begin{center}
-\begin{tabular}{|c|p{6cm}|}
+\begin{tabular}{|c|p{9cm}|}
 \hline
 \bf Rule Name&\multicolumn{1}{|c|}{\bf Details}\\
 \hline
@@ -244,12 +236,12 @@ of the cybersecurity inference graph. Objective O1 could be ensured by {\em assu
 deliverers can be trusted}, but a significantly better design results by searching for 
 an alternative to this risky assumption.}
 
-\subsection{Example 2: A password reset system}
+\subsection{Example 2: A password reset system}\label{exm2}
 Consider a portal which maintains accounts for users of its services and which has a {\em password reset service}, such as discussed in \cite{exptsandproofs}. The rules which apply to the stakeholders of a service for which a password reset service is available are listed in Table \ref{pwresetrules}.
 \begin{table}[tb]
 \caption{Rules for the tickets in a password reset system}\label{pwresetrules}
 \begin{center}
-\begin{tabular}{|c|p{6cm}|}
+\begin{tabular}{|c|p{9cm}|}
 \hline
 		\bf Rule Name&\multicolumn{1}{|c|}{\bf Details}\\
 \hline
@@ -340,7 +332,7 @@ In response to this attack, the ticket algorithm was changed to that shown in Li
 described in this section were then able to succeed. A proof that these types of attacks can't succeed is given in Section \ref{proof}. 
 \fi
 
-\subsection{Example 3: Signatures}
+\subsection{Example 3: Signatures}\label{exm3}
 The validity of the signature of
 a document can be checked by the digital signature algorithm.
 Once this checking has been done, we can be confident that a person
@@ -381,7 +373,7 @@ certificates has been omitted from this example in the interest of simplicity.
 \begin{table}[tb]
 		\caption{Rules for signatures}\label{Authorship}
 	\begin{center}
-			\begin{tabular}{|c|p{6cm}|}
+			\begin{tabular}{|c|p{9cm}|}
 			\hline
 			\bf Rule Name&\multicolumn{1}{|c|}{\bf Details} \\
 			\hline
@@ -430,7 +422,7 @@ IsValidCert(x)& $x$ is a valid certificate\\
 \begin{table}
 \centering
 \caption{Names of objects and entities which appear in the proof that Joan is the signatory of the document}\label{joanobjects}
-\begin{tabular}{|@{\tt}l@{\hspace{2mm}}|p{45mm}|}
+\begin{tabular}{|@{\tt}l@{\hspace{2mm}}|p{6cm}|}
 \hline
 \bf Name&\bf Description\\
 \hline
@@ -552,4 +544,6 @@ P3, E1, E2 and E3. Three of these conditions are {\em enforced}, and P3 has
 already been proved, above. Hence the conclusion of this axiom follows, which
 is what we wished to prove.
 
+\section{The software}\label{swinfgrahp}
+\section{Conclusion}\label{concch5}
 
