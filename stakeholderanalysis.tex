@@ -25,11 +25,11 @@
 
 Cybersecurity issues and ethics take a great variety of forms and new ones appear to emerge regularly, so it can seem an endless process to manage and maintain both of them\cite{josang2005user}. 
 
-An approach used periodically is to assign the task of attacking or harming a service in cyberspace to an individual or a team and then address the discovered weaknesses. We call this a {\em security audit}. The approach of searching for weaknesses and fixing them is so widely used that it might reasonably be regarded as a design philosophy. It is sometimes referred to as ``ethical hacking''.
+An approach used periodically is to assign the task of attacking or harming a service in cyberspace to an individual or a team and then address the discovered weaknesses. We call this a {\em security audit}. The approach of searching for weaknesses and fixing them is so widely used that it might reasonably be regarded as a design philosophy. It is sometimes referred to as ``ethical hacking'' or ``penetration testing''.
 
 This approach has been used in \cite{sheniar2018experiments}, and the results of both the attacks and the resulting defences are reported in Section \ref{secadit}. However, this approach is somewhat pessimistic in that it {\em assumes} that a more methodical security design philosophy that can guarantee a secure design is not available. 
 
-The main result of this dissertation is to demonstrate such a methodical design philosophy. Section 4.3 below shows how stakeholders' policies can be designed
+The main result of this dissertation is to demonstrate such a methodical design philosophy. Section \ref{stakeholders} below shows how stakeholders' policies can be designed
 to incorporate human values and ethics into cybersecurity design.
 \iffalse
 Stakeholder security analysis proceeds as follows: 
@@ -67,7 +67,7 @@ the need for a security audit.
 \label{Traffictraces}
 \end{figure}
 \fi
-We now consider a web service that is readily available for experiments concerned with cybersecurity. This system is typical of many web services in many respects and hence provides a good test-bed for such experiments.
+We now consider a web service that is readily available for experiments concerned with cybersecurity. This system is typical of many web services in many respects and hence provides a good test-bed for such experiments. The Netml system is also used in Chapter \ref{Ch5} to display and edit inference graphs.
 
 The Netml system provides services for analysis, design, and implementation
 of networks \cite{addie2011netml}. These services are provided by means of a web
@@ -124,7 +124,7 @@ The work in sections \ref{secadit} and \ref{stakeholders} were previously report
 \section{Security Auditing}\label{secadit}
 
 As reported in \cite{sheniar2018experiments}. The original design of the password reset
-service of the Netml system is described in figures \ref{usersdl}, \ref{seqdgnetmlorg}, and \ref{brkexpts}.
+service of the Netml system is described in figures \ref{usersdl}, and \ref{seqdgnetmlorg}.
 \begin{figure}
 \begin{center}
 \vspace{5mm}
@@ -140,7 +140,7 @@ make it insecure.
 
 \begin{figure}
 	\centering
-		\includegraphics[width=5cm]{figures/User.png}
+		\includegraphics[width=8cm]{figures/User.png}
 \caption{Sequence diagram for the Netml password reset  system }
 \label{seqdgnetmlorg}
 \end{figure}
@@ -149,7 +149,7 @@ make it insecure.
 \subsection{Break-in experiments}\label{brkexpts}
 \begin{figure}
 	\centering
-		\includegraphics[width=6cm]{figures/attacker.png}
+		\includegraphics[width=7cm]{figures/attacker.png}
 \caption{Sequence diagram for the Netml password reset  system under attack }
 \label{seqdgnetmlattack}
 \end{figure}
@@ -160,10 +160,10 @@ i.e. a series of attacks were undertaken in accordance with known
 vulnerabilities and observed behaviour of the system.
 
 \subsubsection{First Experiment}
-A detail not mentioned in Section \ref{initial} is that when an attempt
+As shwon in Figure \ref{seqdgnetmlattack}, A detail not mentioned in Section \ref{secadit} is that when an attempt
 to update a user's password is made, with an invalid ticket, the web 
 page which is prepared to report an error includes both the invalid
-ticket, and the value that the ticket should have taken. This is a fatal
+ticket and the value that the ticket should have taken. This is a fatal
 mistake (from the point of view of good security). There is no need
 to report to an ordinary user what the value of the ticket should
 have been. The reason this was included in the error-report web page
@@ -234,9 +234,10 @@ some of which depend on their threat potential
 \cite{almorsy2016analysis,diver2007information,savage1991strategies}.
 \fi
 
+\iffalse
 Stakeholder analysis can determine: who would be the attacker, and how a successful attack would be carried out. Also, how should security rules be changed to make the system safer.
-
-However, the most important reason for a careful stakeholder analysis, from
+\fi
+The most important reason for a careful stakeholder analysis, from
 the point of view of this dissertation and \cite{sheniar2018experiments}, is that if we are able to identify a sufficient
 set of rules that ensure the willing participation of each stakeholder, and 
 if we can enforce these rules, then the system is self-evidently secure. 
@@ -254,7 +255,9 @@ For example,
 
 \fi
  If sufficient care is taken with the stakeholder analysis, such events should be rare.
- 
+{\em In this case, the concepts and tools we proposed and illustrated in Chapter \ref{Ch5} will be shown to be sufficient to modify and correct the rules which developed in this chapter}.
+
+
  Stakeholder security analysis proceeds as follows: 
 \begin{enumerate}[1.]
 \item Identify the key stakeholders.

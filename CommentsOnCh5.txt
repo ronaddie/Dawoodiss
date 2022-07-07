@@ -9,13 +9,13 @@ some intermediate propositions that we also wish to prove.
 Where does this idea come from? What is the justification? What about 
 the views of others, which are so much easier to believe? Are they wrong?
 Why are they wrong?
-
+													
 Adding the necessary cross-references and justification is a good thing
 for the dissertation, and for you, because adding these explanations
 and cross-references will allow the work to become much better, to become
 clear to the reader, to become substantial, to become convincing, and to
 allow you to express your views.] 
-
+													....Done
 Cybersecurity is essentially the enforcing of the rules(mandatory objectives and
 their conditions) required by the stakeholders of the system under considera-
 tion.
@@ -33,22 +33,26 @@ their conditions) required by the stakeholders of the system under consideration
 The rules ascribed to each stakeholder must be enforcable, and the security that they
 provide will not contribute to system security unless they _are_ enforced. If we 
 are able to be certain that all rules are enforced, cybersecurity in the sense
-defined by these rules will be assured.
+defined by these rules will be assured.									....Done
 
 The collection of cybersecurity rules forms a graph, in which the vertices
 represent cybersecurity rules,
-[The rulesgraph paper should be cited here.]
+[The rulesgraph paper should be cited here.]								....Done
+										
 
 (Rerup 2018) [This is an incorrect citation. Rerup does not say anything like
 the previous sentence. Using this incorrect citation will mislead the reader
 and it could be quite dangerous to mislead the reader in this way. The best
-approach is to be accurate.]
+approach is to be accurate.]										....Done
+	
 
 5.1.1 Objectives of this research
-[This subsection seems to be out of place. Probably best to remove it.]
+[This subsection seems to be out of place. Probably best to remove it.]					....Done
+
 
 5.1.2 Stakeholder Analysis
-[Repeated subsection heading. Remove.]
+[Repeated subsection heading. Remove.]									....Done
+
 
 [Surely "stakeholder analysis" was treated earlier? I suspect the reason this
 introductory paragraph is here is because it was appropriate in the paper from
@@ -62,7 +66,8 @@ It is good to present it here, but it needs to be _explained_. In what sense
 does the inference graph support the overall plan of the dissertation?
 
 The answer is that it is a way to _illustrate_ and _explain_ how the policies 
-of the stakeholders are enforced. 
+of the stakeholders are enforced. 									....Done
+
 
 The password reset example is good, but it seems likely that a good deal of what
 is presented in this chapter was already present in the preceding chapter! It is
@@ -97,7 +102,7 @@ an earlier chapter, eg in Ch 3.
 
 Tables 5.1 - 5.3
 [These tables are all too narrow. They need to be made wider, so they fit into 
-a page more easily. They will be much easier to read then.]
+a page more easily. They will be much easier to read then.]					...Done
 
 5.3 Examples
 
