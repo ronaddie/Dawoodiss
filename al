@@ -1,4 +1,4 @@
-alias e="gvim -p dawoodiss.tex introduction.tex literature.tex experiments.tex al makefile bmake.sh &"
+alias e="gvim -p dawoodiss.tex introduction.tex CommentsOnCh4_V2.txt  CommentsOnCh5_V2.txt  CommentsOnCh6_V2.txt al makefile bmake.sh &"
 alias v="make view"
 alias x="make xview"
 alias xa="make xviewans"

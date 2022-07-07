@@ -75,3 +75,15 @@ to attack. Conclusions are presented in Section \ref{Ch4conc}.
 
 The work in Section \ref{resetexpts} was previously reported in \cite{x,y}; and that
 in Section \ref{resetstakeholderanalysis} in \cite{z,w}.
+
+The work in sections 4.2 and 4.3 were previously reported in (Sheniar et al.  2018a).
+-->
+The work in Sections 4.2 and 4.3 was previously reported in (Sheniar et al.  2018a).
+["were" would be right if the subject is plural, but the subject is "The work", which
+is in the singular".]
+
+and observed behaviour of the system
+-->
+and the behaviour of the system was observed.
+
+
