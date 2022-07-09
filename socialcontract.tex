@@ -27,6 +27,8 @@ for the social contract\fi an increasingly rigorous, and technical, role for the
 
 
 
+
+
 %\section{Introduction2}
 
 \iffalse
@@ -43,13 +45,39 @@ In \cite{sheniar2021social}, we argued that cyberspace needs a {\em social contr
 
 
 The main contribution of this chapter is to demonstrate the need for a social contract for cyberspace (and the Internet), i.e. a declaration of responsibilities and rights of all members of cyberspace, and also to propose a draft of such a social contract.
-
+\iffalse
 Any such social contract will need to enable and manage the stakeholders' policies, rather than enforce them. Details of protocols, services, and protections will still need to be the responsibility of entities that participate and contribute to cyberspace. The task before this chapter is not to design such safeguards and mechanisms, but rather to enable their free and effective development, evolution, and deployment.
-
+\fi
 In the remainder of this introductory section, we review the initiatives in the recent history of cyberspace that overlap most closely with the work of the present chapter and then outline the rest of the chapter.
 
-\subsection{The Social Contract}
+\subsection{The Structure of Cyberspace}\label{strcofcyb}
 
+Cyberspace is a collection of entities (agents, devices, servers, and more) Figure \ref{policiesfig}. Each entity has a {\em policy}. The policy protects the entity where it is located, and also declares conditions it commits to, for other agents or devices. A policy is a statement of obligations and conditions.
+
+
+\begin{figure}
+	\centering
+		\includegraphics[width=8cm]{figures/policies.png}
+\caption{policies}
+\label{policiesfig}
+\end{figure}
+
+According to this dissertation's point of view, the entities can be classified into, the services, and their stakeholders as shown in Figure \ref{Cyberspacefig}. Stakeholders can set their own policies regarding the services they engage with. These policies are used to achieve key (essential) stakeholder objectives. The stakeholders should be able to work together effectively although they have different objectives.
+\begin{figure}
+	\centering
+		\includegraphics[width=8cm]{figures/Cyberspace.png}
+\caption{Cyberspace}
+\label{Cyberspacefig}
+\end{figure}
+ However, before we can even state these objectives, it is essential to gain agreement between all the parties affected. In other words, to gain agreement to a "contract". Without such a contract, cybersecurity is not possible, because it has no clear goal. But, with such a contract, there is a relatively obvious, systematic process to achieve cybersecurity. 
+ 
+We must design, develop and implement software that enforces the social contract, and ensure that everyone installs this software and uses only this software in the course of their interaction (Like the Uber App in Subsection \ref{gigsol}).
+
+
+\subsection{The Social Contract}
+Social contracts are considered a necessity and an essential factor for the well-being of societies because they regulate their members' relations within those societies \cite{Leviathan}. As social computing \cite{parameswaran2007social}, cyberspace may need a social contract which declares the responsibilities and rights of all members of cyberspace. Any such social contract will need to enable and manage the stakeholders' policies, rather than enforce them. Details of these policies will still need to be the responsibility of stakeholders that participate and contribute to cyberspace. However, the task of this social contract is to enable free and effective development, evolution, and deployment of these policies
+
+\iffalse
 The concept of a social contract appears to have originated in ancient
 Greece, with the sophist philosophers and Epicurus. Plato has been
 found to both explain the concept of the social contract and to reject
@@ -104,7 +132,7 @@ freedom, with a high standard of living. Attempts to formulate an {\em internati
 social contract, have been at best partially successful. There is an international court
 of justice, but many nations do not accept its jurisdiction \cite{Robertson}.
 
-
+\fi
 \subsection{Service Level Agreements}\label{slasec1}
 
 Currently, users of the Internet are likely to have agreed to a {\em service level
@@ -147,7 +175,7 @@ Some of the developments anticipated in the semantic web concept have come to pa
 
 It seems that we need more than a universal API for access to the meaning in the Internet and its contents to ensure that good sense has enough advantage over greed, competitive advantage, and, in general, the forces of human frailty. We must assume that whenever there is an opportunity for error, fraud, deception, or intimidation, it will be exploited. We need to actively defend against criminality, greed, parochialism, and chaos.
 
-\subsection{Outline of the paper}
+\subsection{Outline of the chapter}
 
 In Section \ref{criteria}, criteria for a social contract for cyberspace are outlined, in Section \ref{issues}, fourteen serious and ongoing ethical or security issues in the Internet and cyberspace are reviewed, in Section \ref{necessity}, the questions of whether a social contract is really necessary, whether it is possible, and also whether in a sense it already exists are explored, in Section \ref{proposedsc} a draft social contract is outlined, including a review of how this draft social contract succeeds in addressing the issues presented in Section \ref{issues}, and, finally, in Section \ref{conc} conclusions are presented.
 
@@ -155,38 +183,20 @@ In Section \ref{criteria}, criteria for a social contract for cyberspace are out
 
 \begin{enumerate}[C-1.]
 
-\item\label{canachieve} Any entity using the Internet is able to achieve its goals
-	(including adequate cyber-security), by setting and enforcing
-	their public policy, so long as this policy is consistent with
-	the social contract for cyberspace
+\item\label{canachieve} Any entity using the Internet is able to achieve its goals (including adequate cyber-security), by setting and enforcing its public policy, so long as this policy is consistent with the social contract for cyberspace.
 
-\item\label{sameforall} The obligations and rights {\em provided by the Internet social 
-	contract} are the same for all entities.
-
+\item\label{sameforall} The obligations and rights {\em provided by the Internet social contract} are the same for all entities.
 \end{enumerate}
 
-These criteria are natural and yet quite powerful, and we shall see
-that their implications are surprisingly effective. Because the ethical
-assumptions made by members of cyberspace are currently not explicit,
-it is not possible at present to explain these criteria by reference to
-existing work.
+These criteria are natural and yet quite powerful, and we shall see that their implications are surprisingly effective. Because the ethical assumptions made by members of cyberspace are currently not explicit, it is not possible at present to explain these criteria by reference to existing work.
 
-The first of these criterion merely says that all entities are entitled to 
-{\em be able} to engage securely with the Internet, so long as they do
-not seek to transgress its norms.
+The first of these criteria merely says that all entities are entitled to {\em be able} to engage securely with the Internet, so long as they do not seek to transgress its norms.
 
-The second criterion is the natural condition that any rules 
-should apply uniformly to all participants. Note that
-the specific policies adopted by, and agreed to, by entities in the course of
-providing and using services are not expected to be the same for everyone.
+The second criterion is the natural condition that any rules should apply uniformly to all participants. Note that the specific policies adopted by, and agreed to, by entities in the course of providing and using services are not expected to be the same for everyone.
 
 \section{Current Ethical and Cybersecurity Issues}\label{issues}
 
-Cyberspace is currently burdened by many chronic and serious issues which
-frequently cause harm. 
-Here follows a classified survey of such issues,
-including some account of their particular features in a form which
-is relevant to their subsequent discussion, in \S \ref{address}.
+Cyberspace is currently burdened by many chronic and serious issues which frequently cause harm. Here follows a classified survey of such issues, including some accounts of their particular features in a form that is relevant to their subsequent discussion, in \S \ref{address}.
 
 \subsection{Cyber-Attack}\label{cybattk}
 
@@ -502,6 +512,8 @@ Having proposed {\em criteria} for a social contract, it seems only reasonable t
 propose, if only as a ``straw man,'' a candidate set of rules, for such a contract.
 Even if these rules are incomplete, or insufficiently precise, they can serve as
 a reference point for discussion and development.
+
+
 
 \subsection{A Draft Social Contract}\label{draft}
 
