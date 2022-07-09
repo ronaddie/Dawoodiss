@@ -85,6 +85,11 @@ issues. There is also some other text, in the atnac paper, which has
 been commented out, which you might want to think about restoring,
 since there is no space constraint.]
 
+because there are so many examples
+(14), it has not been possible to treat any of them in depth.
+[In the paper, some "solutions" were not presented at all.
+There is now room to provide "solutions" to _all_ the problems.]
+
 
 
 
