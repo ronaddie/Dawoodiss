@@ -11,3 +11,10 @@ an increasingly rigorous, and technical, role for the social contract.
 an increasingly rigorous, and technical, role for the social contract that is proposed in this chapter.
 
 Done......
+
+Figure 6.1.
+[This is not a sentence. You are trying to say something, by this phrase. Please use sentences to say it.
+Because this is a dissertation, not a paper, you can use several sentences, eg explain what the nodes are,
+and what are the little red squares (I presume these are policies).]
+
+

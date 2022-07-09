@@ -86,4 +86,7 @@ and observed behaviour of the system
 -->
 and the behaviour of the system was observed.
 
+A proof that these type of attacks can’t succeed is given in Section 4.3.3.
+[It is important that this proof is checked.]
+
 
