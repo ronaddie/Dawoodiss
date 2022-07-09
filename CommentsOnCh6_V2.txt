@@ -41,4 +41,50 @@ proposal needs to be introduced before the "solutions" can be explained.
 This is a helpful way to explain the need for the social contract because
 it can be discussed in the context of all the problems having been raised.]
 
+The simplest form of identity theft is for an attacker to find, discover, or guess
+another user’s password, and then use it for services they are not entitled to.
+[There are many examples and possible citations for this example. It would be beneficial
+add such contents and citations. There is no need for brevity in the treatment
+of these examples, in your dissertation. In particular, an extremely common,
+and important identity theft mechanism is based on convincing a telecommunications
+company to issue a new SIM card for a user, and then using that to break into
+other systems. This has been used for major exploits, which are on the public
+record.]
+
+recieved --> received
+
+However, this method for distributing and validating smart phone software
+directly contradicts Criterion C-2. Operating system vendors are adopting a
+highly asymmetical role relative to users in this approach to protection of users.
+[This is too brief. You have room, here, to spell out that this asymmetrical
+relationship can be, and probably already is, exploitative.]
+
+Issue I-7. The Gig-economy (Uber et al)
+
+[Also, much too brief. This observation basically applies to all these examples.]
+
+Necessity and Existence
+-->
+Necessity and Existence of a Social Contract
+
+[In this document, brevity is inappropriate. It reduces clarity, which is
+disturbing to the reader, and harmful to the interests of the author (ie you).]
+
+agreement, privacy.
+-->
+agreement, and privacy.
+[Make sure that "and" uses the normal font for the body of the dissertation, but
+"agreement" and "privacy" use the same font as the other search terms.]
+
+14
+
+[In the paper, there was at least one additional issue, which was commented
+out due to lack of space. You could restore this issue. But if you do,
+don't forget to change the number 14 to 15. You could also add more
+issues. There is also some other text, in the atnac paper, which has
+been commented out, which you might want to think about restoring,
+since there is no space constraint.]
+
+
+
 
