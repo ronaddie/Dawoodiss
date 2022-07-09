@@ -107,6 +107,26 @@ problem, which is, after all, very difficult. In other cases, also,
 it is probably best not to claim that a complete solution is
 provided just by the social contract.]
 
+Account information provided by employees cannot feasibly be altered
+or used in any way except by the employee to whom it refers.
+
+[It should be admitted that enforcing this condition requires the
+adoption of rigorous software development methods. This was previously
+omitted for brevity.]
+
+but this only applies to
+purchases from Google’s app-store.
+[More discussion here?]
+
+Issue I-7
+
+[All your thoughts, and work, on the cases where either the driver or
+the rider do not arrive on time can be included here. There was
+previously not sufficient room, but now there is.]
+
+However, the authors expect
+[there is just one author here.]
+
 
 
 
