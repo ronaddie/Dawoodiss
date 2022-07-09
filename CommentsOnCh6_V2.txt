@@ -87,8 +87,25 @@ since there is no space constraint.]
 
 because there are so many examples
 (14), it has not been possible to treat any of them in depth.
-[In the paper, some "solutions" were not presented at all.
-There is now room to provide "solutions" to _all_ the problems.]
+[In the paper, some "solutions" were presented quite briefly.
+There is now room to provide "full solutions" (or at least fuller
+solutions) to _all_ the problems.]
+
+R-2. To view
+-->
+R-2. to view
+[The sentence is continuing, due to the use of ";"]
+
+This can be achieved by being expressed
+in a language that has a translation into first-order formal logic,
+[It would be good to add a citation to some other work that
+you have participated in, ie an earlier paper, here.]
+
+A solution for this problem is provided by O-1, from the social contract.
+[It should be added that this might not completely solve this
+problem, which is, after all, very difficult. In other cases, also,
+it is probably best not to claim that a complete solution is
+provided just by the social contract.]
 
 
 
