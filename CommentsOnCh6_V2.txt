@@ -17,4 +17,8 @@ Figure 6.1.
 Because this is a dissertation, not a paper, you can use several sentences, eg explain what the nodes are,
 and what are the little red squares (I presume these are policies).]
 
+as shown in Figure 6.2 [The style of Figures 6.1 and 6.2 is not consistent. It might be better to redraw one, or
+the other, or both, to be more consistent.]
 
+The reason the Issue-\ref{} text doesn't work is because in the paper, each issue
+was introduced first as a problem, and then as a solution, but
