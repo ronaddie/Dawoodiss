@@ -33,4 +33,12 @@ but there is no lack of space now, so failing to make a cross-reference like thi
 is a mistake and a wasted opportunity. In a sense, the more cross-references
 from one part of your dissertation to another, the better, because they create
 a sense of unity. Every one is like an endorsement that your whole dissertation makes
-good sense.]
+good sense.
+
+It is also important to explain that in this section (6.3), the _problems_
+are presented, but _not_ the solutions. This is because the social contract
+proposal needs to be introduced before the "solutions" can be explained.
+This is a helpful way to explain the need for the social contract because
+it can be discussed in the context of all the problems having been raised.]
+
+
