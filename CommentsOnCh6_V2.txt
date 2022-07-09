@@ -22,3 +22,15 @@ the other, or both, to be more consistent.]
 
 The reason the Issue-\ref{} text doesn't work is because in the paper, each issue
 was introduced first as a problem, and then as a solution, but
+
+Here follows a classified survey of such issues, including
+some accounts of their particular features in a form that is relevant to their
+subsequent discussion, in §6.5.4.
+
+[It would be good to explain, at this point, that all these examples are "solved"
+in Section 6.5.4. This was not included in the atnac paper because of lack of space,
+but there is no lack of space now, so failing to make a cross-reference like this
+is a mistake and a wasted opportunity. In a sense, the more cross-references
+from one part of your dissertation to another, the better, because they create
+a sense of unity. Every one is like an endorsement that your whole dissertation makes
+good sense.]
