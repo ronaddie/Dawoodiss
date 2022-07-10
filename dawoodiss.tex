@@ -47,6 +47,25 @@
 \newlabel{standardsissue}{{14}{3}{}{}{}}
 
 % \includeonly{chapter1}
+\let\oldtheindex\theindex\def\theindex{%
+\oldtheindex%\addcontentsline{toc}{chapter}{Index}%
+\pdfbookmark[0]{Index}{theindex}}
+\let\oldthebib\thebib\def\thebib{%
+References%
+\pdfbookmark[0]{References}{thebibliography}
+}%
+\makeindex
+%\usepackage{Sweave}
+\makeatletter
+% \def\listoffigures{\@starttoc{lof}}
+% \def\listoftables{\@starttoc{lot}}
+\def\listoflistings{\@starttoc{lol}}
+\newcommand{\l@listing}[0]{\@dottedtocline {1}{1.5em}{2.3em}}
+%\newcommand{\l@listing}[0]{\@dottedtocline {1}{1.5em}{2.3em}}
+% \show\l@figure
+% \renewcommand{\l@figure}[2]{\par\noindent#1 {\itshape #2}}
+% \renewcommand{\l@table}[2]{\par\noindent#1 {\itshape #2}}
+\makeatother
 \begin{document}
 \pagenumbering{roman}
 
@@ -76,6 +95,42 @@ where due reference is made in the text.
 Student Number:&&\\
 \end{tabular}\\
 \pagebreak
+% tables of contents and figures, etc
+\addcontentsline{toc}{chapter}{Front Matter}
+\addcontentsline{toc}{section}{Table of Contents}
+\tableofcontents
+
+%\include{front}
+\vfil
+\setcounter{tocdepth}{2}          % depth of table of contents
+\section*{List of Exercises}
+\addcontentsline{toc}{section}{List of Exercises}
+\listofexercises
+\newpage
+\section*{List of Examples}
+\addcontentsline{toc}{section}{List of Examples}
+\listofexamples
+\newpage
+\section*{List of Figures}
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+\vfil
+\newpage
+\section*{List of Tables}
+\addcontentsline{toc}{section}{List of Tables} 
+% \show\listoftabs
+\listoftables
+\newpage
+\section*{List of Listings}
+\addcontentsline{toc}{section}{List of Listings}
+\listoflistings
+\newpage
+\vfil
+\makeatletter
+% \show\l@figure
+% \show\l@listing
+\makeatother
+\setcounter{tocdepth}{0}          % depth of table of contents
 \pagenumbering{arabic}
 \include{preface}
 \include{introduction}
