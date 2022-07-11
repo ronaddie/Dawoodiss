@@ -52,14 +52,14 @@
 \pdfbookmark[0]{Index}{theindex}}
 \let\oldthebib\thebib\def\thebib{%
 References%
-\pdfbookmark[0]{References}{thebibliography}
-}%
+\pdfbookmark[0]{References}{thebibliography}}%
 \makeindex
 %\usepackage{Sweave}
 \makeatletter
-% \def\listoffigures{\@starttoc{lof}}
-% \def\listoftables{\@starttoc{lot}}
+\def\listoffigures{\@starttoc{lof}}
+\def\listoftables{\@starttoc{lot}}
 \def\listoflistings{\@starttoc{lol}}
+\def\tableofcontents{\@starttoc{toc}}
 \newcommand{\l@listing}[0]{\@dottedtocline {1}{1.5em}{2.3em}}
 %\newcommand{\l@listing}[0]{\@dottedtocline {1}{1.5em}{2.3em}}
 % \show\l@figure
@@ -97,16 +97,18 @@ Student Number:&&\\
 \pagebreak
 % tables of contents and figures, etc
 \addcontentsline{toc}{chapter}{Front Matter}
+\section*{Contents}
 \addcontentsline{toc}{section}{Table of Contents}
 \tableofcontents
+\newpage
 
 %\include{front}
 \vfil
 \setcounter{tocdepth}{2}          % depth of table of contents
-\section*{List of Exercises}
-\addcontentsline{toc}{section}{List of Exercises}
-\listofexercises
-\newpage
+%  \section*{List of Exercises}
+%  \addcontentsline{toc}{section}{List of Exercises}
+%  \listofexercises
+%  \newpage
 \section*{List of Examples}
 \addcontentsline{toc}{section}{List of Examples}
 \listofexamples
