@@ -1,0 +1,32 @@
+A Social Contract for Cyberspace
+--------------------------------
+
+on a core set of
+ethical principles: the social contract
+-->
+on a core set of
+ethical principles: {\em the social contract}
+[Using emphasis, by italics, helps to make the argument more clear.]
+
+Figure 6.1.
+[This is not a sentence. Also, the diagram needs to be _explained_.]
+
+According to this dissertation’s point of view, the entities can be classified
+into, the services, and their stakeholders as shown in Figure 6.2.
+[Neither of these diagrams are satisfactory, and neither is properly explained.
+
+At least explanations of the diagrams should be added.  For example, in Figure 6.2,
+the label "Cybersecurity Policy" is attached to the links. Shouldn't it be attached
+to the entities?]
+
+Hobbes 1985 ["The Leviathan" by Hobbes was published in ~1620. The date 1985 is misleading.]
+
+Currently, users of the Internet are likely to have agreed to a service level agree-
+ment with their Internet provider (IETF 2021).
+[Users are usually also expected to agree to SLAs for each service, and for the devices
+they use, eg a smartphone. Many apps also have SLAs. They are not just with Internet providers.
+You need to mention these agreements, or your text is misleading.]
+
+
+
+
