@@ -27,6 +27,31 @@ ment with their Internet provider (IETF 2021).
 they use, eg a smartphone. Many apps also have SLAs. They are not just with Internet providers.
 You need to mention these agreements, or your text is misleading.]
 
+Functionally, this is similar to a social contract
+[I don't think the SLAs should be regarded as like a social contract, but rather, like a _policy_
+of the sort which is considered in the social contract.]
 
+Tim, O. (2005) [This looks like an incorrect author's name. Please check.]
+
+Stakeholders
+can set their own policies regarding the services they engage with.
+[Surely services and servers also have policies. After all, the SLAs we are asked to sign come
+from them. ]
+
+a ”contract” --> a ``ontract''. [These are the correct quotes to use, when quoting.]
+
+We must design, develop and implement software that enforces the social
+contract, and ensure that everyone installs this software and uses only this
+software
+[Here, again, you seem to be confusing policies with the social contract. What gets
+enforced, most of the time, is the policies. The social contract is a sort of "meta-policy"
+that everyone agrees to. In this chapter, a social contract is suggested. The primary
+element of it is that all users, and services, should honour their own policies.
+
+It might be helpful, for the reader, to give an outline of the proposed
+social contract earlier, ie near the start of the chapter, even if the full details
+are not given till later.]
+
+(Tim 2005) [This seems to be incorrect.]
 
 
