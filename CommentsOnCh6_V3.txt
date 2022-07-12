@@ -117,6 +117,42 @@ To declare and have honoured
 [The intention is that when a user declares a policy concerning their access to a service,
 the providers of that service honour the user's policy (or decline to offer a service at all).]
 
+6.5.4 Does the draft social contract address the issues?
+--------------------------------------------------------
+[As mentioned previously, in each issue in this section, a cross-reference to the earlier
+discussion of the issue, as a problem, could be added. This will be convenient for you,
+as well as for the reader, because it makes it very easy to navigate backwards and fowards.]
+
+This aspect is discussed in Subsection 6.5.4.
+[But this _is_ Subsection 6.5.4! If there is another place where this is discussed, please
+refer to it. But there is no point in refering the reader to this section, from this section.
+It seems that the intention is to refer to the solution of Issue I-2, viruses. The ref
+should be to I-\ref{viruses}, or you could just refer to the next issue (or issue below).
+
+However, does it contradict the draft social contract in Section 6.5?
+
+[Your text offers no answer to this question. That is ok. But, alternatively, you could
+add that national governments have, in some cases, offered an answer to this question,
+and on occasion, governments have _required_ operating system vendors to open their
+systems to alternative services to the ones they provide.]
+
+Issue I-7
+[More details could be added here.]
+
+not be taken seriously by an of its clients
+-->
+not be taken seriously by any of its clients
+
+Issue I-12
+[Why does this "solution" solve the problem? The same comment applies to 
+several other issues . It is better for the solutions to be clear,
+including _why_ the problem is solved.]
+
+Issue I-14
+[The fact that industry representatives dominate the standardization procss
+is understandable at an early point in the history. But as the Internet
+matures, this compromise of independence, from influence by interested parties,
+will become more unacceptable.]
 
 
 
