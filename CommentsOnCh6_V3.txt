@@ -54,4 +54,16 @@ are not given till later.]
 
 (Tim 2005) [This seems to be incorrect.]
 
+in Subsection§6.5.4 in which all these issues are solved
+-->
+in Subsection §6.5.4, where all these issues are solved
+
+If a social contract can help us with this issue, it deserves our strong support.
+
+[Here would be a good place to remind the reader that "solutions" of all
+these issues are proposed, later in the chapter. Make sure to give a reference.
+It might be worthwhile, actually, to provide cross-references between all the
+issues, presented as problems, in this section, and the same issues's solutions,
+later on.]
+
 
