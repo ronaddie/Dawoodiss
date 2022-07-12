@@ -66,4 +66,30 @@ It might be worthwhile, actually, to provide cross-references between all the
 issues, presented as problems, in this section, and the same issues's solutions,
 later on.]
 
+[All these examples, in Ch 6, can easily be expanded by adding more details, citations,
+or discussion.]
+
+6.4 Necessity and Existence of a Social Contract
+------------------------------------------------
+
+for Standardization 2019 [This looks like an error in the bib file. Surely there is no one
+with the name "for Standardisation"?]
+
+(Nations 1948) [Surely the author should be "United Nations" not "Nations". 
+Perhaps you need to put some braces ({}) around the author name here (and in some other cases)
+
+If you work out what is going wrong here, please make sure to scan the whole bib file
+to fix other cases where this "error" is occurring.]
+
+which is the main substance, in mass, of the social contract adopted therein,
+[?? I cannot understand what this is supposed to mean.]
+
+will be clear to all other entities [Use italics? ie {\em ...}]
+
+[It might be useful, also, to spell out that other entities, knowing that an agent
+has publically dis-honoured its own policy, might then choose to not co-operate
+with this one.]
+
+
+
 
