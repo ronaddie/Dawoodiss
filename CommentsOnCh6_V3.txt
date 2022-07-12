@@ -90,6 +90,33 @@ will be clear to all other entities [Use italics? ie {\em ...}]
 has publically dis-honoured its own policy, might then choose to not co-operate
 with this one.]
 
+because there are so many examples (14)
+
+[There was actually one more in the source code of cyerscon. It was commented out to
+save space.]
+
+person, process, organisation, device, or agent
+[Note that here it is suggested that _all_ entities are subject to the _same_
+social contract. Earlier in the chapter, in Figure 6.2, it might have seemed
+that servers have a _different_ role, and perhaps different rights and obligtions.]
+
+enforcing the obligations
+[i.e. by ``software'']
+
+To declare and honour
+[The word "honour" might not be clear to the reader. Even if they do understand
+it, this word is so significant, in this sentence, that perhaps it should be
+explained. E.g.]
+To ``honour'' a commitment (a statement) means to do whatever is necessary to make sure that 
+the statement (of the commitment) remains true.
+
+To declare and honour
+[The word "honour" here has the wrong meaning.]
+-->
+To declare and have honoured
+[The intention is that when a user declares a policy concerning their access to a service,
+the providers of that service honour the user's policy (or decline to offer a service at all).]
+
 
 
 
